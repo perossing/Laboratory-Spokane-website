@@ -1,0 +1,15 @@
+<section class="events_preview">
+    <img class="events_thumbnail" src={{.Params.thumbnail}}>
+    <div class="events_event-info">
+
+        <h2 class="events_event-title"><a href="#">
+            {{if .Params.title }}
+            {{.Params.title}},
+            {{end}}
+            {{.Params.artist}}</a></h2>
+        <p class="events_preview_date">{{ dateFormat "Monday, January 2, 2006" .Date }}, {{.Params.time}}</p>
+        <p class="events_preview_location">{{.Params.venue}}</p>
+        <p class="events_preview_address">{{.Params.address}}</p>
+    </div>
+    <a class="preview_link-more" href="#">more</a>
+</section>

@@ -15,56 +15,46 @@
 
 <body>
     <div class="container-primary">
+
         <div class="social-links">
             <img>
             <img>
             <img>
         </div>
+
         <div class="grid-home">
+
             <header class="header-home">
                 <div class="header_nav-logo-container"> <img class="header_logo" src="images/Laboratory-Logo-WHITE.png" alt="Laboratory text logo">
-
-                    <nav class="header_nav">
-                        <img class="header_nav_divider" src="images/slash.svg">
-                        <div class="header_nav_menu-item">events</div>
-                        <div class="header_nav_triangle"></div>
-
-                        <img class="header_nav_divider" src="images/slash.svg">
-                        <div class="header_nav_menu-item">past work</div>
-                        <div class="header_nav_triangle"></div>
-
-                        <img class="header_nav_divider" src="images/slash.svg">
-                        <div class="header_nav_menu-item">support us</div>
-                        <div class="header_nav_triangle"></div>
-
-                        <img class="header_nav_divider" src="images/slash.svg">
-                        <div class="header_nav_menu-item">residency</div>
-                        <div class="header_nav_triangle"></div>
-                    </nav>
+                    {{ partial "nav" . }}
                 </div>
+
                 <img class="header_image" src="images/FPO_preMADE_67inch_3to4.jpg">
                 <!-- <img class="header_image" src="images/FPO_superduluxe_3to4.jpg"> -->
-                <footer class="header_tagline">interactive, digital, performance art<div class="carrousel-control">
-                        <div class="carrousel-control_dot"></div>
-                        <div class="carrousel-control_dot"></div>
-                        <div class="carrousel-control_dot"></div>
-                        <div class="carrousel-control_dot"></div>
-                        <div class="carrousel-control_dot"></div>
+                <div class="triangle-punch-out"></div>
+
+                <footer class="header_tagline">interactive, digital, performance art<div class="carousel-control">
+                        <div class="carousel-control_dot"></div>
+                        <div class="carousel-control_dot"></div>
+                        <div class="carousel-control_dot"></div>
+                        <div class="carousel-control_dot"></div>
+                        <div class="carousel-control_dot"></div>
                 </footer>
             </header>
-            <section class="preview-list_events">
+
+            <section class="preview_list events">
+
                 <h1>Upcoming Events</h1>
-                <section>
-                    <h2>[Event Title], [Artist Name]</h2>
-                    <p>[day, date, time]</p>
-                    <p>[location name]</p>
-                    <p>[address]</p>
-                </section>
+                {{range sort (where .Pages "Params.type" "events") ".Params.date" | first 3 }}
+                <!-- filter against current date? -->
+                {{ partial "event_preview" . }}
+
+                {{end}}
 
             </section>
+
             <section class="copy-primary_home">
-                <div class="triangle-punch-out"></div>
-                <h1>What We Do</h1>
+                <h1 class="copy-primary_h1">What We Do</h1>
                 <div>
                     <p>Tempor laboris in dolore Lorem excepteur ipsum consectetur. Non nostrud incididunt commodo dolor
                         velit reprehenderit eiusmod quis dolore aliqua ut quis. Elit aliqua quis ipsum sunt amet
@@ -79,9 +69,12 @@
                         proident ea excepteur veniam laborum reprehenderit velit ut aute.</p>
                 </div>
             </section>
+
             <section class="calendar-section">
-                <figure class="event-calendar"></figure>
+                <!-- <figure class="event-calendar"></figure> -->
+                {{ partial "calendar" }}
             </section>
+
             <section class="info">
                 <h1>Laboratory Spokane</h1>
                 <p>Laboratory is a part of Spokane Interactive Arts, a 501(c)3 non-profit organization.</p>
