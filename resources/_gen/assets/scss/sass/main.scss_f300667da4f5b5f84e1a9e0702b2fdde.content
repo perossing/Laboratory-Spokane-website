@@ -4,7 +4,9 @@
   padding: 5px 0 10px 10px;
   position: absolute;
   left: 40px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(45%, #1B1F26), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(#002540, #004B80); }
+
+.home-nav-bg {
   background-image: linear-gradient(to right, #1B1F26 45%, rgba(0, 0, 0, 0)); }
 
 .header_logo {
@@ -90,7 +92,8 @@
   top: 215px;
   left: 6px;
   font-weight: 600;
-  width: 200px; }
+  width: 200px;
+  word-spacing: 3px; }
 
 .event-calendar {
   display: block;
@@ -168,6 +171,7 @@ td {
   grid-area: header; }
 
 .nav_pages {
+  width: 70%;
   max-width: 1000px; }
 
 .header_image-holder {
@@ -177,15 +181,48 @@ td {
   left: -40px;
   background: #B3B0AB;
   position: relative;
-  background-image: url("/images/SzymonKaliski.png");
   background-position-x: 40px;
   background-position-y: 80%;
   background-size: 100%;
   background-repeat: no-repeat; }
+  .header_image-holder.events {
+    background-image: url("/images/SzymonKaliski.png"); }
+  .header_image-holder.artists {
+    background-image: url("/images/LizaStark_TheTellTaleQuilt.png"); }
 
 .tpo_pages {
   left: 0px;
   top: 327px; }
+
+.copy-primary h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 24px; }
+
+.copy-primary img {
+  margin: 30px 25px 28px 0;
+  float: left;
+  max-height: 500px;
+  max-width: 400px;
+  width: auto;
+  height: auto; }
+
+.event-info {
+  margin-top: 30px; }
+  .event-info p {
+    line-height: 20px; }
+  .event-info a {
+    font-size: 18px;
+    display: block;
+    margin-top: 15px; }
+
+.event_time {
+  font-weight: 700;
+  font-size: 20px; }
+
+.event_venue-address {
+  font-size: 18px;
+  margin: 5px; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -251,6 +288,7 @@ a {
     width: auto;
     margin: 0 6px; }
   .social-links img:hover {
+    -webkit-filter: brightness(1.5) hue-rotate(180deg);
     filter: brightness(1.5) hue-rotate(180deg); }
 
 /* ===== HEADER SECTION ===== */
@@ -264,7 +302,7 @@ a {
   left: -40px; }
 
 /* ===== HEADER ===== */
-.header-home_image {
+.header_image-home {
   width: calc(100% - 40px);
   margin-left: 40px;
   margin-bottom: -3px; }
@@ -277,9 +315,8 @@ a {
   border-color: #B3B0AB transparent transparent transparent;
   position: absolute; }
 
-.header_tagline {
+.tagline {
   position: absolute;
-  /* position: relative; to inspect extra pixels at bottom of image */
   left: 40px;
   bottom: 0;
   height: 32px;
@@ -288,14 +325,18 @@ a {
   font-weight: 400;
   letter-spacing: 0.05em;
   color: #B3B3B3;
-  padding: 9px 0 0 15px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(45%, #1B1F26), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to right, #1B1F26 45%, rgba(0, 0, 0, 0)); }
+  padding: 8px 0 0 15px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1B1F26), color-stop(60%, rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, #1B1F26, rgba(0, 0, 0, 0) 60%);
+  text-transform: uppercase; }
+
+footer .tagline {
+  padding-top: 3px; }
 
 .carousel-control {
-  height: 30px;
+  height: 25px;
   position: absolute;
-  top: 10px;
+  bottom: 0;
   right: 10px; }
 
 .carousel-control_dot {
@@ -314,7 +355,7 @@ a {
     background: #fff;
 } */
 /* ===== EVENT PREVIEW LIST SECTION ===== */
-.events {
+.events_list {
   grid-area: events; }
 
 .events_preview {
@@ -356,14 +397,19 @@ a {
 .copy-primary {
   grid-area: copy;
   background: #F7F5F0;
-  padding: 30px 45px;
-  position: relative;
-  font-size: 18px;
-  line-height: 24px; }
-
-.copy-primary_h1 {
-  font-size: 30px;
-  margin: 5px 0 30px 0; }
+  padding: 30px 45px 60px 45px;
+  position: relative; }
+  .copy-primary h1, .copy-primary h2 {
+    color: #00406D;
+    margin: 0; }
+  .copy-primary h1 {
+    font-size: 30px; }
+  .copy-primary .copy-primary_content {
+    clear: both;
+    position: relative;
+    top: 10px;
+    font-size: 18px;
+    line-height: 24px; }
 
 /* ===== INFO SECTION ===== */
 .info {

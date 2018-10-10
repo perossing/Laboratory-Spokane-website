@@ -12,24 +12,78 @@
 }
 
 .nav_pages {
+    width: 70%;
     max-width: 1000px;
 }
 
-.header_image-holder {
+.header_image-holder  {
     grid-area: header-image;
     height: 185px;
     width: calc(100% + 40px);
     left: -40px;
     background: #B3B0AB;
     position: relative;
-    background-image: url("/images/SzymonKaliski.png");
+
     background-position-x: 40px;
     background-position-y: 80%; //specific to current picture
     background-size: 100%;
     background-repeat: no-repeat;
+
+    &.events {
+        background-image: url("/images/SzymonKaliski.png");
+    }
+
+    &.artists {
+        background-image: url("/images/LizaStark_TheTellTaleQuilt.png");
+    }
 }
+
+// .header_image-holder, .events {
+//     background-image: url("/images/SzymonKaliski.png");
+// }
+
+// #[different-page-types] {
+//     background-image: url([...different pics...]);
+// }
 
 .tpo_pages {
     left: 0px;
     top: 327px;
+}
+
+.copy-primary {
+    h2 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    img {
+        margin: 30px 25px 28px 0;
+        float: left;
+        max-height: 500px;
+        max-width: 400px;
+        width: auto;
+        height: auto;
+    }
+}
+
+.event-info {
+    margin-top: 30px;
+    p {
+        line-height: 20px;
+    }
+    a {
+        font-size: 18px;
+        display: block;
+        margin-top: 15px;
+    }
+}
+.event_time {
+    font-weight: 700;
+    font-size: 20px;
+}
+.event_venue-address {
+    font-size: 18px;
+    margin: 5px;
 }

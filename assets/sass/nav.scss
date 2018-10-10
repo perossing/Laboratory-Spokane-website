@@ -5,7 +5,11 @@
     padding: 5px 0 10px 10px;
     position: absolute;
     left: 40px;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(45%, #1B1F26), to(rgba(0, 0, 0, 0)));
+
+    background-image: linear-gradient( #002540, #004B80);
+}
+
+.home-nav-bg {
     background-image: linear-gradient(to right, #1B1F26 45%, rgba(0, 0, 0, 0));
 }
 

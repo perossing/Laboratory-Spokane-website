@@ -5,7 +5,7 @@
 
 * {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -54,13 +54,13 @@ a {
 
     justify-items: start;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    -ms-flex-align: start;
+    align-items: start;
 
     section {
         justify-self: stretch;
         -ms-flex-item-align: stretch;
-            align-self: stretch;
+        align-self: stretch;
     }
 }
 
@@ -86,7 +86,8 @@ a {
     }
 
     img:hover {
-        filter: brightness(1.5) hue-rotate(180deg) ;
+        -webkit-filter: brightness(1.5) hue-rotate(180deg);
+        filter: brightness(1.5) hue-rotate(180deg);
     }
 
 }
@@ -105,7 +106,7 @@ a {
 
 /* ===== HEADER ===== */
 
-.header-home_image {
+.header_image-home {
     width: calc(100% - 40px);
     margin-left: 40px;
     margin-bottom: -3px;
@@ -120,9 +121,8 @@ a {
     position: absolute;
 }
 
-.header_tagline {
+.tagline {
     position: absolute;
-    /* position: relative; to inspect extra pixels at bottom of image */
     left: 40px;
     bottom: 0;
     height: 32px;
@@ -131,15 +131,22 @@ a {
     font-weight: 400;
     letter-spacing: 0.05em;
     color: #B3B3B3;
-    padding: 9px 0 0 15px;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(45%, #1B1F26), to(rgba(0, 0, 0, 0)));
-    background-image: linear-gradient(to right, #1B1F26 45%, rgba(0, 0, 0, 0));
+    padding: 8px 0 0 15px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#1B1F26), color-stop(60%, rgba(0, 0, 0, 0)));
+    background-image: linear-gradient(to right, #1B1F26, rgba(0, 0, 0, 0) 60%);
+    text-transform: uppercase;
+}
+
+footer {
+    .tagline {
+        padding-top: 3px;
+    }
 }
 
 .carousel-control {
-    height: 30px;
+    height: 25px;
     position: absolute;
-    top: 10px;
+    bottom: 0;
     right: 10px;
 }
 
@@ -153,11 +160,12 @@ a {
 }
 
 
- /* -- MAKE INTERACTIVE w JS -- */
+/* -- MAKE INTERACTIVE w JS -- */
 
 .carousel-control_dot:first-of-type {
     background: #fff;
 }
+
 /* .carousel-control_dot:active {
     background: #fff;
 } */
@@ -165,7 +173,7 @@ a {
 
 /* ===== EVENT PREVIEW LIST SECTION ===== */
 
-.events {
+.events_list {
     grid-area: events;
 }
 
@@ -180,7 +188,7 @@ a {
     float: right;
     margin: 5px 10% 25px 0;
     font-size: 15px;
-  }
+}
 
 .events_thumbnail {
     width: 30%;
@@ -217,22 +225,31 @@ a {
 .copy-primary {
     grid-area: copy;
     background: #F7F5F0;
-    padding: 30px 45px;
+    padding: 30px 45px 60px 45px;
     position: relative;
-    font-size: 18px;
-    line-height: 24px;
+
+    h1, h2 {
+        color: #00406D;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .copy-primary_content {
+        clear: both;
+        position: relative;
+        top: 10px;
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
-.copy-primary_h1 {
-    font-size: 30px;
-    margin: 5px 0 30px 0;
-}
+
 
 /* ===== INFO SECTION ===== */
 
 .info {
     grid-area: info;
 }
-
-
-

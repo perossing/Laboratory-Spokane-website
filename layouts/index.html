@@ -4,41 +4,43 @@
     <div class="container-primary">
 
         {{ partial "social" . }}
-        
+
         <div class="grid grid-home">
 
             <header class="header">
-                <div class="header_nav-logo-container"> <img class="header_logo" src="images/Laboratory-Logo-WHITE.png" alt="Laboratory text logo">
+                <div class="header_nav-logo-container home-nav-bg">
+                    <img class="header_logo" src="images/Laboratory-Logo-WHITE.png"
+                        alt="Laboratory text logo">
                     {{ partial "nav" . }}
                 </div>
 
-                <img class="header-home_image" src="images/FPO_preMADE_67inch_3to4.jpg">
+                <img class="header_image-home" src="images/FPO_preMADE_67inch_3to4.jpg">
                 <!-- <img class="header_image" src="images/FPO_superduluxe_3to4.jpg"> -->
                 <div class="triangle-punch-out"></div>
 
-                <footer class="header_tagline">interactive, digital, performance art<div class="carousel-control">
-                        <div class="carousel-control_dot"></div>
-                        <div class="carousel-control_dot"></div>
-                        <div class="carousel-control_dot"></div>
-                        <div class="carousel-control_dot"></div>
-                        <div class="carousel-control_dot"></div>
-                </footer>
+                <div class="tagline">interactive, digital, performance art</div>
+                <div class="carousel-control">
+                    <div class="carousel-control_dot"></div>
+                    <div class="carousel-control_dot"></div>
+                    <div class="carousel-control_dot"></div>
+                    <div class="carousel-control_dot"></div>
+                    <div class="carousel-control_dot"></div>
+                </div>
             </header>
 
-            <section class="preview_list events">
-
+            <section class="preview_list events_list">
                 <h1>Upcoming Events</h1>
                 {{range sort (where .Pages "Params.type" "events") ".Params.date" | first 3 }}
-                <!-- filter against current date? -->
-                {{ partial "event_preview" . }}
-
+                <!-- change 2018-01-01 to now for current date -->
+                {{ if gt .Params.date "2018-01-01"}}
+                    {{ partial "event_preview" . }}
+                    {{end}}
                 {{end}}
-
             </section>
 
-            <section class="copy-primary_home">
+            <section class="copy-primary">
                 <h1 class="copy-primary_h1">What We Do</h1>
-                <div>
+                <div class="copy-primary_content">
                     <p>Tempor laboris in dolore Lorem excepteur ipsum consectetur. Non nostrud incididunt commodo dolor
                         velit reprehenderit eiusmod quis dolore aliqua ut quis. Elit aliqua quis ipsum sunt amet
                         ullamco commodo veniam nulla irure ex consequat aliqua. Lorem consequat laboris duis ea aute

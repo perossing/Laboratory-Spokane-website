@@ -1,11 +1,14 @@
 ---
 thumbnail: /images/FPO_Biological-Computing_THUMBNAIL.jpg
+image: /images/SKaliski_limited-laplacian-growth-768x672.png
 title: Biological Computing Talk
 artist: Szymon Kaliksi
-date: 2018-08-29T23:26:00.000Z
+date: 2018-08-29
 time: 6pm
 venue: Spokane CREATE!
 address: Bay#1, 840 E Spokane Falls Blvd
+artistwebsite: szymonkaliski.com
+artisturl: https://szymonkaliski.com/music/
 facebook: https://www.facebook.com/events/1018248568356982/
 type: events
 ---

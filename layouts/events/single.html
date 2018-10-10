@@ -1,73 +1,36 @@
 {{ define "main"}}
-
-
-<div class="grid grid-single">
-
-    <header class="header">
-        <div class="header_nav-logo-container nav_pages"> <img class="header_logo" src="/images/Laboratory-Logo-WHITE.png" alt="Laboratory text logo">
-            {{ partial "nav" . }}
-        </div>
-
-
-    </header>
-
-    <div class="header_image-holder"></div>
-    <div class="triangle-punch-out tpo_pages"></div>
-    <footer class="header_tagline">interactive, digital, performance art</footer>
+<!-- EVENTS - SINGLE TEMPLATE -->
+<!-- Nav, Social, and Header pic are in baseof -->
 
     <section class="preview_list events">
 
-        <h1>More Upcoming Events</h1>
+        <h1>Upcoming Events</h1>
         {{range sort (where .Site.Pages "Params.type" "events") ".Params.date" | first 3 }}
-        <!-- filter against current date? -->
-        {{ partial "event_preview" . }}
-
+            <!-- change 2018-01-01 to now for current date -->
+            {{ if gt .Params.date "2018-01-01"}}
+                {{ partial "event_preview" . }}
+            {{end}}
         {{end}}
 
     </section>
 
     <section class="copy-primary">
         <h1 class="copy-primary_h1">{{.Title}}</h1>
-        <h2>{{.Params.artist}}</h2>
-        <img src={{.Params.thumbnail}}>
-        <div>
+        <h2 class="copy-primary_h2">{{.Params.artist}}</h2>
+
+        <img src={{.Params.image}}>
+        <section class="event-info">
+        <p class="event_time">{{ dateFormat "Monday, January 2, 2006" .Date }}, {{.Params.time}}</p>
+        <p class="event_venue-address">{{.Params.venue}}</p>
+        <p class="event_venue-address">{{.Params.address}}</p>
+        <a class="facebook-link" href="{{.Params.facebook}}" target="_blank">Facebook event</a>
+        <a class="artist-website"  href="{{.Params.artisturl}}" target="_blank">{{.Params.artistwebsite}}</a>
+        </section>
+        <div class="copy-primary_content">
             {{.Content}}
         </div>
     </section>
 
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {{end}}

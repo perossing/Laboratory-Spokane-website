@@ -1,11 +1,15 @@
 ---
 thumbnail: /images/FPO_Event-Preview_MuralPainting-Raiz_THUMBNAIL.jpg
+image: /images/Raiz_muralconceptpaint-768x1536.jpg
 title: Mural Painting
 artist: Raiz
-date: 2018-08-22T23:26:00.000Z
+date: 2018-08-22
 time: 5pm
+publishdate: 2018-01-01
 venue: Richmond Art Collective
 address: 228 W Spraque Ave
+artistwebsite: pablosomething.tumblr.com
+artisturl: https://pablosomething.tumblr.com/
 facebook: https://www.facebook.com/events/295423461008147/
 type: events
 ---

@@ -1,11 +1,14 @@
 ---
 thumbnail: /images/FPO_CaitlynAu-JulieGautierDownes_THUMBNAIL.jpg
+image: /images/CaitlynAu-JulieGautierDowns_08-18.jpg
 title: ''
 artist: Caitlyn Au and Julie Gautier-Downes
-date: 2018-08-24T23:26:00.000Z
+date: 2018-08-24
 time: 5pm
 venue: Saranac Art Projects
 address: 25 W Main Ave
+artistwebsite: ""
+artisturl: ""
 facebook: https://www.facebook.com/events/316401305596422/
 type: events
 ---
