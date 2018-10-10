@@ -1,0 +1,11 @@
+
+
+{{ define "main"}}
+
+    <h1>Events List Page</h1>
+    {{range .Pages}}
+    <h2>{{.Params.artist}}</h2>
+    <h3>{{.Title}}</h3>
+    {{end}}
+
+{{end}}

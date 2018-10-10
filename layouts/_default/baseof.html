@@ -1,22 +1,19 @@
-<!DOCTYPE html>
+{{ partial "head" . }}
 
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../../static/css/normalize.css">        
-        <link rel="stylesheet" href="../../static/css/styles.css">
-    </head>
-    <body>
-        <div class="container-primary">
-                <div class="spacer"></div>
-            <h1>Laboratory</h1>
+<body>
+
+    <div class="container-primary">
+
+        {{ partial "social" . }}
+
+
+        
+        
+        {{ block "main" . }}
+		{{end}}
 
         </div>
-        
-        <!-- <script src="" async defer></script> -->
-    </body>
+
+</body>
+
 </html>

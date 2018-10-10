@@ -1,0 +1,35 @@
+.grid-single {
+    grid-template-rows: 75px auto;
+    grid-gap: 35px;
+    grid-template-areas:
+        "header header"
+        "header-image header-image"
+        "copy events"
+}
+
+.header_pages {
+    grid-area: header;
+}
+
+.nav_pages {
+    max-width: 1000px;
+}
+
+.header_image-holder {
+    grid-area: header-image;
+    height: 185px;
+    width: calc(100% + 40px);
+    left: -40px;
+    background: #B3B0AB;
+    position: relative;
+    background-image: url("/images/SzymonKaliski.png");
+    background-position-x: 40px;
+    background-position-y: 80%; //specific to current picture
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.tpo_pages {
+    left: 0px;
+    top: 327px;
+}

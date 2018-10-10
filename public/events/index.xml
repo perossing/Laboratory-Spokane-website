@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Events on My New Hugo Site</title>
+    <link>http://example.org/events/</link>
+    <description>Recent content in Events on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Aug 2018 23:26:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/events/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Biological Computing Talk</title>
+      <link>http://example.org/events/2018/biological-computing_szymon-kaliski/</link>
+      <pubDate>Wed, 29 Aug 2018 23:26:00 +0000</pubDate>
+      
+      <guid>http://example.org/events/2018/biological-computing_szymon-kaliski/</guid>
+      <description>Szymon’s work in residence here at Laboratory has been working on tools to “grow out” shapes using biologically-inspired algorithms (boids simulation, algae growth, etc.). The tools (that will be open-sourced later) algorithmically generate 3d objects using signed distance functions, and then convert them into meshes using techniques like marching cubes and surface nets, to walk through the isosurface, and turn it into bunch of water-tight triangles (for possible 3d printing).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/events/2018/caitly-au_julie-gautier-downes/</link>
+      <pubDate>Fri, 24 Aug 2018 23:26:00 +0000</pubDate>
+      
+      <guid>http://example.org/events/2018/caitly-au_julie-gautier-downes/</guid>
+      <description>Opening reception for two new shows! Julie has been working on “Seriation of Distress”, a set of tiny houses modeled on local abandoned properties, and invites you to join in the final part of her work – thoughtless vandalism!
+Meanwhile, Portland-based Caitlyn Au’s “Nondescript” uses architectural materials and shapes to explore our socialized acceptance of ‘necessary violence’ and our acceptance of force to keep order.
+This work is sponsored in part by a grant through Spokane Arts’ SAGA program.</description>
+    </item>
+    
+    <item>
+      <title>Mural Painting</title>
+      <link>http://example.org/events/2018/mural-painting_raiz/</link>
+      <pubDate>Wed, 22 Aug 2018 23:26:00 +0000</pubDate>
+      
+      <guid>http://example.org/events/2018/mural-painting_raiz/</guid>
+      <description>Laboratory artist-in-residence Raiz is working on a mural, and would love your help in making it happen! We’ll be making a large image out of individually-painted index cards, and are looking for people to come out, hang out, and try out some painting. We’ll provide all the paint, tools, and training – you just need to bring yourself, probably in clothes that can get a bit of paint on them. Light refreshments will be available!</description>
+    </item>
+    
+  </channel>
+</rss>

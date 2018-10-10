@@ -1,4 +1,7 @@
 @import 'nav';
+@import 'calendar';
+@import 'previews';
+@import 'single-page';
 
 * {
     -webkit-box-sizing: border-box;
@@ -40,14 +43,28 @@ a {
     max-width: 1500px;
     height: auto;
     min-height: 100vh;
-    margin: 0 auto;
-    padding: 35px 70px 35px 40px;
+    margin: 3px auto 10px auto;
+    padding: 32px 70px 50px 40px;
     position: relative;
 }
 
-.grid-home {
+.grid {
     display: grid;
     grid-template-columns: 60% auto;
+
+    justify-items: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+
+    section {
+        justify-self: stretch;
+        -ms-flex-item-align: stretch;
+            align-self: stretch;
+    }
+}
+
+.grid-home {
     grid-template-rows: auto;
     grid-gap: 35px;
     grid-template-areas:
@@ -55,32 +72,28 @@ a {
         "copy events"
         "copy calendar"
         "copy info";
-    justify-items: start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    
-    section {
-        justify-self: stretch;
-        -ms-flex-item-align: stretch;
-            align-self: stretch;
-        // border: solid 1px pink;
-    }
 }
 
 .social-links {
-    height: 45px;
-    width: 210px;
-    background: #5379BA;
     position: absolute;
     right: 30px;
     top: 25px;
-}
 
+    img {
+        height: 40px;
+        width: auto;
+        margin: 0 6px;
+    }
+
+    img:hover {
+        filter: brightness(1.5) hue-rotate(180deg) ;
+    }
+
+}
 
 /* ===== HEADER SECTION ===== */
 
-.header-home {
+.header {
     grid-area: header;
     position: relative;
     background: #B3B0AB;
@@ -88,10 +101,11 @@ a {
     text-transform: uppercase;
     width: calc(100% + 40px);
     left: -40px;
-
 }
 
-.header_image {
+/* ===== HEADER ===== */
+
+.header-home_image {
     width: calc(100% - 40px);
     margin-left: 40px;
     margin-bottom: -3px;
@@ -164,9 +178,9 @@ a {
 
 .preview_link-more {
     float: right;
-    margin: 5px 10% 5px 0;
-    font-size: 14px;
-}
+    margin: 5px 10% 25px 0;
+    font-size: 15px;
+  }
 
 .events_thumbnail {
     width: 30%;
@@ -198,11 +212,9 @@ a {
 }
 
 
-
-
 /* ===== PRIMARY COPY SECTION ===== */
 
-.copy-primary_home {
+.copy-primary {
     grid-area: copy;
     background: #F7F5F0;
     padding: 30px 45px;
@@ -216,18 +228,6 @@ a {
     margin: 5px 0 30px 0;
 }
 
-/* ===== CALENDAR SECTION ===== */
-
-.calendar-section {
-    grid-area: calendar;
-}
-
-.event-calendar {
-    width: 80%;
-    height: 225px;
-    background: #D9D5D0;
-}
-
 /* ===== INFO SECTION ===== */
 
 .info {
@@ -235,40 +235,4 @@ a {
 }
 
 
-/* ===== MEDIA QUERIES ===== */
 
-@media (max-width: 1700px) {
-    .header_nav {
-        bottom: 0;
-        margin-top: 5px;
-    }
-}
-
-@media (max-width: 1275px) {
-    /* Nav bar needs to change here */
-    /* Drop carousel by around 1175px */
-}
-
-
-@media (max-width: 875px) {
-    .grid-home {
-        grid-template-areas:
-        "header events"
-        "copy events"
-        "calendar calendar"
-        "info info";
-    }
-
-    .events_event-info {
-        font-size: 15px;
-        width: 100%;
-    }
-    
-    .events_event-title {
-        font-size: 18px;
-    }
-    
-    .events_preview_date {
-        margin: 5px 0;
-    }
-}

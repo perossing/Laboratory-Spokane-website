@@ -1,0 +1,73 @@
+{{ define "main"}}
+
+
+<div class="grid grid-single">
+
+    <header class="header">
+        <div class="header_nav-logo-container nav_pages"> <img class="header_logo" src="/images/Laboratory-Logo-WHITE.png" alt="Laboratory text logo">
+            {{ partial "nav" . }}
+        </div>
+
+
+    </header>
+
+    <div class="header_image-holder"></div>
+    <div class="triangle-punch-out tpo_pages"></div>
+    <footer class="header_tagline">interactive, digital, performance art</footer>
+
+    <section class="preview_list events">
+
+        <h1>More Upcoming Events</h1>
+        {{range sort (where .Site.Pages "Params.type" "events") ".Params.date" | first 3 }}
+        <!-- filter against current date? -->
+        {{ partial "event_preview" . }}
+
+        {{end}}
+
+    </section>
+
+    <section class="copy-primary">
+        <h1 class="copy-primary_h1">{{.Title}}</h1>
+        <h2>{{.Params.artist}}</h2>
+        <img src={{.Params.thumbnail}}>
+        <div>
+            {{.Content}}
+        </div>
+    </section>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{end}}

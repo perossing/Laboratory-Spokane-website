@@ -1,5 +1,5 @@
 ---
-thumbnail: images/FPO_Event-Preview_MuralPainting-Raiz_THUMBNAIL.jpg
+thumbnail: /images/FPO_Event-Preview_MuralPainting-Raiz_THUMBNAIL.jpg
 title: Mural Painting
 artist: Raiz
 date: 2018-08-22T23:26:00.000Z

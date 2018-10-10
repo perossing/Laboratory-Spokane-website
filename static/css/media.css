@@ -1,0 +1,80 @@
+/* ===== MEDIA QUERIES ===== */
+
+@media (max-width: 1525px) {
+    /* not quite right method for dropping menu down. test a few px above breakpoint to see */
+    .header_nav {
+        bottom: 0;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .preview_list {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1130px) {
+    /* Nav bar (with shortened wording) needs to change here */
+    .carousel-control {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1025px) {
+    .grid-home {
+        grid-template-areas:
+        "header events"
+        "copy events"
+        "calendar calendar"
+        "info info";
+    }
+
+    .events_event-info {
+        font-size: 15px;
+        width: 100%;
+    }
+    
+    .events_event-title {
+        font-size: 18px;
+    }
+    
+    .events_preview_date {
+        margin: 5px 0;
+    }
+
+    .event-calendar {
+        top: 0;
+        left: 20px;;
+        width: 500px;
+        height: 310px;
+    }
+}
+
+
+@media (max-width: 625px) {
+    .event-calendar {
+        width: 340px;
+        height: 215px;
+    }
+}
+
+
+@media (max-width: 455px) {
+    .event-calendar {
+        left: -20px;
+        width: 250px;
+        height: 155px;
+    }
+    .calendar_month {
+        font-size: 18px;
+        left: 4px;
+    }
+}
+
+@media (max-width: 300px) {
+    .event-calendar {
+       display: none;
+    }
+}

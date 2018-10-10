@@ -1,5 +1,5 @@
 ---
-thumbnail: images/FPO_CaitlynAu-JulieGautierDownes_THUMBNAIL.jpg
+thumbnail: /images/FPO_CaitlynAu-JulieGautierDownes_THUMBNAIL.jpg
 title: ''
 artist: Caitlyn Au and Julie Gautier-Downes
 date: 2018-08-24T23:26:00.000Z

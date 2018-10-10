@@ -1,0 +1,50 @@
+/* ===== EVENT PREVIEW LIST SECTION ===== */
+
+.events {
+    grid-area: events;
+}
+
+.events_preview {
+    // clear: both;
+    // overflow: hidden;
+    border-bottom: solid 1px lightgrey
+}
+
+.events_preview:last-of-type {
+    border: none;
+}
+
+.preview_link-more {
+    float: right;
+    margin: 5px 10% 25px 0;
+    font-size: 15px;
+  }
+
+.events_thumbnail {
+    width: 30%;
+    min-width: 75px;
+    height: auto;
+    // float: left;
+    margin-bottom: 10px;
+}
+
+.events_event-info {
+    display: inline-block;
+    width: 65%;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.events_event-title {
+    font-size: 20px;
+}
+
+.events_preview_date {
+    font-weight: 600;
+    margin: 15px 0 10px 0;
+}
+
+.events_preview_location,
+.events_preview_address {
+    margin: 5px 0;
+}

@@ -1,5 +1,5 @@
 ---
-thumbnail: images/FPO_Biological-Computing_THUMBNAIL.jpg
+thumbnail: /images/FPO_Biological-Computing_THUMBNAIL.jpg
 title: Biological Computing Talk
 artist: Szymon Kaliksi
 date: 2018-08-29T23:26:00.000Z
