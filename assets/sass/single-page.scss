@@ -16,7 +16,7 @@
     max-width: 1000px;
 }
 
-.header_image-holder  {
+.header_image-holder {
     grid-area: header-image;
     height: 185px;
     width: calc(100% + 40px);
@@ -38,13 +38,6 @@
     }
 }
 
-// .header_image-holder, .events {
-//     background-image: url("/images/SzymonKaliski.png");
-// }
-
-// #[different-page-types] {
-//     background-image: url([...different pics...]);
-// }
 
 .tpo_pages {
     left: 0px;
@@ -73,17 +66,45 @@
     p {
         line-height: 20px;
     }
+
     a {
         font-size: 18px;
         display: block;
         margin-top: 15px;
     }
 }
+
 .event_time {
     font-weight: 700;
     font-size: 20px;
 }
+
 .event_venue-address {
     font-size: 18px;
     margin: 5px;
+}
+
+
+.triangle-corner {
+    border-width: 0 250px 85px 0;
+    border-color: transparent #fff transparent transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.link_back_events {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.triangle_back {
+    border-width: 6px 13px 6px 0;
+    border-color:  transparent #004B80 transparent transparent;
+    position: absolute;
+    top: 4px;
+    right: 65px;
 }

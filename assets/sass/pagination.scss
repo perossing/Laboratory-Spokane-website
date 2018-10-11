@@ -1,0 +1,36 @@
+.pagination {
+    // border: solid 1px olivedrab;
+    display: inline-block;
+    color: #004B80;
+    text-transform: lowercase;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+
+
+    div {
+        display: inline-block;
+    }
+
+    a {        
+        letter-spacing: 0.02em;
+    }
+}
+
+.triangle_previous {
+    border-width: 6px 12px 6px 0;
+    border-color:  transparent #004B80 transparent transparent;
+    margin: 0 12px 0 0;
+}
+
+.triangle_next {
+
+    border-width: 6px 0 6px 12px;
+    border-color:  transparent  transparent  transparent #004B80;
+    margin: 0 0 0 12px;
+}
+
+.spacer {
+    margin: 0 10%;
+}

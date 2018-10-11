@@ -2,8 +2,7 @@
 <!-- EVENTS - SINGLE TEMPLATE -->
 <!-- Nav, Social, and Header pic are in baseof -->
 
-    <section class="preview_list events">
-
+    <section class="preview_list events_list">
         <h1>Upcoming Events</h1>
         {{range sort (where .Site.Pages "Params.type" "events") ".Params.date" | first 3 }}
             <!-- change 2018-01-01 to now for current date -->
@@ -17,7 +16,6 @@
     <section class="copy-primary">
         <h1 class="copy-primary_h1">{{.Title}}</h1>
         <h2 class="copy-primary_h2">{{.Params.artist}}</h2>
-
         <img src={{.Params.image}}>
         <section class="event-info">
         <p class="event_time">{{ dateFormat "Monday, January 2, 2006" .Date }}, {{.Params.time}}</p>
@@ -29,6 +27,15 @@
         <div class="copy-primary_content">
             {{.Content}}
         </div>
+
+        <div class="triangle triangle-corner"></div>
+        <a class="link_back_events" href="/events"><div class="triangle triangle_back"></div>EVENTS</a>
+
+        <nav class="pagination">
+            <a><div class="triangle triangle_previous"></div>previous</a>
+            <div class="spacer"></div>
+            <a>next<div class="triangle triangle_next"></div></a>
+        </nav>
     </section>
 
 </div>

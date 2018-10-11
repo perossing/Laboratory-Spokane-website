@@ -2,6 +2,7 @@
 @import 'calendar';
 @import 'previews';
 @import 'single-page';
+@import 'pagination';
 
 * {
     -webkit-box-sizing: border-box;
@@ -35,6 +36,12 @@ h5 {
 a {
     color: #004B80;
     text-decoration: underline;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
 }
 
 .container-primary {
@@ -113,9 +120,6 @@ a {
 }
 
 .triangle-punch-out {
-    width: 0;
-    height: 0;
-    border-style: solid;
     border-width: 18px 42px 0 0;
     border-color: #B3B0AB transparent transparent transparent;
     position: absolute;
@@ -131,16 +135,10 @@ a {
     font-weight: 400;
     letter-spacing: 0.05em;
     color: #B3B3B3;
-    padding: 8px 0 0 15px;
+    padding: 9px 0 0 15px;
     background-image: -webkit-gradient(linear, left top, right top, from(#1B1F26), color-stop(60%, rgba(0, 0, 0, 0)));
     background-image: linear-gradient(to right, #1B1F26, rgba(0, 0, 0, 0) 60%);
     text-transform: uppercase;
-}
-
-footer {
-    .tagline {
-        padding-top: 3px;
-    }
 }
 
 .carousel-control {
@@ -171,61 +169,12 @@ footer {
 } */
 
 
-/* ===== EVENT PREVIEW LIST SECTION ===== */
-
-.events_list {
-    grid-area: events;
-}
-
-.events_preview {
-    clear: both;
-    overflow: hidden;
-    margin-bottom: 15px;
-    border-bottom: solid 1px lightgrey
-}
-
-.preview_link-more {
-    float: right;
-    margin: 5px 10% 25px 0;
-    font-size: 15px;
-}
-
-.events_thumbnail {
-    width: 30%;
-    min-width: 75px;
-    height: auto;
-    float: left;
-    margin-bottom: 10px;
-}
-
-.events_event-info {
-    display: inline-block;
-    width: 65%;
-    margin-left: 10px;
-    font-size: 16px;
-}
-
-.events_event-title {
-    font-size: 20px;
-}
-
-.events_preview_date {
-    font-weight: 600;
-    margin: 15px 0 10px 0;
-}
-
-.events_preview_location,
-.events_preview_address {
-    margin: 5px 0;
-}
-
-
 /* ===== PRIMARY COPY SECTION ===== */
 
 .copy-primary {
     grid-area: copy;
     background: #F7F5F0;
-    padding: 30px 45px 60px 45px;
+    padding: 30px 45px 50px 45px;
     position: relative;
 
     h1, h2 {
@@ -242,10 +191,9 @@ footer {
         position: relative;
         top: 10px;
         font-size: 18px;
-        line-height: 24px;
+        line-height: 1.5;
     }
 }
-
 
 
 /* ===== INFO SECTION ===== */

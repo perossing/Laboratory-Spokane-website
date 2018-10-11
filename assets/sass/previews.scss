@@ -1,13 +1,14 @@
 /* ===== EVENT PREVIEW LIST SECTION ===== */
 
-.events {
+.events_list {
     grid-area: events;
 }
 
 .events_preview {
-    // clear: both;
-    // overflow: hidden;
-    border-bottom: solid 1px lightgrey
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-bottom: solid 1px #666;
 }
 
 .events_preview:last-of-type {
@@ -18,13 +19,13 @@
     float: right;
     margin: 5px 10% 25px 0;
     font-size: 15px;
-  }
+}
 
 .events_thumbnail {
     width: 30%;
     min-width: 75px;
     height: auto;
-    // float: left;
+    float: left;
     margin-bottom: 10px;
 }
 
