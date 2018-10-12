@@ -1,11 +1,13 @@
-
-
 {{ define "main"}}
+<!-- EVENTS - LIST TEMPLATE -->
+<!-- Nav, Social, and Header pic are in baseof -->
 
-    <h1>Events List Page</h1>
-    {{range .Pages}}
-    <h2>{{.Params.artist}}</h2>
-    <h3>{{.Title}}</h3>
-    {{end}}
+    <header class="month-header">
+        <h1 class="subhead_type">Events</h1>
+        <h1 class="subhead_date">{{dateFormat "January 2006" now}}</h1>
+    </header>
+
+    <section class="date-picker"></section>
+
 
 {{end}}

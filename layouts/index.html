@@ -30,7 +30,7 @@
 
             <section class="preview_list events_list">
                 <h1>Upcoming Events</h1>
-                {{range sort (where .Site.Pages "Params.type" "events") ".Params.date" | first 3 }}
+                {{range sort (where (where .Site.Pages "Params.type" "events") ".Params.date" "!=" nil) ".Params.date" | first 3 }}
                 <!-- change 2018-01-01 to now for current date -->
                 {{ if gt .Params.date "2018-01-01"}}
                     {{ partial "event_preview" . }}

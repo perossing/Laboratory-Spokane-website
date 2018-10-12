@@ -122,7 +122,7 @@ td {
 
 /* ===== EVENT PREVIEW LIST SECTION ===== */
 .events_list {
-  grid-area: events; }
+  grid-area: sidebar; }
 
 .events_preview {
   clear: both;
@@ -162,13 +162,11 @@ td {
 .events_preview_address {
   margin: 5px 0; }
 
-.grid-single {
+.grid-pages {
+  grid-template-columns: 30% 30% auto;
   grid-template-rows: 75px auto;
   grid-gap: 35px;
-  grid-template-areas: "header header" "header-image header-image" "copy events"; }
-
-.header_pages {
-  grid-area: header; }
+  grid-template-areas: "header header header" "header-image header-image header-image" "primary primary sidebar" "primary primary sidebar"; }
 
 .nav_pages {
   width: 70%;
@@ -193,19 +191,6 @@ td {
 .tpo_pages {
   left: 0px;
   top: 327px; }
-
-.copy-primary h2 {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 24px; }
-
-.copy-primary img {
-  margin: 30px 25px 28px 0;
-  float: left;
-  max-height: 500px;
-  max-width: 400px;
-  width: auto;
-  height: auto; }
 
 .event-info {
   margin-top: 30px; }
@@ -244,6 +229,30 @@ td {
   position: absolute;
   top: 4px;
   right: 65px; }
+
+.copy-primary h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 24px; }
+
+.copy-primary img {
+  margin: 30px 25px 28px 0;
+  float: left;
+  max-height: 500px;
+  max-width: 400px;
+  width: auto;
+  height: auto; }
+
+.month-header {
+  grid-area: primary; }
+  .month-header h1 {
+    display: inline-block; }
+
+.date-picker {
+  grid-area: sidebar;
+  width: 95%;
+  height: 300px;
+  background: lightgrey; }
 
 .pagination {
   display: inline-block;
@@ -316,7 +325,6 @@ a {
 
 .grid {
   display: grid;
-  grid-template-columns: 60% auto;
   justify-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -327,9 +335,10 @@ a {
     align-self: stretch; }
 
 .grid-home {
+  grid-template-columns: 60% auto;
   grid-template-rows: auto;
   grid-gap: 35px;
-  grid-template-areas: "header events" "copy events" "copy calendar" "copy info"; }
+  grid-template-areas: "header sidebar" "primary sidebar" "primary calendar" "primary info"; }
 
 .social-links {
   position: absolute;
@@ -402,7 +411,7 @@ a {
 } */
 /* ===== PRIMARY COPY SECTION ===== */
 .copy-primary {
-  grid-area: copy;
+  grid-area: primary;
   background: #F7F5F0;
   padding: 30px 45px 50px 45px;
   position: relative; }

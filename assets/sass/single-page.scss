@@ -1,15 +1,16 @@
-.grid-single {
+.grid-pages {
+    grid-template-columns: 30% 30% auto;
     grid-template-rows: 75px auto;
     grid-gap: 35px;
     grid-template-areas:
-        "header header"
-        "header-image header-image"
-        "copy events"
+        "header header header"
+        "header-image header-image header-image"
+        "primary primary sidebar"
+        "primary primary sidebar"
 }
 
-.header_pages {
-    grid-area: header;
-}
+// /* ===== APPLIES TO SINGLE AND LIST -- MOVE? ===== */
+
 
 .nav_pages {
     width: 70%;
@@ -38,28 +39,11 @@
     }
 }
 
-
 .tpo_pages {
     left: 0px;
     top: 327px;
 }
 
-.copy-primary {
-    h2 {
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 24px;
-    }
-
-    img {
-        margin: 30px 25px 28px 0;
-        float: left;
-        max-height: 500px;
-        max-width: 400px;
-        width: auto;
-        height: auto;
-    }
-}
 
 .event-info {
     margin-top: 30px;
@@ -84,7 +68,6 @@
     margin: 5px;
 }
 
-
 .triangle-corner {
     border-width: 0 250px 85px 0;
     border-color: transparent #fff transparent transparent;
@@ -108,3 +91,24 @@
     top: 4px;
     right: 65px;
 }
+
+// /* ========== */
+
+
+.copy-primary {
+    h2 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    img {
+        margin: 30px 25px 28px 0;
+        float: left;
+        max-height: 500px;
+        max-width: 400px;
+        width: auto;
+        height: auto;
+    }
+}
+

@@ -4,7 +4,7 @@
 
     <section class="preview_list events_list">
         <h1>Upcoming Events</h1>
-        {{range sort (where .Site.Pages "Params.type" "events") ".Params.date" | first 3 }}
+        {{range sort (where (where .Site.Pages "Params.type" "events") ".Params.date" "!=" nil) ".Params.date" | first 3 }}
             <!-- change 2018-01-01 to now for current date -->
             {{ if gt .Params.date "2018-01-01"}}
                 {{ partial "event_preview" . }}
@@ -20,7 +20,7 @@
         <section class="event-info">
         <p class="event_time">{{ dateFormat "Monday, January 2, 2006" .Date }}, {{.Params.time}}</p>
         <p class="event_venue-address">{{.Params.venue}}</p>
-        <p class="event_venue-address">{{.Params.address}}</p>
+        <p class="event_venue-address">{{- .Params.address}}</p>
         <a class="facebook-link" href="{{.Params.facebook}}" target="_blank">Facebook event</a>
         <a class="artist-website"  href="{{.Params.artisturl}}" target="_blank">{{.Params.artistwebsite}}</a>
         </section>
@@ -32,9 +32,14 @@
         <a class="link_back_events" href="/events"><div class="triangle triangle_back"></div>EVENTS</a>
 
         <nav class="pagination">
-            <a><div class="triangle triangle_previous"></div>previous</a>
+            {{ if .PrevInSection }}
+            <a href="{{.PrevInSection.RelPermalink}}" rel="PrevInSection"><div class="triangle triangle_previous"></div>previous</a>
             <div class="spacer"></div>
-            <a>next<div class="triangle triangle_next"></div></a>
+            {{ end }}
+
+            {{ if .NextInSection }}
+            <a href="{{.NextInSection.RelPermalink}}" rel="NextInSection">next<div class="triangle triangle_next"></div></a>
+            {{ end }}
         </nav>
     </section>
 
