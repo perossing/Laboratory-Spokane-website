@@ -83,13 +83,15 @@ a {
 
 .social-links {
     position: absolute;
-    right: 30px;
-    top: 25px;
+    right: 32px;
+    top: 40px;
+    z-index: 500;
 
     img {
-        height: 40px;
+        height: 38px;
         width: auto;
         margin: 0 6px;
+        // border: solid 1px #bbb;
     }
 
     img:hover {
@@ -134,10 +136,10 @@ a {
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 0.05em;
-    color: #B3B3B3;
+    color: #bfbfbf;
     padding: 9px 0 0 15px;
     background-image: -webkit-gradient(linear, left top, right top, from(#1B1F26), color-stop(60%, rgba(0, 0, 0, 0)));
-    background-image: linear-gradient(to right, #1B1F26, rgba(0, 0, 0, 0) 60%);
+    background-image: linear-gradient(to right, rgba(27, 31, 38, 0.65), rgba(27, 31, 38, 0) 60%);
     text-transform: uppercase;
 }
 

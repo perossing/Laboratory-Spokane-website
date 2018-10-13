@@ -1,4 +1,4 @@
 ---
-type: events
+type: artists
 gridtype: grid-list
 ---

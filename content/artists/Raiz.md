@@ -1,0 +1,4 @@
+---
+name: Raiz
+type: artists
+---

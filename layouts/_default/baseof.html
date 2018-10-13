@@ -5,24 +5,24 @@
     <div class="container-primary">
 
         {{ partial "social"}}
+
         
-        <div class="grid grid-pages">
+        <div class="grid {{.Params.gridtype}}">
 
             <header class="header">
-                <div class="header_nav-logo-container nav_pages"><a href="/"><img class="header_logo" src="/images/Laboratory-Logo-WHITE.png"
+                <div class="header_nav-logo-container"><a href="/"><img class="header_logo" src="/images/Laboratory-Logo-WHITE.png"
                         alt="Laboratory text logo"></a>
                     {{ partial "nav" . }}
                 </div>
 
-            </header>
+                <div class="header_image-holder {{ if .Params.type }}{{.Params.type}}{{end}}">
+                    <footer>
+                        <div class="tagline">interactive, digital, performance art</div>
+                    </footer>
+                </div>
+                <div class="triangle triangle-punch-out tpo_pages"></div>
 
-            
-            <div class="header_image-holder {{ if .Params.type }}{{.Params.type}}{{end}}">
-                <footer>
-                    <div class="tagline">interactive, digital, performance art</div>
-                </footer>
-            </div>
-            <div class="triangle triangle-punch-out tpo_pages"></div>
+            </header>        
 
 
             {{ block "main" . }}

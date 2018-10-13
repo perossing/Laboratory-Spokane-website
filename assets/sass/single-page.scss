@@ -1,30 +1,26 @@
-.grid-pages {
-    grid-template-columns: 30% 30% auto;
-    grid-template-rows: 75px auto;
+.grid-single {
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto;
     grid-gap: 35px;
     grid-template-areas:
-        "header header header"
-        "header-image header-image header-image"
-        "primary primary sidebar"
-        "primary primary sidebar"
+        "header header"
+        "primary sidebar"
 }
 
 // /* ===== APPLIES TO SINGLE AND LIST -- MOVE? ===== */
 
 
-.nav_pages {
-    width: 70%;
-    max-width: 1000px;
-}
+// .nav_pages {
+//     width: 65%;
+//     max-width: 1000px;
+// }
 
 .header_image-holder {
-    grid-area: header-image;
-    height: 185px;
+    grid-area: header;
+    height: 300px;
     width: calc(100% + 40px);
-    left: -40px;
     background: #B3B0AB;
     position: relative;
-
     background-position-x: 40px;
     background-position-y: 80%; //specific to current picture
     background-size: 100%;
@@ -41,7 +37,8 @@
 
 .tpo_pages {
     left: 0px;
-    top: 327px;
+    // top: 327px;
+    bottom: -18px;
 }
 
 

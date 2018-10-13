@@ -1,17 +1,83 @@
-// * {
-//     border: solid 1px magenta;
-// }
+.grid-list {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 35px;
+    grid-template-areas:
+        "header"
+        "subhead "
+        "listings"
+}
 
-.month-header {
-    grid-area: primary;
-    h1 {
+    .subhead_type {
+        max-width: 67%;
+        grid-area: subhead;
         display: inline-block;
+        margin: 0;
+        height: auto;
+        background: #000;
+        color: #fff;
+        font-weight: 600;
+        padding: 5px 10px;
+        background: #00416F;
+        width: 100%;
+    }
+
+
+.listings {
+    width: 100%;
+    // background: #eee;
+    // padding: 5px;
+    margin-top: -15px;
+}
+
+
+.flex-wrapper {
+    // border: solid 1px purple;
+    margin: 0 auto;
+    width: 100%;  
+    grid-area: flex-wrapper;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    align-content: stretch;
+    // justify-content: center;
+    // height: 500px;
+    // padding: 10px;
+
+    h1 {
+        width: 100%;
+        background: #7C95BF;
+        color: #eee;
+        margin: 10px 68% 10px 0;
+        font-weight: 600;
+        padding: 5px 10px;
+        font-size: 22px;
+    }    
+    section {
+        flex: 0 1 auto;
+        width: 31%;
+        padding: 10px;
+        margin: 10px;
     }
 }
 
-.date-picker {
-    grid-area: sidebar;
-    width: 95%;
+.list_intro {
+    background: #F7F5F0;
     height: 300px;
-    background: lightgrey;
+    min-width: 64%;
 }
+
+.date-filter {
+    // height:
+    width: 20%;
+    border: solid 1px lightblue;
+}
+
+.event-listing {
+    height: 450px;
+    background: #F7F5F0;
+}
+
+
+
+

@@ -1,0 +1,18 @@
+{{ define "main"}}
+<!-- EVENTS - LIST TEMPLATE -->
+<!-- Nav, Social, and Header pic are in baseof -->
+
+<h1 class="subhead_type">{{.Params.type}}</h1>
+
+<div class="listings">
+    <div class="flex-wrapper">
+        <section class="list_intro">Event intro text</section>
+        <section class="date-filter">filter</section>
+
+        {{partial "listings" .}}
+        {{partial "listings" .}}
+
+    </div>
+</div>
+
+{{end}}

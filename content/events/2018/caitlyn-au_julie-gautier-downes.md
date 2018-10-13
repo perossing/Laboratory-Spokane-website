@@ -11,6 +11,7 @@ artistwebsite: ""
 artisturl: ""
 facebook: https://www.facebook.com/events/316401305596422/
 type: events
+gridtype: grid-single
 ---
 Opening reception for two new shows! Julie has been working on “Seriation of Distress”, a set of tiny houses modeled on local abandoned properties, and invites you to join in the final part of her work – thoughtless vandalism!
 
