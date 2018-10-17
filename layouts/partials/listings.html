@@ -1,9 +1,24 @@
 
-<!-- add year header w pic? -->
 
-<h1 class="subhead_date">{{dateFormat "January 2006" now}}</h1>
-        <section class="event-listing"></section>
-        <section class="event-listing"></section>
-        <section class="event-listing"></section>
-        <section class="event-listing"></section>
-        <section class="event-listing"></section>
+
+<h1 class="subhead_date">{{dateFormat "January 2006" .Date}}</h1>
+
+{{ range .Pages }}
+
+        {{if eq .Params.type "events"}}
+                <section class="list_block event-listing">
+                        {{partial "event_preview" .}}
+                </section>
+        {{end}}
+
+        {{if eq .Params.type "artists"}}
+                <section class="list_block event-listing">
+                <h1>{{.Params.artist}}</h1>
+                </section>
+        {{end}}
+
+      
+
+
+
+{{end}}

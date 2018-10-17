@@ -1,0 +1,19 @@
+
+        {{ range $value := .Site.Pages.GroupByDate "January 2006" }}
+            
+            <h1 class="subhead_date">{{.Key}}</h1>
+
+            {{ range where .Pages ".Params.type" "events"}}
+
+                    {{if eq .Params.type "events"}}
+                            <section class="list_block event-listing">
+                                    {{partial "event_preview" .}}
+                            </section>
+                    {{end}}
+
+
+            {{end}}
+
+
+
+        {{ end }}

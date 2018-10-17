@@ -1,9 +1,9 @@
 ---
 thumbnail: /images/FPO_Event-Preview_MuralPainting-Raiz_THUMBNAIL.jpg
 image: /images/Raiz_muralconceptpaint-768x1536.jpg
-title: Mural Painting
-artist: Raiz
-date: 2018-08-22
+title: Test Event
+artist: Artist
+date: 2018-07-22
 time: 5 - 8pm
 publishdate: 2018-01-01
 venue: Richmond Art Collective

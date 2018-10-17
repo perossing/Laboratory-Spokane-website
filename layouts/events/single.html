@@ -18,7 +18,7 @@
         <h2 class="copy-primary_h2">{{.Params.artist}}</h2>
         <img src={{.Params.image}}>
         <section class="event-info">
-        <p class="event_time">{{ dateFormat "Monday, January 2, 2006" .Date }}, {{.Params.time}}</p>
+        <p class="event_date">{{ dateFormat "Monday, January 2, 2006" .Date }},<br/>{{.Params.time}}</p>
         <p class="event_venue-address">{{.Params.venue}}</p>
         <p class="event_venue-address">{{- .Params.address}}</p>
         <a class="facebook-link" href="{{.Params.facebook}}" target="_blank">Facebook event</a>

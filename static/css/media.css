@@ -30,11 +30,6 @@
         "calendar calendar"
         "info info";
     }
-
-    .events_event-info {
-        font-size: 15px;
-        width: 100%;
-    }
     
     .events_event-title {
         font-size: 18px;

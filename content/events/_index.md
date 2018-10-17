@@ -1,4 +1,4 @@
 ---
-type: events
+listType: events
 gridtype: grid-list
 ---

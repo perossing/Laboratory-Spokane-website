@@ -4,7 +4,7 @@
   padding: 5px 0 10px 10px;
   position: absolute;
   left: 40px;
-  background-image: linear-gradient(to right, rgba(27, 31, 38, 0.8) 30%, rgba(27, 31, 38, 0) 75%);
+  background: linear-gradient(180deg, rgba(27, 31, 38, 0.8) 20px, rgba(27, 31, 38, 0) 70px);
   z-index: 100; }
 
 .header_logo {
@@ -123,6 +123,7 @@ td {
   grid-area: sidebar; }
 
 .events_preview {
+  font-size: 16px;
   clear: both;
   overflow: hidden;
   margin-bottom: 15px;
@@ -141,13 +142,7 @@ td {
   min-width: 75px;
   height: auto;
   float: left;
-  margin-bottom: 10px; }
-
-.events_event-info {
-  display: inline-block;
-  width: 65%;
-  margin-left: 10px;
-  font-size: 16px; }
+  margin: 0 15px 15px 0; }
 
 .events_event-title {
   font-size: 20px; }
@@ -160,6 +155,29 @@ td {
 .events_preview_address {
   margin: 5px 0; }
 
+.preview_summary {
+  display: none; }
+
+.event-listing .events_thumbnail {
+  width: 40%;
+  margin-top: 5px;
+  margin-bottom: 50px; }
+
+.event-listing .events_event-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px; }
+
+.event-listing .events_preview_date {
+  font-size: 17px;
+  line-height: 1.3; }
+
+.event-listing .preview_summary {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 1.4;
+  margin-top: 10px; }
+
 .grid-single {
   grid-template-columns: 60% auto;
   grid-template-rows: auto;
@@ -169,17 +187,18 @@ td {
 .header_image-holder {
   grid-area: header;
   height: 300px;
-  width: calc(100% + 40px);
+  width: 100%;
   background: #B3B0AB;
   position: relative;
   background-position-x: 40px;
-  background-position-y: 80%;
   background-size: 100%;
   background-repeat: no-repeat; }
   .header_image-holder.events {
-    background-image: url("/images/SzymonKaliski.png"); }
+    background-image: url("/images/SzymonKaliski.png");
+    background-position-y: 80%; }
   .header_image-holder.artists {
-    background-image: url("/images/LizaStark_TheTellTaleQuilt.png"); }
+    background-image: url("/images/LizaStark_TheTellTaleQuilt.png");
+    background-position-y: 20%; }
 
 .tpo_pages {
   left: 0px;
@@ -187,16 +206,15 @@ td {
 
 .event-info {
   margin-top: 30px; }
-  .event-info p {
-    line-height: 20px; }
   .event-info a {
     font-size: 18px;
     display: block;
     margin-top: 15px; }
 
-.event_time {
+.event_date {
   font-weight: 700;
-  font-size: 20px; }
+  font-size: 20px;
+  line-height: 1.3; }
 
 .event_venue-address {
   font-size: 18px;
@@ -240,10 +258,11 @@ td {
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-gap: 35px;
-  grid-template-areas: "header" "subhead " "listings"; }
+  grid-template-areas: "header" "subhead " "listings";
+  width: 100%; }
 
 .subhead_type {
-  max-width: 67%;
+  width: 100%;
   grid-area: subhead;
   display: inline-block;
   margin: 0;
@@ -252,8 +271,16 @@ td {
   color: #fff;
   font-weight: 600;
   padding: 5px 10px;
-  background: #00416F;
-  width: 100%; }
+  background: linear-gradient(to right, #00416F 45%, rgba(0, 65, 111, 0.4)); }
+
+.subhead_date {
+  width: 100%;
+  background: linear-gradient(to right, #7C95BF, rgba(124, 149, 191, 0.2));
+  color: #eee;
+  margin: 10px 0;
+  font-weight: 600;
+  padding: 5px 10px;
+  font-size: 22px; }
 
 .listings {
   width: 100%;
@@ -267,19 +294,12 @@ td {
   flex-flow: row wrap;
   align-items: stretch;
   align-content: stretch; }
-  .flex-wrapper h1 {
-    width: 100%;
-    background: #7C95BF;
-    color: #eee;
-    margin: 10px 68% 10px 0;
-    font-weight: 600;
-    padding: 5px 10px;
-    font-size: 22px; }
-  .flex-wrapper section {
-    flex: 0 1 auto;
-    width: 31%;
-    padding: 10px;
-    margin: 10px; }
+
+.list_block {
+  flex: 0 1 auto;
+  width: 31%;
+  padding: 10px;
+  margin: 10px; }
 
 .list_intro {
   background: #F7F5F0;
@@ -291,6 +311,7 @@ td {
   border: solid 1px lightblue; }
 
 .event-listing {
+  padding: 20px 10px 15px 20px;
   height: 450px;
   background: #F7F5F0; }
 
@@ -325,8 +346,8 @@ td {
   box-sizing: border-box; }
 
 body {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(90%, #B3B0AB), to(#8C8A86));
-  background-image: linear-gradient(to right, #B3B0AB 90%, #8C8A86);
+  background: -webkit-gradient(linear, left top, right top, color-stop(90%, #B3B0AB), to(#8C8A86));
+  background: linear-gradient(to right, #B3B0AB 90%, #8C8A86);
   font-family: 'Cairo', sans-serif;
   color: #000;
   /* padding-top: 3px; */ }
@@ -360,8 +381,9 @@ a {
   height: auto;
   min-height: 100vh;
   margin: 3px auto 10px auto;
-  padding: 32px 70px 50px 40px;
-  position: relative; }
+  padding: 32px 55px 50px 40px;
+  position: relative;
+  left: 5px; }
 
 .grid {
   display: grid;
@@ -425,9 +447,10 @@ a {
   letter-spacing: 0.05em;
   color: #bfbfbf;
   padding: 9px 0 0 15px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#1B1F26), color-stop(60%, rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to right, rgba(27, 31, 38, 0.65), rgba(27, 31, 38, 0) 60%);
-  text-transform: uppercase; }
+  background: -webkit-gradient(linear, left top, right top, from(#1B1F26), color-stop(60%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(to right, rgba(27, 31, 38, 0.65), rgba(27, 31, 38, 0) 60%);
+  text-transform: uppercase;
+  border-top: solid 1px rgba(179, 176, 171, 0.3); }
 
 .carousel-control {
   height: 25px;

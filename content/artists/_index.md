@@ -1,4 +1,4 @@
 ---
-type: artists
+listType: artists
 gridtype: grid-list
 ---

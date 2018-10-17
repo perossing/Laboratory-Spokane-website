@@ -1,4 +1,4 @@
 ---
-name: Raiz
+artist: Raiz
 type: artists
 ---
