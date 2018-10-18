@@ -6,10 +6,10 @@
 
 <div class="listings">
     <div class="flex-wrapper">
-        <section class="list_block list_intro">Event intro text</section>
-        <section class="list_block date-filter">filter</section>
+        <section class="list_intro">{{.Content}}</section>
+        <section class="list_block date-filter">{{partial "date-filter" .}}</section>
 
-        {{partial "listings_tests" . }}
+        {{partial "event_listings" . }}
 
     </div>
 </div>

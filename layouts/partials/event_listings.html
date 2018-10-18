@@ -1,0 +1,24 @@
+
+{{$eventDate := dateFormat "January2006" .Date }}
+
+
+{{ range (where .Site.Pages ".Params.type" "events").GroupByDate "January 2006" }}
+        
+
+
+        <h1 class="subhead_date {{$eventDate}}">{{.Key}}</h1>
+
+        {{ range where .Pages "Type" "events"}}
+
+
+                <section class="list_block event-listing {{$eventDate}}">
+
+                        {{partial "event_preview" .}}
+
+                </section>
+
+
+        {{end}}
+
+
+{{ end }}

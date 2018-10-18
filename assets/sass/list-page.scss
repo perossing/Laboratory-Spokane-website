@@ -37,14 +37,11 @@
 
 .listings {
     width: 100%;
-    // background: #eee;
-    // padding: 5px;
     margin-top: -15px;
 }
 
 
 .flex-wrapper {
-    // border: solid 1px purple;
     margin: 0 auto;
     width: 100%;  
     grid-area: flex-wrapper;
@@ -52,9 +49,6 @@
     flex-flow: row wrap;
     align-items: stretch;
     align-content: stretch;
-    // justify-content: center;
-    // height: 500px;
-    // padding: 10px;   
 }
 
 .list_block {
@@ -65,22 +59,92 @@
 }
 
 .list_intro {
-    background: #F7F5F0;
-    height: 300px;
-    min-width: 64%;
+    height: 200px;
+    width: 64%;
+    padding: 10px 50px 10px 30px;
+    font-size: 18px;
+    line-height: 1.3;
 }
 
 .date-filter {
-    // height:
-    width: 20%;
-    border: solid 1px lightblue;
+    width: 30%;
+
+    form {
+        padding: 10px;
+    }
+
+    .year-select {
+        background: #7C95BF;
+        text-align: center;
+        border: none;
+        margin: 0 5px;
+        height: 25px;
+        width: 100px;
+    }
+
+    .year-select::placeholder {
+        color: #fff;
+    }
+
+    input::-webkit-calendar-picker-indicator {
+        display: none;
+    }
+
+    .filter-buttons {
+        display: block;
+        margin: 10px;
+    }
 }
 
-.event-listing {
+
+.event-listing, .artist-listing {
     padding: 20px 10px 15px 20px;
-    height: 450px;
+    height: auto;
     background: #F7F5F0;
 }
+
+
+.event-listing {
+
+    .events_thumbnail {
+        width: 40%;
+        margin-top: 5px;
+        margin-bottom: 50px;
+    }
+
+    .events_event-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    .events_preview_date {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .preview_summary {
+        display: inline-block;
+        font-size: 17px;
+        line-height: 1.4;
+        margin-top: 10px;
+    }
+
+
+}
+
+
+
+.artist-pic {
+    max-width: 95%;
+}
+
+.artist-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
 
 
 

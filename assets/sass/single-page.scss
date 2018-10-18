@@ -73,12 +73,18 @@
     right: 0;
 }
 
-.link_back_events {
+.link_back {
     position: absolute;
     top: 15px;
     right: 25px;
     font-weight: 600;
     font-size: 16px;
+
+    &:hover {
+        > .triangle_back {
+            border-color:  transparent #7C95BF transparent transparent;
+        }
+    }
 }
 
 .triangle_back {
@@ -99,7 +105,7 @@
         line-height: 24px;
     }
 
-    img {
+    .event-pic {
         margin: 30px 25px 28px 0;
         float: left;
         max-height: 500px;
@@ -107,5 +113,19 @@
         width: auto;
         height: auto;
     }
-}
 
+    .artist-pic {
+        margin-top: 25px;
+    }
+
+    .artist-website {
+        font-size: 18px;
+        white-space: pre;
+        margin: 30px 0;
+
+        a {
+            display: inline;
+        }
+    }
+
+}

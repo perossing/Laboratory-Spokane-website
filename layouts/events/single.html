@@ -4,7 +4,7 @@
 
     <section class="preview_list events_list">
         <h1>Upcoming Events</h1>
-        {{range sort (where (where .Site.Pages "Params.type" "events") ".Params.date" "!=" nil) ".Params.date" | first 3 }}
+        {{range sort (where .Site.Pages ".Params.type" "events")  | first 3 }}
             <!-- change 2018-01-01 to now for current date -->
             {{ if gt .Params.date "2018-01-01"}}
                 {{ partial "event_preview" . }}
@@ -16,31 +16,24 @@
     <section class="copy-primary">
         <h1 class="copy-primary_h1">{{.Title}}</h1>
         <h2 class="copy-primary_h2">{{.Params.artist}}</h2>
-        <img src={{.Params.image}}>
+        <img class="event-pic" src={{.Params.image}}>
         <section class="event-info">
         <p class="event_date">{{ dateFormat "Monday, January 2, 2006" .Date }},<br/>{{.Params.time}}</p>
         <p class="event_venue-address">{{.Params.venue}}</p>
         <p class="event_venue-address">{{- .Params.address}}</p>
         <a class="facebook-link" href="{{.Params.facebook}}" target="_blank">Facebook event</a>
-        <a class="artist-website"  href="{{.Params.artisturl}}" target="_blank">{{.Params.artistwebsite}}</a>
+        <p class="artist-website">artist website:  <a href="{{.Params.artistwebsite}}" target="_blank">{{replaceRE "^https?://([^/]+).*" "$1" .Params.artistwebsite}}</a></p>
+        <a class="artist-bio" href="/artists/{{.Params.artist | urlize }}">artist bio</a></p>
         </section>
         <div class="copy-primary_content">
             {{.Content}}
         </div>
 
         <div class="triangle triangle-corner"></div>
-        <a class="link_back_events" href="/events"><div class="triangle triangle_back"></div>EVENTS</a>
+        <a class="link_back" href="/events"><div class="triangle triangle_back"></div>EVENTS</a>
+        
+        {{ partial "pagination" .}}
 
-        <nav class="pagination">
-            {{ if .PrevInSection }}
-            <a href="{{.PrevInSection.RelPermalink}}" rel="PrevInSection"><div class="triangle triangle_previous"></div>previous</a>
-            <div class="spacer"></div>
-            {{ end }}
-
-            {{ if .NextInSection }}
-            <a href="{{.NextInSection.RelPermalink}}" rel="NextInSection">next<div class="triangle triangle_next"></div></a>
-            {{ end }}
-        </nav>
     </section>
 
 </div>

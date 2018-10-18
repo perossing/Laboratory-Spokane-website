@@ -24,9 +24,10 @@
 
 .header_nav_menu-item {
   position: relative; }
-
-.header_nav_menu-item:hover {
-  color: #deab63; }
+  .header_nav_menu-item:hover {
+    color: #deab63; }
+    .header_nav_menu-item:hover > .triangle_drop-down {
+      border-color: #fff transparent transparent transparent; }
 
 .header_nav div {
   display: inline-block; }
@@ -158,26 +159,6 @@ td {
 .preview_summary {
   display: none; }
 
-.event-listing .events_thumbnail {
-  width: 40%;
-  margin-top: 5px;
-  margin-bottom: 50px; }
-
-.event-listing .events_event-title {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 25px; }
-
-.event-listing .events_preview_date {
-  font-size: 17px;
-  line-height: 1.3; }
-
-.event-listing .preview_summary {
-  display: inline-block;
-  font-size: 17px;
-  line-height: 1.4;
-  margin-top: 10px; }
-
 .grid-single {
   grid-template-columns: 60% auto;
   grid-template-rows: auto;
@@ -227,12 +208,14 @@ td {
   top: 0;
   right: 0; }
 
-.link_back_events {
+.link_back {
   position: absolute;
   top: 15px;
   right: 25px;
   font-weight: 600;
   font-size: 16px; }
+  .link_back:hover > .triangle_back {
+    border-color: transparent #7C95BF transparent transparent; }
 
 .triangle_back {
   border-width: 6px 13px 6px 0;
@@ -246,13 +229,23 @@ td {
   font-weight: 700;
   line-height: 24px; }
 
-.copy-primary img {
+.copy-primary .event-pic {
   margin: 30px 25px 28px 0;
   float: left;
   max-height: 500px;
   max-width: 400px;
   width: auto;
   height: auto; }
+
+.copy-primary .artist-pic {
+  margin-top: 25px; }
+
+.copy-primary .artist-website {
+  font-size: 18px;
+  white-space: pre;
+  margin: 30px 0; }
+  .copy-primary .artist-website a {
+    display: inline; }
 
 .grid-list {
   grid-template-columns: auto;
@@ -302,18 +295,63 @@ td {
   margin: 10px; }
 
 .list_intro {
-  background: #F7F5F0;
-  height: 300px;
-  min-width: 64%; }
+  height: 200px;
+  width: 64%;
+  padding: 10px 50px 10px 30px;
+  font-size: 18px;
+  line-height: 1.3; }
 
 .date-filter {
-  width: 20%;
-  border: solid 1px lightblue; }
+  width: 30%; }
+  .date-filter form {
+    padding: 10px; }
+  .date-filter .year-select {
+    background: #7C95BF;
+    text-align: center;
+    border: none;
+    margin: 0 5px;
+    height: 25px;
+    width: 100px; }
+  .date-filter .year-select::placeholder {
+    color: #fff; }
+  .date-filter input::-webkit-calendar-picker-indicator {
+    display: none; }
+  .date-filter .filter-buttons {
+    display: block;
+    margin: 10px; }
 
-.event-listing {
+.event-listing, .artist-listing {
   padding: 20px 10px 15px 20px;
-  height: 450px;
+  height: auto;
   background: #F7F5F0; }
+
+.event-listing .events_thumbnail {
+  width: 40%;
+  margin-top: 5px;
+  margin-bottom: 50px; }
+
+.event-listing .events_event-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px; }
+
+.event-listing .events_preview_date {
+  font-size: 17px;
+  line-height: 1.3; }
+
+.event-listing .preview_summary {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 1.4;
+  margin-top: 10px; }
+
+.artist-pic {
+  max-width: 95%; }
+
+.artist-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px; }
 
 .pagination {
   display: inline-block;
@@ -327,6 +365,10 @@ td {
     display: inline-block; }
   .pagination a {
     letter-spacing: 0.02em; }
+    .pagination a:hover > .triangle_previous {
+      border-color: transparent #7C95BF transparent transparent; }
+    .pagination a:hover > .triangle_next {
+      border-color: transparent transparent transparent #7C95BF; }
 
 .triangle_previous {
   border-width: 6px 12px 6px 0;
@@ -369,6 +411,9 @@ a {
   color: #004B80;
   text-decoration: underline; }
 
+a:hover {
+  color: #E6AC5C; }
+
 .triangle {
   width: 0;
   height: 0;
@@ -405,8 +450,10 @@ a {
 .social-links {
   position: absolute;
   right: 32px;
-  top: 40px;
-  z-index: 500; }
+  top: 15px;
+  z-index: 500;
+  background: #fff;
+  padding: 5px; }
   .social-links img {
     height: 38px;
     width: auto;

@@ -1,0 +1,10 @@
+<nav class="pagination">
+    {{ if .PrevInSection }}
+    <a href="{{.PrevInSection.RelPermalink}}" rel="PrevInSection"><div class="triangle triangle_previous"></div>previous {{ singularize .Type }}</a>
+    <div class="spacer"></div>
+    {{ end }}
+
+    {{ if .NextInSection }}
+    <a href="{{.NextInSection.RelPermalink}}" rel="NextInSection">next {{ singularize .Type }}<div class="triangle triangle_next"></div></a>
+    {{ end }}
+</nav>

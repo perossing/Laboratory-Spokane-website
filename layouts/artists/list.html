@@ -1,0 +1,17 @@
+{{ define "main"}}
+<!-- ARTISTS - LIST TEMPLATE -->
+<!-- Nav, Social, and Header pic are in baseof -->
+
+<h1 class="subhead_type">{{.Params.listType}}</h1>
+
+<div class="listings">
+    <div class="flex-wrapper">
+        <section class="list_intro">{{.Content}}</section>
+        <section class="list_block date-filter">{{partial "date-filter" .}}</section>
+
+        {{partial "artist_listings" . }}
+
+    </div>
+</div>
+
+{{end}}
