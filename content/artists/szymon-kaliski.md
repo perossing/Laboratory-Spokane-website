@@ -2,7 +2,6 @@
 name: Szymon Kaliski
 type: artists
 listType: artists
-quarter: Summer 2018
 date: 2018-06-01
 picture: /images/artist_pics/SzymonKaliski.png
 artistwebsite:  http://szymonkaliski.com

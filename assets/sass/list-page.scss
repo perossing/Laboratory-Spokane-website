@@ -66,36 +66,6 @@
     line-height: 1.3;
 }
 
-.date-filter {
-    width: 30%;
-
-    form {
-        padding: 10px;
-    }
-
-    .year-select {
-        background: #7C95BF;
-        text-align: center;
-        border: none;
-        margin: 0 5px;
-        height: 25px;
-        width: 100px;
-    }
-
-    .year-select::placeholder {
-        color: #fff;
-    }
-
-    input::-webkit-calendar-picker-indicator {
-        display: none;
-    }
-
-    .filter-buttons {
-        display: block;
-        margin: 10px;
-    }
-}
-
 
 .event-listing, .artist-listing {
     padding: 20px 10px 15px 20px;

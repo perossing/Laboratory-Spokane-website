@@ -19,8 +19,11 @@
 
     <section class="copy-primary">
         <h1 class="copy-primary_h1">{{.Params.name}}</h1>
+        <div class="artist-quarter">QUARTER</div>
         <img class="artist-pic" src={{.Params.picture}}>
+        {{if .Params.artistwebsite}}
         <p class="artist-website">artist website:  <a href="{{.Params.artistwebsite}}" target="_blank">{{replaceRE "^https?://([^/]+).*" "$1" .Params.artistwebsite}}</a></p>
+        {{end}}
         <div class="copy-primary_content">
             {{.Content}}
         </div>

@@ -1,9 +1,10 @@
 ---
-thumbnail: /images/tell-tale-quilt_THUMBNAIL.png
+thumbnail: /images/FPO-LizaStark_TheTellTaleQuilt_THUMBNAIL.png
 image: /images/LizaStark_TheTellTaleQuilt.png
 title: The Tell-Tale Quilt
 artist: Liza Stark
 date: 2018-05-30
+endDate:
 time: 5 - 8pm
 publishdate: 2018-01-01
 venue: Richmond Art Collective

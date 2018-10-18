@@ -1,5 +1,6 @@
 <section class="events_preview">
 
+{{$endDate := .Params.endDate}}
     
     <img class="events_thumbnail" src={{.Params.thumbnail}}>
 
@@ -9,7 +10,14 @@
             {{end}}
             {{.Params.artist}}</a></h2>
         <div>
-        <p class="events_preview_date">{{ dateFormat "Monday, January 2, 2006" .Date }},<br/>{{.Params.time}}</p>
+
+            <p class="events_preview_date">
+                {{ if .Params.endDate }}
+                {{ dateFormat "January 2" .Date }} - {{ dateFormat "January 2, 2006" .Params.endDate }}<br/>{{.Params.time}}
+                {{else}}
+                {{ dateFormat "Monday, January 2, 2006" .Date }}<br/>{{.Params.time}}
+                {{ end }}          
+            </p>
         <p class="events_preview_location">{{.Params.venue}}</p>
         <p class="events_preview_address">{{.Params.address}}</p>
         </div>

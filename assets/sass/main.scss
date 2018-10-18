@@ -4,6 +4,7 @@
 @import 'single-page';
 @import 'list-page';
 @import 'pagination';
+@import 'date-filter';
 
 * {
     -webkit-box-sizing: border-box;
@@ -144,7 +145,7 @@ a:hover {
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 0.05em;
-    color: #bfbfbf;
+    color: #b9bec6;
     padding: 9px 0 0 15px;
     background: -webkit-gradient(linear, left top, right top, from(#1B1F26), color-stop(60%, rgba(0, 0, 0, 0)));
     background: linear-gradient(to right, rgba(27, 31, 38, 0.65), rgba(27, 31, 38, 0) 60%);

@@ -2,7 +2,6 @@
 name: Liza Stark
 type: artists
 listType: artists
-quarter: Summer 2018
 date: 2018-03-01
 picture: /images/artist_pics/LizaStark.jpg
 artistwebsite:  http://thesoftcircuiteer.net/

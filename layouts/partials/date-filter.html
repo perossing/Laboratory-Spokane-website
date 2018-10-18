@@ -1,19 +1,6 @@
 
-<h3>select a time period to filter {{.Type | singularize}} listings:</h3>
-
-<!-- <form>    
-    <input list="quarters" name="quarters" placeholder="select time period">
-        <datalist id="quarters">
-            {{ range (where .Site.Pages ".Params.type" "events").GroupByDate "January 2006" }}
-            <option value="{{.Key}}"></option>
-            {{end}}
-        </datalist>
-    <input type="submit" value="filter">
-    <input type="reset" value="show all">
-</form> -->
-
-
 <form> 
+        <p>Select a time period to filter {{.Type | singularize}} listings:</p>
         {{ range (where .Site.Pages ".Params.type" "events").GroupByDate "2006" }}   
         <input class="year-select" list="quarters" name="quarters" placeholder="{{.Key}}">
             <datalist id="quarters">
@@ -23,7 +10,9 @@
                     <option value="Winter">
             </datalist>
             {{end}}
-        <input class="filter-buttons" type="submit" value="filter">
-        <input class="filter-buttons" type="reset" value="show all">
-    </form>
+        <div>
+        <!-- <input class="filter-buttons" type="submit" value="filter"> -->
+        <input class="filter-buttons" type="reset" value="clear filter">
+        </div>
+</form>
 

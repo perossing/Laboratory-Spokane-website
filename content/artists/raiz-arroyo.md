@@ -2,7 +2,6 @@
 name: Raiz Arroyo
 type: artists
 listType: artists
-quarter: Summer 2018
 date: 2018-06-01
 picture: /images/artist_pics/RaizArroyo.jpg
 artistwebsite: https://pablosomething.tumblr.com/
