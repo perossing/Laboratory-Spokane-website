@@ -1,0 +1,27 @@
+{{ define "main"}}
+<!-- RESIDENCY - LIST TEMPLATE (Design follows Single layout.  Single and List are the same for residency so "_index.md" can be overview ) -->
+<!-- Nav, Social, and Header pic are in baseof -->
+
+<section class="preview_list events_list">
+        
+
+        <h1>{{.Params.sidebar}}</h1>
+
+        <ul>
+                {{ range sort (where .Site.Pages ".Params.type" "residency") ".Params.order"}}
+                <li>{{.Params.title}}</li>
+                {{end}}
+        </ul>
+
+    
+        </section>
+    
+        <section class="copy-primary">
+            
+            
+            <h1>{{.Params.title}}</h1>
+            <div class="copy-primary_content">{{.Content}}</div>
+            
+        </section>
+
+{{end}}

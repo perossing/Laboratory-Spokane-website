@@ -24,9 +24,7 @@
         {{if .Params.artistwebsite}}
         <p class="artist-website">artist website:  <a href="{{.Params.artistwebsite}}" target="_blank">{{replaceRE "^https?://([^/]+).*" "$1" .Params.artistwebsite}}</a></p>
         {{end}}
-        <div class="copy-primary_content">
-            {{.Content}}
-        </div>
+        <div class="copy-primary_content">{{.Content}}</div>
 
         <div class="triangle triangle-corner"></div>
         <a class="link_back" href="/artists"><div class="triangle triangle_back"></div>ARTISTS</a>
@@ -34,7 +32,5 @@
         {{ partial "pagination" .}}
         
     </section>
-
-</div>
 
 {{end}}

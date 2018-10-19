@@ -183,6 +183,12 @@ td {
   .header_image-holder.artists {
     background-image: url("/images/LizaStark_TheTellTaleQuilt.png");
     background-position-y: 20%; }
+  .header_image-holder.support {
+    background-image: url("/images/SexCakeMonster_SecretsoftheDeep-2.png");
+    background-position-y: 40%; }
+  .header_image-holder.residency {
+    background-image: url("/images/ShuangshuangHuo_InvisibleTerritories.png");
+    background-position-y: 80%; }
 
 .tpo_pages {
   left: 0px;
@@ -233,7 +239,7 @@ td {
   line-height: 24px; }
 
 .copy-primary .event-pic {
-  margin: 30px 25px 28px 0;
+  margin: 30px 25px 40px 0;
   float: left;
   max-height: 500px;
   max-width: 400px;
@@ -249,6 +255,23 @@ td {
   margin: 30px 0; }
   .copy-primary .artist-website a {
     display: inline; }
+
+.donor-logo {
+  max-width: 100px;
+  max-height: 100px;
+  -webkit-vertical-align: middle;
+  vertical-align: middle;
+  margin: 10px 25px 0 0; }
+
+.donor-name {
+  font-size: 22px;
+  font-weight: 600;
+  display: inline-block; }
+
+.contribute-info {
+  width: 80%;
+  font-size: 17px;
+  line-height: 1.3; }
 
 .grid-list {
   grid-template-columns: auto;
@@ -323,19 +346,21 @@ td {
   font-size: 17px;
   line-height: 1.3; }
 
-.event-listing .preview_summary {
-  display: inline-block;
-  font-size: 17px;
-  line-height: 1.4;
-  margin-top: 10px; }
-
-.artist-pic {
-  max-width: 95%; }
+.artist-listing .artist-pic {
+  max-width: 95%;
+  margin-bottom: 10px; }
 
 .artist-name {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 15px; }
+
+.list-page_summary {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 1.4;
+  margin-top: 10px;
+  width: 95%; }
 
 .pagination {
   display: inline-block;
@@ -380,7 +405,7 @@ td {
     background: #A3A09C;
     text-align: center;
     border: none;
-    margin: 0 10px 0 10px;
+    margin-left: 10px;
     height: 27px;
     width: 100px;
     box-shadow: inset 1px 2px 10px #77736e;
@@ -388,7 +413,8 @@ td {
     font-weight: 700;
     padding-bottom: 2px;
     font-size: 18px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-shadow: 1px 2px 10px #77736e; }
   .date-filter .year-select::placeholder {
     color: #fff;
     font-weight: 700;
@@ -421,7 +447,8 @@ datalist option {
   background: #E6AC5C;
   box-shadow: none;
   cursor: pointer;
-  color: #fff; }
+  color: #fff;
+  text-shadow: none; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -574,10 +601,20 @@ a:hover {
   .copy-primary .copy-primary_content {
     clear: both;
     position: relative;
-    top: 10px;
     font-size: 18px;
-    line-height: 1.5; }
+    line-height: 1.4; }
 
 /* ===== INFO SECTION ===== */
 .info {
-  grid-area: info; }
+  grid-area: info;
+  font-size: 17px;
+  width: 90%; }
+  .info hr {
+    margin-bottom: 20px; }
+
+.org-info h1 {
+  display: inline;
+  font-size: 17px; }
+
+.org-info p {
+  display: inline; }

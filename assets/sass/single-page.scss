@@ -35,6 +35,17 @@
         background-image: url("/images/LizaStark_TheTellTaleQuilt.png");
         background-position-y: 20%; //specific to current picture
     }
+
+    &.support {
+        background-image: url("/images/SexCakeMonster_SecretsoftheDeep-2.png");
+        background-position-y: 40%; //specific to current picture
+    }
+
+    &.residency {
+        background-image: url("/images/ShuangshuangHuo_InvisibleTerritories.png");
+        background-position-y: 80%; //specific to current picture
+    }
+
 }
 
 .tpo_pages {
@@ -106,7 +117,7 @@
     }
 
     .event-pic {
-        margin: 30px 25px 28px 0;
+        margin: 30px 25px 40px 0;
         float: left;
         max-height: 500px;
         max-width: 400px;
@@ -129,3 +140,32 @@
     }
 
 }
+
+// ===== CONTRIBUTOR PAGES =====
+
+.donor-logo {
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-vertical-align: middle;
+    vertical-align: middle;
+    margin: 10px 25px 0 0;
+}
+
+.donor-name {
+    font-size: 22px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.contribute-info {
+    width: 80%;
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+
+
+
+
+
+

@@ -68,7 +68,6 @@ a:hover {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: start;
-// border: solid 1px purple;
 
     section {
         justify-self: stretch;
@@ -197,19 +196,35 @@ a:hover {
     h1 {
         font-size: 30px;
     }
-
     .copy-primary_content {
         clear: both;
         position: relative;
-        top: 10px;
         font-size: 18px;
-        line-height: 1.5;
+        line-height: 1.4;
     }
 }
+
 
 
 /* ===== INFO SECTION ===== */
 
 .info {
     grid-area: info;
+    font-size: 17px;
+    width: 90%;
+
+    hr {
+        margin-bottom: 20px;
+    }
+}
+
+.org-info {
+    h1 {
+        display: inline;
+        font-size: 17px;
+    }
+
+    p {
+        display: inline;
+    }
 }

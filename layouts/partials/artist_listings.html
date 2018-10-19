@@ -4,6 +4,7 @@
 
 {{$year := substr .Key (sub (len .Key) 4) 4}}
 
+
         {{if (in .Key  "March")}}
         <h1 class="subhead_date">SPRING {{$year}}</h1>
         {{else if (in .Key  "June")}}
@@ -13,12 +14,12 @@
         {{else if (in .Key  "December")}}
         <h1 class="subhead_date">Winter {{$year}}</h1>
         {{end}}
-        
+
         {{ range where .Pages "Type" "artists"}}
                 <section class="list_block artist-listing">
                         <h2 class="artist-name"><a href="{{.URL}}">{{.Params.name}}</h2></a>
                         <img class="artist-pic" src={{.Params.picture}}>
-                        <p>{{.Summary | truncate 200 }}</p>
+                        <p class="list-page_summary">{{.Summary | truncate 200 }}</p>
                         <a class="preview_link-more" href="{{.URL}}">more</a>
                 </section>
         {{end}}
