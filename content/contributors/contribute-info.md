@@ -1,5 +1,4 @@
 ---
-
 type: contributors
 listType: support
 info:
