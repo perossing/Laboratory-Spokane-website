@@ -4,7 +4,8 @@ gridtype: grid-single
 listType: residency
 type: residency
 image:
-order: 2
+image: /images/residency/stairway.jpg
+order: 5
 ---
 
 Laboratory is open to interactive artists looking to spend 1-3 months working here in Spokane, Washington. We generally consider ‘interactive art’ to be artwork that reacts to people or live data, and we tend to focus on works that directly respond to the viewer, but we’re pretty open to whatever cool ideas you’ve got. We do a lot of projects that don’t involve electronics or programming, but engage viewers in tactile and immersive ways,like Karen Briem’s interactive sculpture work, or Margaret Kearney’s fort-building piece. That said, we also do lots with electrons, and do a lot to help artists gain skills in those areas. So, please, if you’re not sure that your proposal is ‘interactive’, drop us a line and let’s talk!

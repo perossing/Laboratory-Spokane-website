@@ -2,8 +2,8 @@
 listType: residency
 gridtype: grid-single
 title: Overview
-sidebar: more residency info
 type: residency
+image: /images/residency/kitchen.jpg
 order: 1
 ---
 

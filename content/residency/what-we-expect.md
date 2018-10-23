@@ -1,0 +1,18 @@
+---
+title: What We Expect
+gridtype: grid-single
+listType: residency
+type: residency
+image: /images/residency/open-door.jpg
+order: 3
+---
+
+Show up! Get stuff done! We want you to come here and have an opportunity to focus and develop your work. That said, we also want to see some tangible results – we generally expect everyone to have some sort of show at the end of your time here – we work with a number of different spaces and we’ll figure out where fits best once we learn more about your piece, but we work in everything from formal gallery spaces to empty storefronts to street performance. How advanced that show is is kind of up to you – if you’re working on a big piece, we’re probably interested in showing that. Working on a new tool? Come up with some demos that show it off in a pretty way. Focusing on boosting your skills? Take one of your exercises and make it super awesome. Check out the Laboratory website for examples of what sorts of projects we’ve done in the past – we’ve done lots of projection-based work, and lots of performances. For logistical reasons, we usually side more for performance-based or storefront-based things – we don’t have the money for gallery staff, so having long-term public open hours are more difficult for us.
+
+Also, don’t be a jerk. We expect you to be respectful of the space, and especially of your fellow residents. You’ll be sharing a 750 sq.ft. apartment with a stranger for a couple months, so think about if that’s an environment you can thrive in – this isn’t going to be a quiet, solitary retreat-type residency. Also, that stranger may be of a different gender or orientation than you, so that’s something you should be able to handle comfortably and professionally.
+
+We have a partnership with Riverpoint Academy, a local STEM/maker high school, where we go and spend 4 hours a week working at that location. You’ll still be working primarily on your own project, but you’ll be asked to be open to sharing what you’re doing with the students there – we do it so that students can see professionals (that’s you!) using the same tools and skills they’re using in a professional, adult capacity. Plus, it gives you access to the laser cutters, CNC mills, and other great fabrication tools they have.
+
+We also ask that you have the time in your life to take 1-3 months to dedicate to working on your projects mostly undistracted. Of course, you’ll have other things going on in your life, but if you’ve got a bunch of freelance work, or are working like crazy on grant applications, or something like that, this might not be the best time for you to apply for our program. Basically, we expect you to be able to devote yourself full-time to your project here – we’re trying our best to make an environment where you have everything you need to focus on what you’re passionate about, and we want you to be in a place in your life where you can make the most out of it.
+
+We want our residency to be a place for primarily our residents, so our default policy is to not allow for guests to stay longer than 1 day. This is something that is open to negotiation between you and your residency-mate, but we want to have a clear baseline policy. Basically, we’re not really set up for you to come here with your spouse/boyfriend/girlfriend/children, since it’s a tough dynamic if there’s someone else living in the space who is off doing something totally unrelated to the program. However, you’re welcome to apply as a couple if both of you are partners in your artistic practice! Just be sure to show us some of the previous work you’ve done together – we want to make sure you’ve had a history of successful collaboration.

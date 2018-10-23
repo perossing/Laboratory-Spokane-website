@@ -4,7 +4,8 @@ gridtype: grid-single
 listType: residency
 type: residency
 image:
-order: 3
+order: 6
+image: 
 ---
 
 If you live in the Spokane region, can you apply for Laboratory?

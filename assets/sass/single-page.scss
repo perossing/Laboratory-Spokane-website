@@ -41,9 +41,14 @@
         background-position-y: 40%; //specific to current picture
     }
 
+    // &.residency {
+    //     background-image: url("/images/ShuangshuangHuo_InvisibleTerritories.png");
+    //     background-position-y: 80%; //specific to current picture
+    // }
+
     &.residency {
-        background-image: url("/images/ShuangshuangHuo_InvisibleTerritories.png");
-        background-position-y: 80%; //specific to current picture
+        background-image: url("/images/residency/balcony.jpg");
+        background-position-y: 45%; //specific to current picture
     }
 
 }
