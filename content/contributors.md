@@ -1,5 +1,5 @@
 ---
-title: Our Contributors
+title: Our Supporters
 gridtype: grid-single
 listType: support
 type: contributors

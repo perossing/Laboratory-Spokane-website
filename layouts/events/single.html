@@ -19,14 +19,17 @@
         <img class="event-pic" src={{.Params.image}}>
         <section class="event-info">
         <p class="event_date">{{ dateFormat "Monday, January 2, 2006" .Date }},<br/>{{.Params.time}}</p>
-        <p class="event_venue-address">{{.Params.venue}}</p>
-        <p class="event_venue-address">{{- .Params.address}}</p>
+        <p class="event_venue">{{.Params.venue}}</p>
+        <p class="event_address">{{.Params.address}}</p>
         <a class="facebook-link" href="{{.Params.facebook}}" target="_blank">Facebook event</a>
+
+        <a class="artist-bio" href="/artists/{{.Params.artist | urlize }}">artist bio</a></p>
+
         {{if .Params.artistwebsite}}
         <p class="artist-website">artist website:  <a href="{{.Params.artistwebsite}}" target="_blank">{{replaceRE "^https?://([^/]+).*" "$1" .Params.artistwebsite}}</a></p>
         {{end}}
         
-        <a class="artist-bio" href="/artists/{{.Params.artist | urlize }}">artist bio</a></p>
+
 
         </section>
         <div class="copy-primary_content">{{.Content}}</div>
