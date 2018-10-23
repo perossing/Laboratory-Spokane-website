@@ -1,25 +1,25 @@
-<section class="events_preview">
+<section class="projects_preview">
 
 {{$endDate := .Params.endDate}}
     
-    <img class="events_thumbnail" src={{.Params.thumbnail}}>
+    <img class="projects_thumbnail" src={{.Params.thumbnail}}>
 
-        <h2 class="events_event-title"><a href="{{.URL}}">
+        <h2 class="projects_project-title"><a href="{{.URL}}">
             {{if .Params.title }}
             {{.Params.title}},
             {{end}}
             {{.Params.artist}}</a></h2>
         <div>
 
-            <p class="events_preview_date">
+            <p class="projects_preview_date">
                 {{ if .Params.endDate }}
                 {{ dateFormat "January 2" .Date }} - {{ dateFormat "January 2, 2006" .Params.endDate }}<br/>{{.Params.time}}
                 {{else}}
                 {{ dateFormat "Monday, January 2, 2006" .Date }}<br/>{{.Params.time}}
                 {{ end }}          
             </p>
-        <p class="events_preview_location">{{.Params.venue}}</p>
-        <p class="events_preview_address">{{.Params.address}}</p>
+        <p class="projects_preview_location">{{.Params.venue}}</p>
+        <p class="projects_preview_address">{{.Params.address}}</p>
         </div>
 
 

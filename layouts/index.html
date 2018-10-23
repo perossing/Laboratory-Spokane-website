@@ -28,12 +28,12 @@
                 </div>
             </header>
 
-            <section class="preview_list events_list">
-                <h1>Upcoming Events</h1>
-                {{range sort (where (where .Site.Pages "Params.type" "events") ".Params.date" "!=" nil) ".Params.date" | first 3 }}
+            <section class="preview_list projects_list">
+                <h1>Upcoming Projects</h1>
+                {{range sort (where (where .Site.Pages "Params.type" "projects") ".Params.date" "!=" nil) ".Params.date" | first 3 }}
                 <!-- change 2018-01-01 to now for current date -->
                 {{ if gt .Params.date "2018-01-01"}}
-                    {{ partial "event_preview" . }}
+                    {{ partial "project_preview" . }}
                     {{end}}
                 {{end}}
             </section>
@@ -56,7 +56,7 @@
             </section>
 
             <section class="calendar-section">
-                <!-- <figure class="event-calendar"></figure> -->
+                <!-- <figure class="project-calendar"></figure> -->
                 {{ partial "calendar" }}
             </section>
 

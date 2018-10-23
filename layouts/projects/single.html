@@ -1,13 +1,13 @@
 {{ define "main"}}
-<!-- EVENTS - SINGLE TEMPLATE -->
+<!-- PROJECTS - SINGLE TEMPLATE -->
 <!-- Nav, Social, and Header pic are in baseof -->
 
-    <section class="preview_list events_list">
-        <h1>Upcoming Events</h1>
-        {{range sort (where .Site.Pages ".Params.type" "events")  | first 3 }}
+    <section class="preview_list projects_list">
+        <h1>Upcoming Projects</h1>
+        {{range sort (where .Site.Pages ".Params.type" "projects")  | first 3 }}
             <!-- change 2018-01-01 to now for current date -->
             {{ if gt .Params.date "2018-01-01"}}
-                {{ partial "event_preview" . }}
+                {{ partial "project_preview" . }}
             {{end}}
         {{end}}
 
@@ -16,12 +16,12 @@
     <section class="copy-primary">
         <h1 class="copy-primary_h1">{{.Title}}</h1>
         <h2 class="copy-primary_h2">{{.Params.artist}}</h2>
-        <img class="event-pic" src={{.Params.image}}>
-        <section class="event-info">
-        <p class="event_date">{{ dateFormat "Monday, January 2, 2006" .Date }},<br/>{{.Params.time}}</p>
-        <p class="event_venue">{{.Params.venue}}</p>
-        <p class="event_address">{{.Params.address}}</p>
-        <a class="facebook-link" href="{{.Params.facebook}}" target="_blank">Facebook event</a>
+        <img class="project-pic" src={{.Params.image}}>
+        <section class="project-info">
+        <p class="project_date">{{ dateFormat "Monday, January 2, 2006" .Date }},<br/>{{.Params.time}}</p>
+        <p class="project_venue">{{.Params.venue}}</p>
+        <p class="project_address">{{.Params.address}}</p>
+        <a class="facebook-link" href="{{.Params.facebook}}" target="_blank">Facebook project</a>
 
         <a class="artist-bio" href="/artists/{{.Params.artist | urlize }}">artist bio</a></p>
 
@@ -35,7 +35,7 @@
         <div class="copy-primary_content">{{.Content}}</div>
 
         <div class="triangle triangle-corner"></div>
-        <a class="link_back" href="/events"><div class="triangle triangle_back"></div>EVENTS</a>
+        <a class="link_back" href="/projects"><div class="triangle triangle_back"></div>EVENTS</a>
         
         {{ partial "pagination" .}}
 

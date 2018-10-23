@@ -4,12 +4,12 @@
 
 {{$artist := .Params.name}}
 
-    <section class="preview_list events_list">
+    <section class="preview_list projects_list">
         <h1>{{$artist}} at Laboratory</h1>
-        {{range where .Site.Pages ".Params.type" "events" }}
+        {{range where .Site.Pages ".Params.type" "projects" }}
 
                 {{ if eq .Params.artist $artist}}
-                {{ partial "event_preview" . }}
+                {{ partial "project_preview" . }}
                 {{end}}
 
         {{end}}

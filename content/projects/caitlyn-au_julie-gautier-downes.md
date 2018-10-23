@@ -9,9 +9,9 @@ time: 5 - 8pm
 venue: Saranac Art Projects
 address: 25 W Main Ave
 artisturl: ""
-facebook: https://www.facebook.com/events/316401305596422/
-type: events
-listType: events
+facebook: https://www.facebook.com/projects/316401305596422/
+type: projects
+listType: projects
 gridtype: grid-single
 publishdate: 2018-01-01
 ---

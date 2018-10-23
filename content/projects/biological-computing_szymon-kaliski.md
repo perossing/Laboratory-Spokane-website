@@ -8,9 +8,9 @@ time: 6 - 8pm
 venue: Spokane CREATE!
 address: Bay#1, 840 E Spokane Falls Blvd
 artistwebsite: https://szymonkaliski.com/music/
-facebook: https://www.facebook.com/events/1018248568356982/
-type: events
-listType: events
+facebook: https://www.facebook.com/projects/1018248568356982/
+type: projects
+listType: projects
 gridtype: grid-single
 publishdate: 2018-01-01
 ---

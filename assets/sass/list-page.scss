@@ -32,6 +32,7 @@
     font-weight: 600;
     padding: 5px 10px;
     font-size: 22px;
+    clear: both;
 } 
 
 
@@ -43,7 +44,7 @@
 
 .flex-wrapper {
     margin: 0 auto;
-    width: 100%;  
+    width: 100%; 
     grid-area: flex-wrapper;
     display: flex;
     flex-flow: row wrap;
@@ -52,14 +53,11 @@
 }
 
 .list_block {
-    flex: 0 1 auto;
     width: 31%;
-    padding: 10px;
     margin: 10px;
 }
 
 .list_intro {
-    height: 200px;
     width: 64%;
     padding: 10px 50px 10px 30px;
     font-size: 18px;
@@ -67,28 +65,31 @@
 }
 
 
-.event-listing, .artist-listing {
-    padding: 20px 10px 15px 20px;
-    height: auto;
+.project-listing, .artist-listing {
+    padding: 20px 10px 0 20px;
     background: #F7F5F0;
 }
 
 
-.event-listing {
+.project-listing {
 
-    .events_thumbnail {
+    .projects_preview {
+        margin-bottom: 0;
+    }
+
+    .projects_thumbnail {
         width: 40%;
         margin-top: 5px;
         margin-bottom: 50px;
     }
 
-    .events_event-title {
+    .projects_project-title {
         font-size: 26px;
         font-weight: 700;
         margin-bottom: 25px;
     }
 
-    .events_preview_date {
+    .projects_preview_date {
         font-size: 17px;
         line-height: 1.3;
     }
@@ -113,6 +114,7 @@
     font-size: 17px;
     line-height: 1.4;
     margin-top: 10px;
+    margin-bottom: 15px;
     width: 95%;
 }
 

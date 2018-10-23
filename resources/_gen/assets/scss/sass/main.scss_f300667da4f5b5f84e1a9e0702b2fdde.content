@@ -113,7 +113,7 @@
   width: 200px;
   word-spacing: 3px; }
 
-.event-calendar {
+.project-calendar {
   display: block;
   position: relative;
   top: -35px;
@@ -143,40 +143,40 @@ td {
   background: #E6AC5C; }
 
 /* ===== EVENT PREVIEW LIST SECTION ===== */
-.events_list {
+.projects_list {
   grid-area: sidebar; }
 
-.events_preview {
+.projects_preview {
   font-size: 16px;
   clear: both;
   overflow: hidden;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border-bottom: solid 1px #666; }
 
-.events_preview:last-of-type {
+.projects_preview:last-of-type {
   border: none; }
 
 .preview_link-more {
   float: right;
-  margin: 5px 10% 25px 0;
+  margin: 0 10% 25px 0;
   font-size: 15px; }
 
-.events_thumbnail {
+.projects_thumbnail {
   width: 30%;
   min-width: 75px;
   height: auto;
   float: left;
   margin: 0 15px 15px 0; }
 
-.events_event-title {
+.projects_project-title {
   font-size: 20px; }
 
-.events_preview_date {
+.projects_preview_date {
   font-weight: 600;
   margin: 15px 0 10px 0; }
 
-.events_preview_location,
-.events_preview_address {
+.projects_preview_location,
+.projects_preview_address {
   margin: 5px 0; }
 
 .preview_summary {
@@ -197,7 +197,7 @@ td {
   background-position-x: 40px;
   background-size: 100%;
   background-repeat: no-repeat; }
-  .header_image-holder.events {
+  .header_image-holder.projects {
     background-image: url("/images/SzymonKaliski.png");
     background-position-y: 80%; }
   .header_image-holder.artists {
@@ -214,19 +214,19 @@ td {
   left: 0px;
   bottom: -18px; }
 
-.event-info {
+.project-info {
   margin-top: 30px;
   font-size: 18px; }
-  .event-info a {
+  .project-info a {
     display: block;
     margin-top: 15px; }
 
-.event_date {
+.project_date {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.3; }
 
-.event_address {
+.project_address {
   font-size: 18px;
   margin: -12px 0 30px 0; }
 
@@ -258,7 +258,7 @@ td {
   font-weight: 700;
   line-height: 24px; }
 
-.copy-primary .event-pic {
+.copy-primary .project-pic {
   margin: 30px 25px 40px 0;
   float: left;
   max-height: 500px;
@@ -323,7 +323,8 @@ td {
   margin: 10px 0;
   font-weight: 600;
   padding: 5px 10px;
-  font-size: 22px; }
+  font-size: 22px;
+  clear: both; }
 
 .listings {
   width: 100%;
@@ -339,34 +340,33 @@ td {
   align-content: stretch; }
 
 .list_block {
-  flex: 0 1 auto;
   width: 31%;
-  padding: 10px;
   margin: 10px; }
 
 .list_intro {
-  height: 200px;
   width: 64%;
   padding: 10px 50px 10px 30px;
   font-size: 18px;
   line-height: 1.3; }
 
-.event-listing, .artist-listing {
-  padding: 20px 10px 15px 20px;
-  height: auto;
+.project-listing, .artist-listing {
+  padding: 20px 10px 0 20px;
   background: #F7F5F0; }
 
-.event-listing .events_thumbnail {
+.project-listing .projects_preview {
+  margin-bottom: 0; }
+
+.project-listing .projects_thumbnail {
   width: 40%;
   margin-top: 5px;
   margin-bottom: 50px; }
 
-.event-listing .events_event-title {
+.project-listing .projects_project-title {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 25px; }
 
-.event-listing .events_preview_date {
+.project-listing .projects_preview_date {
   font-size: 17px;
   line-height: 1.3; }
 
@@ -384,6 +384,7 @@ td {
   font-size: 17px;
   line-height: 1.4;
   margin-top: 10px;
+  margin-bottom: 15px;
   width: 95%; }
 
 .pagination {
@@ -416,63 +417,85 @@ td {
 .spacer {
   margin: 0 10%; }
 
-.date-filter {
-  width: 30%; }
-  .date-filter form {
-    width: 100%; }
-    .date-filter form p {
-      text-align: center;
-      font-size: 17px;
-      margin: 0 0 12px 0;
-      color: #004B80; }
-  .date-filter .year-select {
+.block_date-filter {
+  width: 29%; }
+  .block_date-filter .date-filter p {
+    width: 100%;
+    font-size: 17px;
+    margin: 0 0 15px 0;
+    color: #004B80;
+    text-align: center; }
+  .block_date-filter .date-filter_flex-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .block_date-filter .year-select {
     background: #A3A09C;
     text-align: center;
     border: none;
-    margin-left: 10px;
-    height: 27px;
-    width: 100px;
+    margin: 7px 5px;
+    height: 30px;
+    width: 110px;
     box-shadow: inset 1px 2px 10px #77736e;
     color: #fff;
     font-weight: 700;
-    padding-bottom: 2px;
+    padding-top: 5px;
     font-size: 18px;
     text-transform: uppercase;
-    text-shadow: 1px 2px 10px #77736e; }
-  .date-filter .year-select::placeholder {
-    color: #fff;
-    font-weight: 700;
-    font-size: 19px; }
-    .date-filter .year-select::placeholder:active {
-      color: #fff; }
-  .date-filter input::-webkit-calendar-picker-indicator {
-    display: none; }
+    text-shadow: 1px 2px 5px #363330;
+    display: inline-block;
+    position: relative; }
+  .block_date-filter .quarters {
+    align-self: flex-end;
+    opacity: 0;
+    width: 110px;
+    margin-top: 2px;
+    padding-top: 30px;
+    position: absolute;
+    top: 0; }
+    .block_date-filter .quarters .opacifier {
+      background: #fff; }
+    .block_date-filter .quarters p {
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      background: #b6b3af;
+      height: 28px;
+      border: solid 1px #fff;
+      margin: 3px 0;
+      padding-top: 4px;
+      text-shadow: 1px 1px 5px #1b1a18;
+      border-bottom: solid 1px #77736e; }
+    .block_date-filter .quarters:hover {
+      opacity: 1;
+      z-index: 100; }
 
-datalist option {
-  background: pink;
-  text-transform: lowercase; }
+.year-select:active, .year-select:hover, .year-select:focus, .filter-buttons:active, .filter-buttons:hover, .filter-buttons:focus, .quarters p:active, .quarters p:hover, .quarters p:focus {
+  background: #E6AC5C;
+  box-shadow: none;
+  cursor: pointer;
+  text-shadow: none; }
 
-.filter-buttons {
-  margin: 10px;
-  padding: 0 0 2px 0;
-  display: block;
-  border: none;
+.year-select:active, .year-select:hover, .year-select:focus {
+  background: #004B80; }
+
+.filter-button {
+  margin: 20px 0 0 -10px;
+  padding: 2px 0;
+  display: inline-block;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 16px;
   cursor: pointer;
   background: #004B80;
   color: #fff;
   height: 27px;
-  width: 100px; }
-  .filter-buttons:first-of-type {
-    margin-top: 20px; }
-
-.year-select:active, .year-select:hover, .year-select:focus, .filter-buttons:active, .filter-buttons:hover, .filter-buttons:focus {
-  background: #E6AC5C;
-  box-shadow: none;
-  cursor: pointer;
-  color: #fff;
-  text-shadow: none; }
+  width: 85px;
+  text-align: center;
+  position: relative;
+  left: 100%; }
 
 .residency_menu h1 {
   font-size: 24px;

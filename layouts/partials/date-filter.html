@@ -1,18 +1,23 @@
-
-<form> 
+<div class="date-filter">
         <p>Select a time period to filter {{.Type | singularize}} listings:</p>
-        {{ range (where .Site.Pages ".Params.type" "events").GroupByDate "2006" }}   
-        <input class="year-select" list="quarters" name="quarters" placeholder="{{.Key}}">
-            <datalist id="quarters">
-                    <option value="Spring">
-                    <option value="Summer">
-                    <option value="Fall">
-                    <option value="Winter">
-            </datalist>
-        {{end}}
-        <div>
-        <!-- <input class="filter-buttons" type="submit" value="filter"> -->
-        <input class="filter-buttons" type="reset" value="clear filter">
-        </div>
-</form>
+        <div class="date-filter_flex-wrapper">
 
+                {{ range (where .Site.Pages ".Params.type" "projects").GroupByDate "2006" }}
+                <div class="year-select">{{.Key}}
+
+                        <div class="quarters">
+                                <div class="opacifier">
+                                        <p>Spring {{.Key}}</p>
+                                        <p>Summer {{.Key}}</p>
+                                        <p>Fall {{.Key}}</p>
+                                        <p>Winter {{.Key}}</p>
+                                </div>
+                        </div>
+                </div>
+                {{end}}
+
+
+        </div>
+
+        <div class="filter-button">clear filter</div>
+</div>

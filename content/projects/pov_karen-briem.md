@@ -10,8 +10,8 @@ venue: Richmond Art Collective
 address: 228 W Sprague Ave
 artistwebsite: 
 facebook: 
-type: events
-listType: events
+type: projects
+listType: projects
 gridtype: grid-single
 publishdate: 2017-09-01
 ---

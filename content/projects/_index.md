@@ -1,5 +1,5 @@
 ---
-listType: events
+listType: projects
 gridtype: grid-list
 ---
 

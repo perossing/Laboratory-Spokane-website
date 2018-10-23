@@ -25,21 +25,21 @@
 @media (max-width: 1025px) {
     .grid-home {
         grid-template-areas:
-        "header events"
-        "copy events"
+        "header projects"
+        "copy projects"
         "calendar calendar"
         "info info";
     }
     
-    .events_event-title {
+    .projects_project-title {
         font-size: 18px;
     }
     
-    .events_preview_date {
+    .projects_preview_date {
         margin: 5px 0;
     }
 
-    .event-calendar {
+    .project-calendar {
         top: 0;
         left: 20px;;
         width: 500px;
@@ -49,7 +49,7 @@
 
 
 @media (max-width: 625px) {
-    .event-calendar {
+    .project-calendar {
         width: 340px;
         height: 215px;
     }
@@ -57,7 +57,7 @@
 
 
 @media (max-width: 455px) {
-    .event-calendar {
+    .project-calendar {
         left: -20px;
         width: 250px;
         height: 155px;
@@ -69,7 +69,7 @@
 }
 
 @media (max-width: 300px) {
-    .event-calendar {
+    .project-calendar {
        display: none;
     }
 }

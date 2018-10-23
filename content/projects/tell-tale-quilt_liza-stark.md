@@ -10,9 +10,9 @@ publishdate: 2018-01-01
 venue: Richmond Art Collective
 address: 228 W Spraque Ave
 artistwebsite: http://thesoftcircuiteer.net/
-facebook: https://www.facebook.com/events/216428449134682/
-type: events
-listType: events
+facebook: https://www.facebook.com/projects/216428449134682/
+type: projects
+listType: projects
 gridtype: grid-single
 publishdate: 2018-01-01
 ---
