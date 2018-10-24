@@ -1,4 +1,6 @@
 
+<!-- FORMATS ARTIST PREVIEWS FOR LIST PAGE -->
+
 {{ range (where .Site.Pages ".Params.type" "artists").GroupByDate "January 2006"}}
 
         {{$year := substr .Key (sub (len .Key) 4) 4}}
