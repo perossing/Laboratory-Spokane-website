@@ -6,7 +6,7 @@
 console.log("=== date filter ===");
 
 let filterItem = document.getElementsByClassName("filter-item");
-let dateSelect = document.querySelector("date-selector");
+let dateSelect = document.getElementsByClassName("date-selector");
 
 
 // let Aug = document.querySelectorAll(".August2018");
