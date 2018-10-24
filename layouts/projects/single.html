@@ -3,14 +3,25 @@
 <!-- Nav, Social, and Header pic are in baseof -->
 
     <section class="preview_list projects_list">
-        <h1>Upcoming Projects</h1>
-        {{range sort (where .Site.Pages ".Params.type" "projects")  | first 3 }}
-            <!-- change 2018-01-01 to now for current date -->
-            {{ if gt .Params.date "2018-01-01"}}
-                {{ partial "project_preview" . }}
-            {{end}}
-        {{end}}
 
+        <h1>Upcoming Projects</h1>
+
+        <!-- Set cutoffDate to current project shown on Single Page -->
+        {{$cutoffDate := time .Params.date}}
+
+        {{ $.Scratch.Set "previewCount" 0}}
+    
+        {{range sort (where (where .Site.Pages "Params.type" "projects") ".Params.date" "!=" nil) ".Params.date" }}
+
+        <!-- Set projectDate to date of project listing in loop -->
+        {{$projectDate := time .Params.date}}
+    
+        {{ if and (gt $projectDate $cutoffDate) (le ($.Scratch.Get "previewCount") 4)}}
+            {{ partial "project_preview" . }}
+            {{ $.Scratch.Set "previewCount" (add ($.Scratch.Get "previewCount") 1)}}
+        {{end}}
+    
+        {{end}}
     </section>
 
     <section class="copy-primary">

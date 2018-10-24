@@ -26,27 +26,25 @@
                     <div class="carousel-control_dot"></div>
                     <div class="carousel-control_dot"></div>
                 </div>
-            </header>
-
-            
+            </header>         
 
             <section class="preview_list projects_list">
 
-                <h1>Upcoming Projects</h1>
-                {{ $.Scratch.Set "previewCount" 0}}       
-      
-                {{range sort (where (where .Site.Pages "Params.type" "projects") ".Params.date" "!=" nil) ".Params.date" }}
+                    <h1>Upcoming Projects</h1>
+                    {{ $.Scratch.Set "previewCount" 0}}
                 
-                <!-- change 2018-01-01 to now for current date (now) OR could make variable than can be edited -->
-                {{$cutoffDate := time "2018-08-01"}}
-                {{$projectDate := time .Params.date}}
-
+                    {{range sort (where (where .Site.Pages "Params.type" "projects") ".Params.date" "!=" nil) ".Params.date" }}
+                
+                    <!-- change 2018-01-01 to now for current date (now) OR make variable that can be edited -->
+                    {{$cutoffDate := time "2018-08-01"}}
+                    {{$projectDate := time .Params.date}}
+                
                     {{ if and (ge $projectDate $cutoffDate) (le ($.Scratch.Get "previewCount") 4)}}
                         {{ partial "project_preview" . }}
                         {{ $.Scratch.Set "previewCount" (add ($.Scratch.Get "previewCount") 1)}}
                     {{end}}
-
-                {{end}}
+                
+                    {{end}}
             </section>
 
             <section class="copy-primary">
