@@ -333,13 +333,13 @@ td {
 .flex-wrapper {
   margin: 0 auto;
   width: 100%;
-  grid-area: flex-wrapper;
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
   align-content: stretch; }
 
 .list_block {
+  flex-basis: auto;
   width: 31%;
   margin: 10px; }
 

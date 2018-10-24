@@ -1,24 +1,24 @@
 
-{{$projectDate := dateFormat "January2006" .Date }}
-
-
 {{ range (where .Site.Pages ".Params.type" "projects").GroupByDate "January 2006" }}
-        
 
 
-        <h1 class="subhead_date {{$projectDate}}">{{.Key}}</h1>
+
+{{ $projectDate := replace .Key " " ""}}
+
+<div class="{{$projectDate}} filter-item">
+
+        <div class="flex-wrapper">
+        <h1 class="subhead_date">{{.Key}}</h1>
 
         {{ range where .Pages "Type" "projects"}}
 
-
-                <section class="list_block project-listing {{$projectDate}}">
-
+                <section class="list_block project-listing">
                         {{partial "project_preview" .}}
-
                 </section>
-
-
         {{end}}
+
+        </div>
+</div>
 
 
 {{ end }}

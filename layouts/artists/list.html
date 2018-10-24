@@ -8,11 +8,9 @@
     <div class="flex-wrapper">
         <section class="list_intro">{{.Content}}</section>
         <section class="list_block block_date-filter">{{partial "date-filter" .}}</section>
-        {{partial "artist_listings" . }}
-
     </div>
-</div>
 
-{{ partial "to-top" .}}
+        {{partial "artist_listings" . }}
+</div>
 
 {{end}}

@@ -6,12 +6,11 @@
 
 <div class="listings">
     <div class="flex-wrapper">
-        <section class="list_intro">{{.Content}}</section>
+        <section class="list_intro">{{.Content}}</section>    
         <section class="list_block block_date-filter">{{partial "date-filter" .}}</section>
+    </div>
 
         {{partial "project_listings" . }}
-
-    </div>
 
 </div>
 
