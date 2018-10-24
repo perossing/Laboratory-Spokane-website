@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 1300px) {
-    .preview_list {
+    .sidebar-previews {
         margin-top: 50px;
     }
 }

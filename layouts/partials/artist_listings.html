@@ -1,7 +1,7 @@
 
 <!-- FORMATS ARTIST PREVIEWS FOR LIST PAGE -->
 
-{{ range (where .Site.Pages ".Params.type" "artists").GroupByDate "January 2006"}}
+{{ range (where .Site.Pages ".Params.type" "artists").GroupByDate "January 2006" }}
 
         {{$year := substr .Key (sub (len .Key) 4) 4}}
 
@@ -24,7 +24,7 @@
                 <div class="flex-wrapper">
                 <h1 class="subhead_date ">{{$season}} {{$year}}</h1>
 
-                {{ range where .Pages "Type" "artists"}}
+                {{ range sort (where .Pages "Type" "artists") ".Params.name" }}
                         <section class="list_block artist-listing">
                                 <h2 class="artist-name"><a href="{{.URL}}">{{.Params.name}}</h2></a>
                                 <img class="artist-pic" src={{.Params.picture}}>

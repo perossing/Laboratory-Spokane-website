@@ -10,7 +10,7 @@
         <div class="flex-wrapper">
         <h1 class="subhead_date">{{.Key}}</h1>
 
-        {{ range where .Pages "Type" "projects"}}
+        {{ range sort (where .Pages "Type" "projects") ".Params.date" }}
                 <section class="list_block project-listing">
                         {{partial "project_preview" .}}
                 </section>

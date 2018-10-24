@@ -4,7 +4,7 @@
 
 {{$artist := .Params.name}}
 
-    <section class="preview_list projects_list">
+    <section class="sidebar-previews projects_list">
         <h1>{{$artist}} at Laboratory</h1>
         {{range where .Site.Pages ".Params.type" "projects" }}
 

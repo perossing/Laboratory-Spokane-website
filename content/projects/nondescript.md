@@ -1,8 +1,8 @@
 ---
 thumbnail: /images/FPO_CaitlynAu-JulieGautierDownes_THUMBNAIL.jpg
 image: /images/CaitlynAu-JulieGautierDowns_08-18.jpg
-title: ''
-artist: Caitlyn Au and Julie Gautier-Downes
+title: 'Nondescript'
+artist: Caitlyn Au
 date: 2018-08-24
 endDate:
 time: 5 - 8pm

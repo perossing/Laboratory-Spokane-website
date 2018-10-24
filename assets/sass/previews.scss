@@ -45,9 +45,11 @@
     margin: 5px 0;
 }
 
-.preview_summary {
+.sidebar-previews {
+    .list-page_summary{
     // Removes summary from display in small previews
     display: none;
+    }
 }
 
 

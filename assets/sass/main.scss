@@ -20,7 +20,6 @@ body {
     /* padding-top: 3px; */
 }
 
-
 h1 {
     font-size: 26px;
     margin: 10px 0 20px 0;
@@ -90,22 +89,31 @@ a:hover {
 
 .social-links {
     position: absolute;
-    right: 32px;
+    right: 20px;
     top: 15px;
     z-index: 500;
     background: #fff;
     padding: 5px;
+    height: 52px;
+    width: 165px;
 
     img {
-        height: 38px;
-        width: auto;
+        height: 36px;
+        width: 36px;
         margin: 0 6px;
-        // border: solid 1px #bbb;
     }
 
     img:hover {
         -webkit-filter: brightness(1.5) hue-rotate(180deg);
         filter: brightness(1.5) hue-rotate(180deg);
+    }
+
+    .triangle {
+        border-width: 0 121px 52px 0;
+        border-color: transparent #fff transparent transparent;
+        position: absolute;
+        top: 0;
+        right: 165px;
     }
 
 }
@@ -145,9 +153,9 @@ a:hover {
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 0.05em;
-    color: #b9bec6;
+    color: #d5d8dd;
     padding: 9px 0 0 15px;
-    background: -webkit-gradient(linear, left top, right top, from(#1B1F26), color-stop(60%, rgba(0, 0, 0, 0)));
+    background: -webkit-gradient(linear, left top, right top, from(rgba(27, 31, 38, 0.65)), color-stop(60%, rgba(27, 31, 38, 0)));
     background: linear-gradient(to right, rgba(27, 31, 38, 0.65), rgba(27, 31, 38, 0) 60%);
     text-transform: uppercase;
     border-top: solid 1px rgba(179, 176, 171, 0.3);
