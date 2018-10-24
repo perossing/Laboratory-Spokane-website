@@ -15,6 +15,8 @@ type: projects
 listType: projects
 gridtype: grid-single
 publishdate: 2018-01-01
+tbd: false
+draft: false
 ---
 Laboratory artist-in-residence Raiz is working on a mural, and would love your help in making it happen! We’ll be making a large image out of individually-painted index cards, and are looking for people to come out, hang out, and try out some painting. We’ll provide all the paint, tools, and training – you just need to bring yourself, probably in clothes that can get a bit of paint on them. Light refreshments will be available!
 

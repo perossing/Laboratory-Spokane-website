@@ -41,14 +41,16 @@
 
     .quarters {
         align-self: flex-end;
-        opacity: 0;
+        // opacity: 0.3;
         width: 110px;
         margin-top: 2px;
         padding-top: 30px;
         position: absolute;
-        top: 0;
+        top: -2px;
+        height: 33px;
+        overflow: hidden;
 
-        .opacifier {
+        .quarters_bg {
             background: #fff;
         }
 
@@ -66,8 +68,9 @@
         }
 
         &:hover {
-            opacity: 1;
+            // opacity: 1;
             z-index: 100;
+            overflow: visible;
         }
     }
 }

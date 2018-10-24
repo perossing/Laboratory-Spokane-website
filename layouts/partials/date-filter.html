@@ -3,19 +3,18 @@
         <div class="date-filter_flex-wrapper">
 
                 {{ range (where .Site.Pages ".Params.type" "projects").GroupByDate "2006" }}
-                <div class="year-select">{{.Key}}
+                <div class="year-select" id="select{{.Key}}">{{.Key}}
 
                         <div class="quarters">
-                                <div class="opacifier">
-                                        <p>Spring {{.Key}}</p>
-                                        <p>Summer {{.Key}}</p>
-                                        <p>Fall {{.Key}}</p>
-                                        <p>Winter {{.Key}}</p>
+                                <div class="quarters_bg">
+                                        <p class="date-selector" id="Spring{{.Key}}">Spring {{.Key}}</p>
+                                        <p class="date-selector" id="Summer{{.Key}}">Summer {{.Key}}</p>
+                                        <p class="date-selector" id="Fall{{.Key}}">Fall {{.Key}}</p>
+                                        <p class="date-selector" id="Winter{{.Key}}">Winter {{.Key}}</p>
                                 </div>
                         </div>
                 </div>
                 {{end}}
-
 
         </div>
 

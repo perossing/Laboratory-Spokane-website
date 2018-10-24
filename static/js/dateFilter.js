@@ -2,7 +2,12 @@
 
 // with button or selection, target elements by class...
 
+
+console.log("=== date filter ===");
+
 let filterItem = document.getElementsByClassName("filter-item");
+let dateSelect = document.querySelector("date-selector");
+
 
 // let Aug = document.querySelectorAll(".August2018");
 
@@ -26,6 +31,3 @@ function useFilter(month) {
         }
     }
 }
-
-
-console.log("=== date filter ===");

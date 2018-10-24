@@ -14,6 +14,8 @@ type: projects
 listType: projects
 gridtype: grid-single
 publishdate: 2017-09-01
+tbd: false
+draft: false
 ---
 Point-of-view is an interactive installation focusing on how perspective plays a role as a vital instrument in our lives. By actively pushing ourselves to step out of our comfort zone and viewing situations from a different point of view we not only gain access to a wider range of emotions but also evoke deeper understanding of our surroundings. The more effort we are willing to put into gaining new perspective the bigger the impact. This installation is a physical exploration of this process.
 

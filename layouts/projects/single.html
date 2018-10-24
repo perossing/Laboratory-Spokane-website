@@ -30,12 +30,21 @@
         <h2 class="copy-primary_h2">{{.Params.artist}}</h2>
         <img class="project-pic" src={{.Params.image}}>
         <section class="project-info">
+
+        {{ if ne .Params.tbd true}}
         <p class="project_date">{{ dateFormat "Monday, January 2, 2006" .Date }},<br/>{{.Params.time}}</p>
+        {{end}}
+
         <p class="project_venue">{{.Params.venue}}</p>
         <p class="project_address">{{.Params.address}}</p>
+
+        {{if .Params.facebook}}
         <a class="facebook-link" href="{{.Params.facebook}}" target="_blank">Facebook project</a>
+        {{end}}
        
+        {{if .Params.artist}}
         <a class="artist-bio" href="/artists/{{.Params.artist | urlize }}">artist bio</a></p>
+        {{end}}
 
         {{if .Params.artistwebsite}}
         <p class="artist-website">artist website:  <a href="{{.Params.artistwebsite}}" target="_blank">{{replaceRE "^https?://([^/]+).*" "$1" .Params.artistwebsite}}</a></p>

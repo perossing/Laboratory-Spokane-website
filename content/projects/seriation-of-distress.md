@@ -14,6 +14,8 @@ type: projects
 listType: projects
 gridtype: grid-single
 publishdate: 2018-01-01
+tbd: false
+draft: false
 ---
 *Opening reception for two new shows!*
 

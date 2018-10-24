@@ -449,13 +449,14 @@ td {
     position: relative; }
   .block_date-filter .quarters {
     align-self: flex-end;
-    opacity: 0;
     width: 110px;
     margin-top: 2px;
     padding-top: 30px;
     position: absolute;
-    top: 0; }
-    .block_date-filter .quarters .opacifier {
+    top: -2px;
+    height: 33px;
+    overflow: hidden; }
+    .block_date-filter .quarters .quarters_bg {
       background: #fff; }
     .block_date-filter .quarters p {
       color: #fff;
@@ -469,8 +470,8 @@ td {
       text-shadow: 1px 1px 5px #1b1a18;
       border-bottom: solid 1px #77736e; }
     .block_date-filter .quarters:hover {
-      opacity: 1;
-      z-index: 100; }
+      z-index: 100;
+      overflow: visible; }
 
 .year-select:active, .year-select:hover, .year-select:focus, .filter-buttons:active, .filter-buttons:hover, .filter-buttons:focus, .quarters p:active, .quarters p:hover, .quarters p:focus {
   background: #E6AC5C;

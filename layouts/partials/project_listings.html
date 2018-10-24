@@ -1,22 +1,27 @@
 
 <!-- FORMATS PROJECT PREVIEWS FOR LIST PAGE -->
 
+
+
 {{ range (where .Site.Pages ".Params.type" "projects").GroupByDate "January 2006" }}
 
 {{ $projectDate := replace .Key " " ""}}
+
+
 
 <div class="{{$projectDate}} filter-item">
 
         <div class="flex-wrapper">
         <h1 class="subhead_date">{{.Key}}</h1>
 
-        {{ range sort (where .Pages "Type" "projects") ".Params.date" }}
+        {{ range sort (where .Pages "Type" "projects") ".Params.date" }}    
                 <section class="list_block project-listing">
                         {{partial "project_preview" .}}
-                </section>
+                </section>         
         {{end}}
-
         </div>
 </div>
+
+
 
 {{ end }}

@@ -15,6 +15,8 @@ type: projects
 listType: projects
 gridtype: grid-single
 publishdate: 2018-01-01
+tbd: false
+draft: false
 ---
 
 We use quilts to memorialize histories and tell stories, to protect us and comfort us. But quilts also lay silently, storing our memories. They know how we sleep, when we get cold, when we cry into them, when we need protection, how many bodies are under or on top of them. What if your quilt could speak? What stories would it share? What would it remember? What would it forget? What happens when the Quilt is the one telling your story?
