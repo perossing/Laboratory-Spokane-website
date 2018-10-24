@@ -8,6 +8,7 @@
 
         <!-- Set cutoffDate to current project shown on Single Page -->
         {{$cutoffDate := time .Params.date}}
+        {{$currentProject := .Params.title}}
 
         {{ $.Scratch.Set "previewCount" 0}}
     
@@ -16,7 +17,7 @@
         <!-- Set projectDate to date of project listing in loop -->
         {{$projectDate := time .Params.date}}
     
-        {{ if and (gt $projectDate $cutoffDate) (le ($.Scratch.Get "previewCount") 4)}}
+        {{ if and (ge $projectDate $cutoffDate) (ne $currentProject .Title) (le ($.Scratch.Get "previewCount") 4) }}
             {{ partial "project_preview" . }}
             {{ $.Scratch.Set "previewCount" (add ($.Scratch.Get "previewCount") 1)}}
         {{end}}

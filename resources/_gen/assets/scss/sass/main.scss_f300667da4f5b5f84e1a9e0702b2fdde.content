@@ -78,8 +78,8 @@
 /* ===== TO-TOP ===== */
 .to-top {
   display: none;
-  width: 72px;
-  height: 72px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: solid 1px rgba(200, 200, 200, 0.6);
   background: rgba(135, 165, 216, 0.45);
@@ -91,9 +91,9 @@
   cursor: pointer;
   box-shadow: 2px 4px 15px rgba(50, 50, 50, 0.25); }
   .to-top .triangle {
-    border-width: 0 15px 26px 15px;
+    border-width: 0 13px 24px 13px;
     border-color: transparent transparent #fff transparent;
-    margin: -8px 0 0 15px; }
+    margin: -7px 0 0 15px; }
 
 /* ===== CALENDAR SECTION ===== */
 .calendar-section {
@@ -603,13 +603,13 @@ a:hover {
   top: 15px;
   z-index: 500;
   background: #fff;
-  padding: 5px;
+  padding-top: 2px;
   height: 52px;
   width: 165px; }
   .social-links img {
-    height: 36px;
-    width: 36px;
-    margin: 0 6px; }
+    height: 34px;
+    width: 34px;
+    margin: 0 12px 0 0; }
   .social-links img:hover {
     -webkit-filter: brightness(1.5) hue-rotate(180deg);
     filter: brightness(1.5) hue-rotate(180deg); }
@@ -693,7 +693,11 @@ a:hover {
     clear: both;
     position: relative;
     font-size: 18px;
-    line-height: 1.4; }
+    line-height: 1.4;
+    font-weight: 400; }
+    .copy-primary .copy-primary_content strong {
+      font-weight: 700;
+      color: #00406D; }
 
 /* ===== INFO SECTION ===== */
 .info {

@@ -93,14 +93,14 @@ a:hover {
     top: 15px;
     z-index: 500;
     background: #fff;
-    padding: 5px;
+    padding-top: 2px;
     height: 52px;
     width: 165px;
 
     img {
-        height: 36px;
-        width: 36px;
-        margin: 0 6px;
+        height: 34px;
+        width: 34px;
+        margin: 0 12px 0 0;
     }
 
     img:hover {
@@ -210,7 +210,14 @@ a:hover {
         position: relative;
         font-size: 18px;
         line-height: 1.4;
+        font-weight: 400;
+
+        strong {
+            font-weight: 700;
+            color: #00406D;
+        }
     }
+
 }
 
 
