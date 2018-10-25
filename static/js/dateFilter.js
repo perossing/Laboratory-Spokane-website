@@ -1,6 +1,6 @@
 /* jshint esversion: 6 */
 
-// (function filterDates() {
+(function filterDates() {
 
     console.log("=== date filter ===");
 
@@ -13,13 +13,16 @@
     let clickedList;
 
     for (let i = 0; i < yearSelect.length; i++) {
+        restoreSeasonList(i);
+    }
+
+    function restoreSeasonList(i) {
         yearSelect[i].onmouseover = (() => {
             if (clickedList) {
                 clickedList.style.display = "block";
             }
         });
     }
-
 
     for (let i = 0; i < dateSelect.length; i++) {
         dateSelectClick(i);
@@ -71,7 +74,6 @@
         }
     });
 
-
     function changeOpacity(i) {
         setTimeout(() => {
             filterItem[i].style.opacity = 1;
@@ -84,4 +86,4 @@
         }, 100);
     }
 
-// })();
+})();

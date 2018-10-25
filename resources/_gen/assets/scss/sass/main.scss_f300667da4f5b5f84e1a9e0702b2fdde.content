@@ -140,7 +140,7 @@ td {
   height: 20%; }
 
 .highlight {
-  background: #E6AC5C; }
+  background: #ECAD55; }
 
 /* ===== EVENT PREVIEW LIST SECTION ===== */
 .projects_list {
@@ -440,7 +440,7 @@ td {
     border: none;
     margin: 7px 5px;
     height: 30px;
-    width: 110px;
+    width: 125px;
     box-shadow: inset 1px 2px 10px #77736e;
     color: #fff;
     font-weight: 700;
@@ -453,7 +453,7 @@ td {
   .block_date-filter .quarters {
     align-self: flex-end;
     opacity: 0;
-    width: 110px;
+    width: 125px;
     margin-top: 2px;
     padding-top: 30px;
     position: absolute;
@@ -507,9 +507,10 @@ td {
   display: none;
   font-size: 20px;
   font-weight: 700;
-  color: orange;
+  color: #E6AC5C;
   text-align: center;
-  margin-top: -26px; }
+  margin-top: -26px;
+  width: 85%; }
 
 .residency_menu p {
   font-size: 18px;
@@ -577,7 +578,7 @@ a {
   text-decoration: underline; }
 
 a:hover {
-  color: #E6AC5C; }
+  color: #ECAD55; }
 
 .triangle {
   width: 0;

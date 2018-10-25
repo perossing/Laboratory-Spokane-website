@@ -1,8 +1,22 @@
 <div class="date-filter">
         <p>Select a time period to filter {{.Type | singularize}} listings:</p>
-        <div class="date-filter_flex-wrapper">
+        <div class="date-filter_flex-wrapper">           
 
-                {{ range (where .Site.Pages ".Params.type" "projects").GroupByDate "2006" }}
+                {{ range (where .Pages ".Params.type" "projects").GroupByDate "2006" }}
+
+                {{$nextYear := add (int (substr .Key (sub (len .Key) 2) 2)) 1}}
+
+                {{ range where .Pages ".Params.type" "projects" }}
+                        {{$.Scratch.Set "janfebProject" false}}
+                        {{$month := dateFormat "January" .Params.date}}
+                                {{if or (eq $month "January") (eq $month "February") }}
+                                {{$.Scratch.Set "janfebProject" true}}
+                                {{end}}
+                {{end}}
+
+                {{$inJanFeb := $.Scratch.Get "janfebProject"}}
+                
+                {{if not $inJanFeb}}
                 <div class="year-select" id="select{{.Key}}">{{.Key}}
 
                         <div class="quarters">
@@ -10,10 +24,12 @@
                                         <p class="date-selector" id="Spring{{.Key}}">Spring {{.Key}}</p>
                                         <p class="date-selector" id="Summer{{.Key}}">Summer {{.Key}}</p>
                                         <p class="date-selector" id="Fall{{.Key}}">Fall {{.Key}}</p>
-                                        <p class="date-selector" id="Winter{{.Key}}">Winter {{.Key}}</p>
+                                        <p class="date-selector" id="Winter{{.Key}}">Winter {{.Key}}/{{$nextYear}}</p>
                                 </div>
                         </div>
                 </div>
+                {{end}}
+
                 {{end}}
 
         </div>
