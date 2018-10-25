@@ -1,3 +1,7 @@
+.filter-item {
+    transition: opacity 0.1s ease-in;
+}
+
 .block_date-filter {
     width: 29%;
 
@@ -41,7 +45,7 @@
 
     .quarters {
         align-self: flex-end;
-        // opacity: 0.3;
+        opacity: 0;
         width: 110px;
         margin-top: 2px;
         padding-top: 30px;
@@ -49,6 +53,7 @@
         top: -2px;
         height: 33px;
         overflow: hidden;
+        transition: opacity 0.2s ease-in;
 
         .quarters_bg {
             background: #fff;
@@ -65,10 +70,11 @@
             padding-top: 4px;
             text-shadow: 1px 1px 5px #1b1a18;
             border-bottom: solid 1px #77736e;
+            
         }
 
         &:hover {
-            // opacity: 1;
+            opacity: 1;
             z-index: 100;
             overflow: visible;
         }
@@ -105,8 +111,18 @@
     width: 85px;
     text-align: center;
     position: relative;
-    // left: 65%;
-    left: 100%;
+    // left: 100%;
+    left: 95%;
+}
+
+.results-status {
+    display: none;
+    // opacity: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: orange;
+    text-align: center;
+    margin-top: -26px;
 }
 
 

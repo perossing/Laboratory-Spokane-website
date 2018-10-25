@@ -2,12 +2,12 @@
 <!-- FORMATS PROJECT PREVIEWS FOR LIST PAGE -->
 
 
-
 {{ range (where .Site.Pages ".Params.type" "projects").GroupByDate "January 2006" }}
 
 {{ $projectDate := replace .Key " " ""}}
 
-
+<!-- Create $season variable from Key for applicable months and add as class to filter item rather than projectDate -->
+<!-- Will need to put Jan-Feb into Winter of previous year -->
 
 <div class="{{$projectDate}} filter-item">
 

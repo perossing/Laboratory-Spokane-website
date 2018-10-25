@@ -416,6 +416,9 @@ td {
 .spacer {
   margin: 0 10%; }
 
+.filter-item {
+  transition: opacity 0.1s ease-in; }
+
 .block_date-filter {
   width: 29%; }
   .block_date-filter .date-filter p {
@@ -449,13 +452,15 @@ td {
     position: relative; }
   .block_date-filter .quarters {
     align-self: flex-end;
+    opacity: 0;
     width: 110px;
     margin-top: 2px;
     padding-top: 30px;
     position: absolute;
     top: -2px;
     height: 33px;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: opacity 0.2s ease-in; }
     .block_date-filter .quarters .quarters_bg {
       background: #fff; }
     .block_date-filter .quarters p {
@@ -470,6 +475,7 @@ td {
       text-shadow: 1px 1px 5px #1b1a18;
       border-bottom: solid 1px #77736e; }
     .block_date-filter .quarters:hover {
+      opacity: 1;
       z-index: 100;
       overflow: visible; }
 
@@ -495,7 +501,15 @@ td {
   width: 85px;
   text-align: center;
   position: relative;
-  left: 100%; }
+  left: 95%; }
+
+.results-status {
+  display: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: orange;
+  text-align: center;
+  margin-top: -26px; }
 
 .residency_menu p {
   font-size: 18px;
