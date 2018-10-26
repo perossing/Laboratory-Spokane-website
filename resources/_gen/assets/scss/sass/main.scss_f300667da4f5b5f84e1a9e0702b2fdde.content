@@ -205,7 +205,7 @@ td {
     background-position-y: 20%; }
   .header_image-holder.support {
     background-image: url("/images/SexCakeMonster_SecretsoftheDeep-2.png");
-    background-position-y: 40%; }
+    background-position-y: 50%; }
   .header_image-holder.residency {
     background-image: url("/images/residency/balcony.jpg");
     background-position-y: 45%; }

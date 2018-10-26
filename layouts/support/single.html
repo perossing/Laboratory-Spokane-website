@@ -6,6 +6,10 @@
     <section class="sidebar-previews">        
 
         <h1>Volunteer info</h1>
+
+        {{range where .Site.Pages ".Params.type" "volunteer"}}
+            <div>{{.Content}}</div>
+        {{end}}
         
     </section>
 

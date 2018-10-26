@@ -4,46 +4,40 @@
 
 {{ range (where .Site.Pages ".Params.type" "projects").GroupByDate "January 2006" }}
 
+        {{$year := substr .Key (sub (len .Key) 4) 4}}
+        {{$prevYear := sub (int $year) 1}}
 
-<!-- Create $season variable from Key for applicable months and add as class to filter item rather than projectDate -->
-<!-- Will need to put Jan-Feb into Winter of previous year -->
+        {{ $.Scratch.Set "season" ""}}
+        {{ $.Scratch.Set "classYear" $year}}
 
-
-{{$year := substr .Key (sub (len .Key) 4) 4}}
-{{$prevYear := sub (int $year) 1}}
-
-{{ $.Scratch.Set "season" ""}}
-{{ $.Scratch.Set "classYear" $year}}
-
-{{if or (in .Key  "March") (in .Key  "April") (in .Key  "May")}}
-        {{ $.Scratch.Set "season" "Spring"}}
-{{else if or (in .Key  "June") (in .Key  "July") (in .Key  "August")}}
-        {{ $.Scratch.Set "season" "Summer"}}
-{{else if or (in .Key  "September") (in .Key  "October") (in .Key  "November")}}
-        {{ $.Scratch.Set "season" "Fall"}}
-{{else if or (in .Key  "December") (in .Key  "January") (in .Key  "February")}}
-        {{ $.Scratch.Set "season" "Winter"}}
-        {{ if or (in .Key  "January") (in .Key  "February")}}
-                {{$.Scratch.Set "classYear" $prevYear}}
-        {{end}}      
-{{end}}
-
-{{$season := $.Scratch.Get "season"}}
-{{$year := $.Scratch.Get "classYear"}}
-
-<div class="{{$season}}{{$year}} filter-item">
-
-        <div class="flex-wrapper">
-        <h1 class="subhead_date">{{.Key}}</h1>
-
-        {{ range sort (where .Pages "Type" "projects") ".Params.date" }}    
-                <section class="list_block project-listing">
-                        {{partial "project_preview" .}}
-                </section>         
+        {{if or (in .Key  "March") (in .Key  "April") (in .Key  "May")}}
+                {{ $.Scratch.Set "season" "Spring"}}
+        {{else if or (in .Key  "June") (in .Key  "July") (in .Key  "August")}}
+                {{ $.Scratch.Set "season" "Summer"}}
+        {{else if or (in .Key  "September") (in .Key  "October") (in .Key  "November")}}
+                {{ $.Scratch.Set "season" "Fall"}}
+        {{else if or (in .Key  "December") (in .Key  "January") (in .Key  "February")}}
+                {{ $.Scratch.Set "season" "Winter"}}
+                {{ if or (in .Key  "January") (in .Key  "February")}}
+                        {{$.Scratch.Set "classYear" $prevYear}}
+                {{end}}      
         {{end}}
+
+        {{$season := $.Scratch.Get "season"}}
+        {{$year := $.Scratch.Get "classYear"}}
+
+        <div class="{{$season}}{{$year}} filter-item">
+
+                <div class="flex-wrapper">
+                <h1 class="subhead_date">{{.Key}}</h1>
+
+                {{ range sort (where .Pages "Type" "projects") ".Params.date" }}    
+                        <section class="list_block project-listing">
+                                {{partial "project_preview" .}}
+                        </section>         
+                {{end}}
+                </div>
+                
         </div>
-</div>
-
-
 
 {{ end }}
