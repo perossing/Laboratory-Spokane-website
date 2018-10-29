@@ -1,0 +1,52 @@
+{{ define "main"}}
+
+<!-- CONTRIBUTE SINGLE PAGE (Design based on Single template, functions as List)-->
+<!-- Nav, Social, and Header pic are in baseof -->
+
+<section class="sidebar-previews support">    
+
+        {{range where .Pages ".Params.type" "volunteer"}} 
+            <h1>{{.Title}}</h1>  
+            <div class="contribute-info">
+                {{.Content}}
+            </div>
+            <img src="{{.Params.image}}" >
+        {{end}}
+
+        <p class="non-profit-info">{{.Site.Data.orgInfo.nonprofit }}</p>
+
+
+</section>
+
+<section class="copy-primary support">
+    
+    <h1>{{.Params.title}}</h1>
+
+
+
+    {{range where .Site.Pages ".Params.section" "primary"}}
+
+    <div class="copy-primary_content donate_container">
+         
+        <div class="donate_info">
+            <h2>{{.Title}}</h2>
+            <div>{{.Content}}</div>
+        </div> 
+        {{ if eq .Params.donorType "monthly"}}
+         {{ partial "donate-form_monthly" .}}
+         {{ else if eq .Params.donorType "one-time"}}
+         {{ partial "donate-form_one-time" .}}
+        {{ end }}
+    </div>
+    {{end}}
+
+
+    
+</section>
+
+{{end}}
+
+
+
+
+

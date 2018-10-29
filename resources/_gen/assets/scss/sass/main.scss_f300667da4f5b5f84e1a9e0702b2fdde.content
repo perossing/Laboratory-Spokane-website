@@ -285,7 +285,8 @@ td {
   max-height: 100px;
   -webkit-vertical-align: middle;
   vertical-align: middle;
-  margin: 10px 25px 0 0; }
+  margin: 0 25px 0 10px;
+  background: #fff; }
 
 .donor-name {
   font-size: 22px;
@@ -543,11 +544,126 @@ td {
   font-weight: 400;
   color: #00406D; }
 
-.residency-copy p {
-  margin: 15px 0 0 0; }
-
 .residency-copy ol {
   padding-left: 15px; }
+
+.support .donate_container {
+  display: table;
+  vertical-align: top; }
+
+.support h2 {
+  text-transform: uppercase;
+  font-size: 24px; }
+
+.support ul {
+  list-style: none;
+  padding-left: 0; }
+
+.support li {
+  margin-bottom: 12px; }
+
+.support img {
+  max-width: 75%;
+  margin: 10px auto; }
+
+.donate_info,
+.donate_form {
+  display: table-cell;
+  width: 50%; }
+  .donate_info form,
+  .donate_form form {
+    margin: 0 auto;
+    position: relative;
+    top: 50px; }
+    .donate_info form.monthly,
+    .donate_form form.monthly {
+      width: 225px; }
+    .donate_info form div,
+    .donate_form form div {
+      margin-top: 7px;
+      width: 100%;
+      height: 40px;
+      background: #A3A09C;
+      color: #fff;
+      font-weight: 600;
+      padding: 5px 0 0 12px;
+      font-size: 20px;
+      border: solid 1px #fff;
+      box-shadow: 0 2px 10px #ceccca; }
+      .donate_info form div:hover, .donate_info form div:active, .donate_info form div:focus,
+      .donate_form form div:hover,
+      .donate_form form div:active,
+      .donate_form form div:focus {
+        background: #E6AC5C; }
+    .donate_info form .donate-focus,
+    .donate_form form .donate-focus {
+      background: #d58921; }
+      .donate_info form .donate-focus:hover, .donate_info form .donate-focus:active, .donate_info form .donate-focus:focus,
+      .donate_form form .donate-focus:hover,
+      .donate_form form .donate-focus:active,
+      .donate_form form .donate-focus:focus {
+        background: #E6AC5C; }
+    .donate_info form .dollar-sign,
+    .donate_form form .dollar-sign {
+      margin-top: 10px;
+      display: inline-block;
+      width: 30px;
+      height: 38px;
+      padding-left: 0;
+      text-align: center;
+      box-shadow: none;
+      position: relative;
+      top: 1px;
+      border: none; }
+    .donate_info form input,
+    .donate_form form input {
+      display: inline-block;
+      width: calc(100% - 30px);
+      height: 38px;
+      border: solid 1px #918d88;
+      padding-left: 10px; }
+      .donate_info form input::placeholder,
+      .donate_form form input::placeholder {
+        color: #A3A09C;
+        font-weight: 400; }
+    .donate_info form button,
+    .donate_form form button {
+      margin-top: 20px;
+      float: right;
+      background: #004B80;
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 15px;
+      height: 28px;
+      padding: 4px 10px;
+      box-shadow: 0 2px 10px #ceccca; }
+      .donate_info form button:hover,
+      .donate_form form button:hover {
+        background: #7C95BF; }
+    .donate_info form.one-time,
+    .donate_form form.one-time {
+      width: 285px; }
+      .donate_info form.one-time div:not(.dollar-sign),
+      .donate_form form.one-time div:not(.dollar-sign) {
+        width: 62px;
+        display: inline-block;
+        padding: 5px 0 0 0;
+        text-align: center;
+        margin-right: 5px; }
+      .donate_info form.one-time input,
+      .donate_form form.one-time input {
+        width: calc(280px - 35px); }
+      .donate_info form.one-time button,
+      .donate_form form.one-time button {
+        margin-right: 10px; }
+
+.non-profit-info {
+  width: 80%;
+  font-size: 16px;
+  margin-top: 30px;
+  line-height: 1.2; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -557,8 +673,7 @@ body {
   background: -webkit-gradient(linear, left top, right top, color-stop(90%, #B3B0AB), to(#8C8A86));
   background: linear-gradient(to right, #B3B0AB 90%, #8C8A86);
   font-family: 'Cairo', sans-serif;
-  color: #000;
-  /* padding-top: 3px; */ }
+  color: #000; }
 
 h1 {
   font-size: 26px;
@@ -710,22 +825,19 @@ a:hover {
     position: relative;
     font-size: 18px;
     line-height: 1.4;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-top: 20px; }
     .copy-primary .copy-primary_content strong {
       font-weight: 700;
       color: #00406D; }
 
-/* ===== INFO SECTION ===== */
-.info {
+/* ===== ORG-INFO SECTION ===== */
+.org-info {
   grid-area: info;
   font-size: 17px;
-  width: 90%; }
-  .info hr {
+  width: 90%;
+  line-height: 1.2; }
+  .org-info hr {
     margin-bottom: 20px; }
-
-.org-info h1 {
-  display: inline;
-  font-size: 17px; }
-
-.org-info p {
-  display: inline; }
+  .org-info p {
+    margin-bottom: 16px; }

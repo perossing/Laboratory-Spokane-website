@@ -1,0 +1,150 @@
+@import 'variables';
+
+.support {
+
+    .donate_container {
+        display: table;
+        vertical-align: top;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+
+    & ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    & li {
+        margin-bottom: 12px;
+    }
+
+    img {
+        max-width: 75%;
+        margin: 10px auto;
+
+        
+    }
+}
+
+.donate_info,
+.donate_form {
+    display: table-cell;
+    width: 50%;
+   
+    form {
+        margin: 0 auto;
+        position: relative;
+        top: 50px;
+
+        &.monthly {
+            width: 225px;
+        }
+
+        div {
+            margin-top: 7px;
+            width: 100%;  
+            height: 40px;
+            background: #A3A09C;
+            color: #fff;
+            font-weight: 600;
+            padding: 5px 0 0 12px;
+            font-size: 20px;
+            border: solid 1px #fff;
+            box-shadow: 0 2px 10px #ceccca;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background: #E6AC5C
+            }
+
+        }
+
+        .donate-focus {
+            background: darken( $orange, 15% );
+
+            &:hover,
+            &:active,
+            &:focus {
+                background: $orange;
+            }           
+        }
+
+        .dollar-sign {
+            margin-top: 10px;
+            display: inline-block;
+            width: 30px;
+            height: 38px;
+            padding-left: 0;
+            text-align: center;
+            box-shadow: none;
+            position: relative;
+            top: 1px;
+            border: none;
+        }
+
+        input {
+            display: inline-block;
+            width: calc(100% - 30px);  
+            height: 38px;
+            border: solid 1px #918d88;
+            padding-left: 10px;
+            
+            &::placeholder {
+                color: #A3A09C;
+                font-weight: 400;
+            }
+        }
+
+        button {
+            margin-top: 20px;
+            float: right;
+            background: $darkblue;
+            color: #fff;
+            border: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 15px;
+            height: 28px;
+            padding: 4px 10px;
+            box-shadow: 0 2px 10px #ceccca;
+
+            &:hover {
+                background: $lightblue;
+            }
+        }
+
+
+        &.one-time {
+            width: 285px;
+            // border: solid 1px blue;
+
+            div:not(.dollar-sign) {
+                width: 62px;
+                display: inline-block;
+                padding: 5px 0 0 0;
+                text-align: center;
+                margin-right: 5px;
+            }
+            input {
+                width: calc(280px - 35px);
+            }
+
+            button {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+.non-profit-info {
+    width: 80%;
+    font-size: 16px;
+    margin-top: 30px;
+    line-height: 1.2;
+}
+

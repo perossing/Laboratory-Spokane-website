@@ -1,6 +1,6 @@
 ---
 name: Spokane Arts
-type: contributors
+type: supporters
 listType: support
 logo: /images/contributors/spokane-arts.png
 website: http://www.spokanearts.org

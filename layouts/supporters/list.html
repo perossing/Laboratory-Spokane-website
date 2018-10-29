@@ -1,0 +1,39 @@
+{{ define "main"}}
+
+<!-- SUPPORTERS PAGE (Design based on Single template, functions as List)-->
+<!-- Nav, Social, and Header pic are in baseof -->
+
+<section class="sidebar-previews">        
+
+        <h1>{{.Title}}</h1>
+
+        {{range where .Site.Pages ".Params.sidebar" "contribute"}}   
+            <div class="contribute-info">
+                {{.Content}}
+            </div>
+        {{end}}
+        <p class="non-profit-info">{{.Site.Data.orgInfo.nonprofit }}</p>
+
+
+</section>
+
+<section class="copy-primary">
+    
+    <h1>Thank you to Our Sponsors</h1>
+
+    <div class="copy-primary_content">
+
+    {{range where .Site.Pages ".Params.type" "supporters"}}
+
+        <div>
+        <img class="donor-logo" src="{{.Params.logo}}">
+        <p class="donor-name"><a href="{{.Params.website}}" target="_blank">{{.Params.name}}</a></p>
+        </div>
+    {{end}}
+
+    </div>
+    
+</section>
+
+{{end}}
+

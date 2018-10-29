@@ -6,6 +6,8 @@
 @import 'pagination';
 @import 'date-filter';
 @import 'residency';
+@import 'support';
+@import 'variables';
 
 * {
     -webkit-box-sizing: border-box;
@@ -17,7 +19,7 @@ body {
     background: linear-gradient(to right, #B3B0AB 90%, #8C8A86);
     font-family: 'Cairo', sans-serif;
     color: #000;
-    /* padding-top: 3px; */
+    // padding-top: 3px;
 }
 
 h1 {
@@ -211,6 +213,8 @@ a:hover {
         font-size: 18px;
         line-height: 1.4;
         font-weight: 400;
+        // border: 1px solid purple;
+        margin-top: 20px;
 
         strong {
             font-weight: 700;
@@ -222,25 +226,19 @@ a:hover {
 
 
 
-/* ===== INFO SECTION ===== */
+/* ===== ORG-INFO SECTION ===== */
 
-.info {
+.org-info {
     grid-area: info;
     font-size: 17px;
     width: 90%;
+    line-height: 1.2;
 
     hr {
         margin-bottom: 20px;
     }
-}
-
-.org-info {
-    h1 {
-        display: inline;
-        font-size: 17px;
-    }
 
     p {
-        display: inline;
+        margin-bottom: 16px;
     }
 }

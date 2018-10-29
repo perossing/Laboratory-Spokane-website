@@ -69,14 +69,14 @@
                 <h3><a href="/projects">See more projects and events</a></h3>
             </section>
 
-            <section class="info">
+            <section class="org-info">
                 <hr>
-                <div class="org-info"><h1>Laboratory</h1><p> is a part of Spokane Interactive Arts, a 501(c)3 non-profit organization.</p></div>
-                <p>Laboratory’s mission is to provide practicing interactive artists with the time, space, and freedom to make awesome stuff.  We offer artists from around the world space to live, space to work, tools, mentorship, and connections to make that happen.</p>
-                <p>Laboratory</p>
-                    <p>228 W Sprague Ave, Unit One</p>
-                    <p>Spokane, WA 99201</p>
-                <p>Laboratory projects are sponsored in part by a grant through Spokane Arts’ SAGA program.</p>
+                <p> {{.Site.Data.orgInfo.nonprofit}}</p>
+                <p>{{.Site.Data.orgInfo.mission}}</p>
+                <p>LABORATORY<br/>
+                {{.Site.Data.orgInfo.address}}<br/>
+                {{.Site.Data.orgInfo.city}}</p>
+                <p>{{.Site.Data.orgInfo.sponsors}}</p>
             </section>
 
 
