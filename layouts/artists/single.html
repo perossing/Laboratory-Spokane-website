@@ -3,6 +3,20 @@
 <!-- Nav, Social, and Header pic are in baseof -->
 
 {{$artist := .Params.name}}
+{{$.Scratch.Set "quarter" (string (dateFormat "January 2006" .Params.date))}}
+{{$year := dateFormat "2006" .Params.date}}
+
+    {{if (in ($.Scratch.Get "quarter") "March")}}
+    {{ $.Scratch.Set "quarter" "Spring"}}
+    {{else if (in ($.Scratch.Get "quarter") "June")}}
+    {{ $.Scratch.Set "quarter" "Summer"}}
+    {{else if (in ($.Scratch.Get "quarter") "September")}}
+    {{ $.Scratch.Set "quarter" "Fall"}}
+    {{else if (in ($.Scratch.Get "quarter") "December")}}
+    {{ $.Scratch.Set "quarter" "Winter"}}        
+    {{end}}
+
+
 
     <section class="sidebar-previews projects_list">
         <h1>{{$artist}} at Laboratory</h1>
@@ -17,9 +31,10 @@
 
     </section>
 
-    <section class="copy-primary">
+    <section class="copy-primary artists">
+
         <h1 class="copy-primary_h1">{{.Params.name}}</h1>
-        <div class="artist-quarter">QUARTER</div>
+        <div class="artist-quarter">{{$.Scratch.Get "quarter"}} {{$year}}</div>
         <img class="artist-pic" src={{.Params.picture}}>
         {{if .Params.artistwebsite}}
         <p class="artist-website">artist website:  <a href="{{.Params.artistwebsite}}" target="_blank">{{replaceRE "^https?://([^/]+).*" "$1" .Params.artistwebsite}}</a></p>

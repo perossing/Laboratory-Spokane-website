@@ -12,8 +12,8 @@
                 {{.Content}}
             </div>
         {{end}}
+        
         <p class="non-profit-info">{{.Site.Data.orgInfo.nonprofit }}</p>
-
 
 </section>
 
@@ -25,11 +25,12 @@
     <div class="copy-primary_content">
 
     {{range where .Site.Pages ".Params.type" "supporters"}}
-
-        <div>
-        <img class="donor-logo" src="{{.Params.logo}}">
-        <p class="donor-name"><a href="{{.Params.website}}" target="_blank">{{.Params.name}}</a></p>
-        </div>
+        {{ if .Params.name}}
+            <div class="donor-listing">
+                <img class="donor-logo" src="{{.Params.logo}}">
+                <p class="donor-name"><a href="{{.Params.website}}" target="_blank">{{.Params.name}}</a></p>
+            </div>
+        {{end}}
     {{end}}
 
     </div>
