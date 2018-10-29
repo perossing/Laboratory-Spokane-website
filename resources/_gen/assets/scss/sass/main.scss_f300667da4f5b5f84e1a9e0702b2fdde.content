@@ -563,21 +563,20 @@ td {
   margin-bottom: 12px; }
 
 .support img {
-  max-width: 75%;
+  max-width: 85%;
   margin: 10px auto; }
 
 .donate_info,
 .donate_form {
-  display: table-cell;
-  width: 50%; }
+  display: table-cell; }
   .donate_info form,
   .donate_form form {
-    margin: 0 auto;
+    margin: 0 0 0 auto;
     position: relative;
     top: 50px; }
     .donate_info form.monthly,
     .donate_form form.monthly {
-      width: 225px; }
+      width: 250px; }
     .donate_info form div,
     .donate_form form div {
       margin-top: 7px;
@@ -658,6 +657,12 @@ td {
       .donate_info form.one-time button,
       .donate_form form.one-time button {
         margin-right: 10px; }
+
+.donate_info {
+  width: 55%; }
+
+.donate_form {
+  width: 45%; }
 
 .non-profit-info {
   width: 80%;

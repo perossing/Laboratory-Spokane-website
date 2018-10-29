@@ -22,25 +22,23 @@
     }
 
     img {
-        max-width: 75%;
-        margin: 10px auto;
-
-        
+        max-width: 85%;
+        margin: 10px auto;      
     }
 }
+
 
 .donate_info,
 .donate_form {
     display: table-cell;
-    width: 50%;
    
     form {
-        margin: 0 auto;
+        margin: 0 0 0 auto;
         position: relative;
         top: 50px;
 
         &.monthly {
-            width: 225px;
+            width: 250px;
         }
 
         div {
@@ -138,6 +136,14 @@
             }
         }
     }
+}
+
+.donate_info {
+    width: 55%;
+}
+
+.donate_form {
+    width: 45%;
 }
 
 
