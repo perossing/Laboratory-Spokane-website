@@ -46,6 +46,11 @@ a:hover {
     color: #ECAD55;
 }
 
+strong {
+    font-weight: 700;
+    color: #00406D;
+}
+
 .triangle {
     width: 0;
     height: 0;
@@ -214,11 +219,6 @@ a:hover {
         line-height: 1.4;
         font-weight: 400;
         margin-top: 20px;
-
-        strong {
-            font-weight: 700;
-            color: #00406D;
-        }
     }
 }
 
