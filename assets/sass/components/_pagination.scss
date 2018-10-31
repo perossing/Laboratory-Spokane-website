@@ -1,6 +1,6 @@
 .pagination {
     display: inline-block;
-    color: #004B80;
+    color: $darkblue;
     text-transform: lowercase;
     margin: 30px auto 0 auto;
     text-align: center;
@@ -17,10 +17,10 @@
 
         &:hover {
             > .triangle_previous {
-                border-color:  transparent #7C95BF transparent transparent;
+                border-color:  transparent $lightblue transparent transparent;
             }
             > .triangle_next {
-                border-color:  transparent transparent transparent #7C95BF ;
+                border-color:  transparent transparent transparent $lightblue ;
             }
         }
     }
@@ -28,13 +28,13 @@
 
 .triangle_previous {
     border-width: 6px 12px 6px 0;
-    border-color:  transparent #004B80 transparent transparent;
+    border-color:  transparent $darkblue transparent transparent;
     margin: 0 12px 0 0;
 }
 
 .triangle_next {
     border-width: 6px 0 6px 12px;
-    border-color:  transparent  transparent  transparent #004B80;
+    border-color:  transparent  transparent  transparent $darkblue;
     margin: 0 0 0 12px;
 }
 

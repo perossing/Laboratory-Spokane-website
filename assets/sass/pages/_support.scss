@@ -45,7 +45,7 @@
             margin-top: 7px;
             width: 100%;  
             height: 40px;
-            background: #A3A09C;
+            background: $taupe;
             color: #fff;
             font-weight: 600;
             padding-left: 12px;
@@ -57,7 +57,7 @@
             &:hover,
             &:active,
             &:focus {
-                background: #E6AC5C
+                background: $orange
             }
 
         }
@@ -93,7 +93,7 @@
             padding-left: 10px;
             
             &::placeholder {
-                color: #A3A09C;
+                color: $taupe;
                 font-weight: 400;
             }
         }

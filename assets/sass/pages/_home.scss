@@ -1,0 +1,28 @@
+.grid-home {
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto;
+    grid-gap: 35px;
+    grid-template-areas:
+        "header sidebar"
+        "primary sidebar"
+        "primary calendar"
+        "primary info";
+}
+
+
+/* ===== ORG-INFO SECTION ===== */
+
+.org-info {
+    grid-area: info;
+    font-size: 17px;
+    width: 90%;
+    line-height: 1.2;
+
+    hr {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,202 @@
+@import 'variables';
+
+.grid-single {
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto;
+    grid-gap: 35px;
+    grid-template-areas:
+        "header header"
+        "primary sidebar";
+}
+
+// /* ===== APPLIES TO SINGLE AND LIST -- MOVE? ===== */
+
+
+// .nav_pages {
+//     width: 65%;
+//     max-width: 1000px;
+// }
+
+.header_image-holder {
+    grid-area: header;
+    height: 300px;
+    width: 100%;
+    background: $taupe;
+    position: relative;
+    background-position-x: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    &.projects {
+        background-image: url("/images/SzymonKaliski.png");
+        background-position-y: 80%; //specific to current picture
+    }
+
+    &.artists {
+        background-image: url("/images/LizaStark_TheTellTaleQuilt.png");
+        background-position-y: 20%; //specific to current picture
+    }
+
+    &.support {
+        background-image: url("/images/SexCakeMonster_SecretsoftheDeep-2.png");
+        background-position-y: 50%; //specific to current picture
+    }
+
+    // &.residency {
+    //     background-image: url("/images/ShuangshuangHuo_InvisibleTerritories.png");
+    //     background-position-y: 80%; //specific to current picture
+    // }
+
+    &.residency {
+        background-image: url("/images/residency/balcony.jpg");
+        background-position-y: 45%; //specific to current picture
+    }
+
+}
+
+.tpo_pages {
+    left: 0px;
+    // top: 327px;
+    bottom: -18px;
+}
+
+
+.project-info {
+    margin-top: 30px;
+    font-size: 18px;
+
+    a {
+        display: block;
+        margin-top: 15px;
+    }
+}
+
+.project_date {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.project_address {
+    font-size: 18px;
+    margin: -12px 0 30px 0;
+}
+
+.triangle-corner {
+    border-width: 0 250px 85px 0;
+    border-color: transparent #fff transparent transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.link_back {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-weight: 600;
+    font-size: 16px;
+
+    &:hover {
+        > .triangle_back {
+            border-color:  transparent $lightblue transparent transparent;
+        }
+    }
+}
+
+.triangle_back {
+    border-width: 6px 13px 6px 0;
+    border-color:  transparent $darkblue transparent transparent;
+    position: absolute;
+    top: 4px;
+    right: 65px;
+}
+
+// /* ========== */
+
+.copy-primary {
+    h2 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .project-pic {
+        margin: 30px 25px 40px 0;
+        float: left;
+        max-height: 500px;
+        max-width: 400px;
+        width: auto;
+        height: auto;
+    }
+
+    .artist-pic {
+        margin-top: 25px;
+    }
+
+    .artist-website {
+        font-size: 18px;
+        white-space: pre;
+        display: inline-block;
+        margin-top: 10px;
+
+        a {
+            display: inline;
+        }
+    }
+
+    .artist-bio {
+        margin-top: 20px;
+    }
+
+}
+
+.artists {
+    h1 {
+        display: inline-block;
+    }
+}
+
+.artist-quarter {
+    height: 30px;
+    background: $orange;
+    color: #fff;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 20px;
+    padding: 2px 15px 0 14px;
+    margin-left: 20px;
+    position: relative;
+    top: -3px;
+    text-transform: uppercase;
+}
+
+// ===== CONTRIBUTOR PAGES =====
+
+.donor-logo {
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-vertical-align: middle;
+    vertical-align: middle;
+    margin: 0 25px 0 10px;
+    background: #fff;
+}
+
+.donor-name {
+    font-size: 22px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.contribute-info {
+    width: 80%;
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+
+
+
+
+
+

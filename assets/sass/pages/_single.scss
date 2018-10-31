@@ -21,7 +21,7 @@
     grid-area: header;
     height: 300px;
     width: 100%;
-    background: #B3B0AB;
+    background: $taupe;
     position: relative;
     background-position-x: 40px;
     background-size: 100%;
@@ -99,14 +99,14 @@
 
     &:hover {
         > .triangle_back {
-            border-color:  transparent #7C95BF transparent transparent;
+            border-color:  transparent $lightblue transparent transparent;
         }
     }
 }
 
 .triangle_back {
     border-width: 6px 13px 6px 0;
-    border-color:  transparent #004B80 transparent transparent;
+    border-color:  transparent $darkblue transparent transparent;
     position: absolute;
     top: 4px;
     right: 65px;
