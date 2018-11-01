@@ -1,6 +1,6 @@
 ---
 title: Info for Local Artists
-gridtype: grid-single
+gridtype: grid--single
 listType: residency
 type: residency
 image:

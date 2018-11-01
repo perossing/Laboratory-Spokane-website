@@ -4,10 +4,9 @@
     grid-gap: 35px;
     grid-template-areas:
         "header"
-        "subhead "
+        "subhead"
         "listings";
     width: 100%;
-    // border: solid 1px salmon;
 }
 
 .subhead_type {
@@ -53,7 +52,7 @@
 }
 
 .list_block {
-    flex-basis: auto;
+    flex: 0 1 auto;
     width: 31%;
     margin: 10px;
 }

@@ -13,7 +13,7 @@ artistwebsite: https://pablosomething.tumblr.com/
 facebook: https://www.facebook.com/projects/295423461008147/
 type: projects
 listType: projects
-gridtype: grid-single
+gridtype: grid--single
 publishdate: 2018-01-01
 tbd: false
 draft: false

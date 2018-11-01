@@ -1,6 +1,6 @@
 ---
 title: What We Expect
-gridtype: grid-single
+gridtype: grid--single
 listType: residency
 type: residency
 image: /images/residency/open-door.jpg

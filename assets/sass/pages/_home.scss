@@ -1,11 +1,10 @@
-.grid-home {
+.grid--home {
     grid-template-columns: 60% auto;
     grid-template-rows: auto;
     grid-gap: 35px;
     grid-template-areas:
         "header sidebar"
         "primary sidebar"
-        "primary calendar"
         "primary info";
 }
 

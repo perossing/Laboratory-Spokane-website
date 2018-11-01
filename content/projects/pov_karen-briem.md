@@ -12,7 +12,7 @@ artistwebsite:
 facebook: 
 type: projects
 listType: projects
-gridtype: grid-single
+gridtype: grid--single
 publishdate: 2017-09-01
 tbd: false
 draft: false

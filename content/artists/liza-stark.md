@@ -5,7 +5,7 @@ listType: artists
 date: 2018-03-01
 picture: /images/artist_pics/LizaStark.jpg
 artistwebsite:  http://thesoftcircuiteer.net/
-gridtype: grid-single
+gridtype: grid--single
 publishdate: 2018-01-01
 ---
 

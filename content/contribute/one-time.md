@@ -1,6 +1,6 @@
 ---
 title: One-Time Donations
-gridtype: grid-single
+gridtype: grid--single
 type: contribute
 # listType: support
 section: primary

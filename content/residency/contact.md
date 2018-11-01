@@ -1,6 +1,6 @@
 ---
 title: Contact Us
-gridtype: grid-single
+gridtype: grid--single
 listType: residency
 type: residency
 image: /images/residency/bathroom.jpg

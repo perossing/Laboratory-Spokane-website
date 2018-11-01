@@ -1,6 +1,6 @@
 ---
 title: How to Apply
-gridtype: grid-single
+gridtype: grid--single
 listType: residency
 type: residency
 image:

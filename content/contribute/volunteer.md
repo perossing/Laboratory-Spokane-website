@@ -1,6 +1,6 @@
 ---
 title: Volunteer
-gridtype: grid-single
+gridtype: grid--single
 # listType: support
 type: volunteer
 image: /images/ElsaPhilippe_MercuryTheatre.jpg

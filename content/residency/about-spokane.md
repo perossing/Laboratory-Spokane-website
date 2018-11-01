@@ -1,6 +1,6 @@
 ---
 title: About Spokane
-gridtype: grid-single
+gridtype: grid--single
 listType: residency
 type: residency
 image: /images/residency/studio.png

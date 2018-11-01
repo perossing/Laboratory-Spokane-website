@@ -1,11 +1,11 @@
 {{ partial "head" . }}
 
 <body>
-    <div class="container-primary">
+    <div class="page-container page-container--home">
 
         {{ partial "social" . }}
 
-        <div class="grid grid-home">
+        <div class="grid grid--home">
 
             <header class="header">
                 <div class="header_nav-logo-container">
@@ -26,7 +26,25 @@
                     <div class="carousel-control_dot"></div>
                     <div class="carousel-control_dot"></div>
                 </div>
-            </header>         
+            </header>
+            
+            <section class="page-copy">
+                <div class="triangle triangle-corner"></div>
+                    <h1 class="page-copy_h1">What We Do</h1>
+                    <div class="page-copy_content">
+                        <p>Tempor laboris in dolore Lorem excepteur ipsum consectetur. Non nostrud incididunt commodo dolor
+                            velit reprehenderit eiusmod quis dolore aliqua ut quis. Elit aliqua quis ipsum sunt amet
+                            ullamco commodo veniam nulla irure ex consequat aliqua. Lorem consequat laboris duis ea aute
+                            nulla nulla eu irure adipisicing. Veniam ut sunt voluptate qui veniam fugiat ipsum consectetur
+                            ipsum. Sit consequat officia reprehenderit enim non velit cillum ex tempor exercitation ut
+                            labore consequat.</p>
+                        <p>Commodo sunt eu Lorem dolore quis esse in dolore in dolore fugiat laboris ipsum. Est
+                            exercitation excepteur duis eu pariatur est in exercitation ad est Lorem pariatur elit. Ex do
+                            anim dolor qui ea proident irure. Occaecat aliquip anim qui minim ad ullamco eiusmod consequat
+                            reprehenderit. Velit cillum duis tempor elit ad. In ullamco laboris ipsum incididunt. Quis do
+                            proident ea excepteur veniam laborum reprehenderit velit ut aute.</p>
+                    </div>
+                </section>
 
             <section class="sidebar-previews projects_list">
 
@@ -45,29 +63,7 @@
                     {{end}}
                 
                     {{end}}
-            </section>
-
-            <section class="copy-primary">
-            <div class="triangle triangle-corner"></div>
-                <h1 class="copy-primary_h1">What We Do</h1>
-                <div class="copy-primary_content">
-                    <p>Tempor laboris in dolore Lorem excepteur ipsum consectetur. Non nostrud incididunt commodo dolor
-                        velit reprehenderit eiusmod quis dolore aliqua ut quis. Elit aliqua quis ipsum sunt amet
-                        ullamco commodo veniam nulla irure ex consequat aliqua. Lorem consequat laboris duis ea aute
-                        nulla nulla eu irure adipisicing. Veniam ut sunt voluptate qui veniam fugiat ipsum consectetur
-                        ipsum. Sit consequat officia reprehenderit enim non velit cillum ex tempor exercitation ut
-                        labore consequat.</p>
-                    <p>Commodo sunt eu Lorem dolore quis esse in dolore in dolore fugiat laboris ipsum. Est
-                        exercitation excepteur duis eu pariatur est in exercitation ad est Lorem pariatur elit. Ex do
-                        anim dolor qui ea proident irure. Occaecat aliquip anim qui minim ad ullamco eiusmod consequat
-                        reprehenderit. Velit cillum duis tempor elit ad. In ullamco laboris ipsum incididunt. Quis do
-                        proident ea excepteur veniam laborum reprehenderit velit ut aute.</p>
-                </div>
-            </section>
-
-            <section class="calendar-section">
-                <!-- {{ partial "calendar" }} -->
-                <h3><a href="/projects">See more projects and events</a></h3>
+                    <h3><a href="/projects">More projects and events</a></h3>
             </section>
 
             <section class="org-info">

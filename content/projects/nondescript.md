@@ -12,7 +12,7 @@ artisturl: ""
 facebook: https://www.facebook.com/projects/316401305596422/
 type: projects
 listType: projects
-gridtype: grid-single
+gridtype: grid--single
 publishdate: 2018-01-01
 tbd: false
 draft: false

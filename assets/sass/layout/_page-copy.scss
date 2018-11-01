@@ -1,0 +1,62 @@
+/* ===== PRIMARY COPY SECTION ===== */
+
+.page-copy {
+    grid-area: primary;
+    background: $beige;
+    padding: 30px 45px 50px 45px;
+    position: relative;
+
+    h1,
+    h2 {
+        color: $darkblue;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .page-copy_content {
+        clear: both;
+        position: relative;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+
+    .project-pic {
+        margin: 30px 25px 40px 0;
+        float: left;
+        max-height: 500px;
+        max-width: 400px;
+        width: auto;
+        height: auto;
+    }
+
+    .artist-pic {
+        margin-top: 25px;
+    }
+
+    .artist-website {
+        font-size: 18px;
+        white-space: pre;
+        display: inline-block;
+        margin-top: 10px;
+
+        a {
+            display: inline;
+        }
+    }
+
+    .artist-bio {
+        margin-top: 20px;
+    }
+
+}

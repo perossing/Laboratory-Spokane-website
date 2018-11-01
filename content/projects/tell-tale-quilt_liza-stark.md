@@ -13,7 +13,7 @@ artistwebsite: http://thesoftcircuiteer.net/
 facebook: https://www.facebook.com/projects/216428449134682/
 type: projects
 listType: projects
-gridtype: grid-single
+gridtype: grid--single
 publishdate: 2018-01-01
 tbd: false
 draft: false

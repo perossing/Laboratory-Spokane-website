@@ -1,36 +1,22 @@
 /* ===== MEDIA QUERIES ===== */
 
-@media (max-width: 1525px) {
-    /* not quite right method for dropping menu down. test a few px above breakpoint to see */
-    .header_nav {
-        bottom: 0;
-        margin-top: 5px;
-    }
-}
-
 @media (max-width: 1300px) {
-    .sidebar-previews {
-        margin-top: 50px;
+    .page-container--home {
+        .sidebar-previews {
+            margin-top: 30px;
+        }
     }
 }
-
-@media (max-width: 1130px) {
-    /* Nav bar (with shortened wording) needs to change here */
-    .carousel-control {
-        display: none;
-    }
-}
-
 
 @media (max-width: 1025px) {
-    .grid-home {
-        grid-template-areas:
-        "header projects"
-        "copy projects"
-        "calendar calendar"
-        "info info";
-    }
-    
+    .page-container--home {
+        .grid--home {
+            grid-template-areas:
+            "header sidebar"
+            "primary sidebar"
+            "info info";
+        }
+    }    
     .projects_project-title {
         font-size: 18px;
     }
@@ -39,37 +25,72 @@
         margin: 5px 0;
     }
 
-    .project-calendar {
-        top: 0;
-        left: 20px;;
-        width: 500px;
-        height: 310px;
+    .org-info {
+        width: 100% !important;
     }
 }
 
 
-@media (max-width: 625px) {
-    .project-calendar {
-        width: 340px;
-        height: 215px;
+@media (max-width: 1005px) {
+    /* GO TO DIFFERENT NAV LAYOUT HERE */
+    // .header_nav_menu-item {
+    //     border: solid 1px orange;
+    // }
+    .list_block {
+        flex-grow: 1;
+        min-width: 46%;
     }
+
+    .page-container--base {
+        .grid--single {
+            grid-template-columns: auto;
+            grid-template-areas:
+                "header"
+                "primary"
+                "sidebar";
+        }
+        .preview_link-more {
+            float: none;
+            display: inline-block;
+            margin: 20px 0 0 0;
+        }
+    }
+
+
+    
+
+}
+
+@media (max-width: 700px) {
+    .list_block {
+        min-width: 100%;
+    }
+}
+
+
+//  ===== OLD =====
+
+
+
+@media (max-width: 1130px) {
+    .carousel-control {
+        display: none;
+    }
+}
+
+
+
+
+
+@media (max-width: 625px) {
+
 }
 
 
 @media (max-width: 455px) {
-    .project-calendar {
-        left: -20px;
-        width: 250px;
-        height: 155px;
-    }
-    .calendar_month {
-        font-size: 18px;
-        left: 4px;
-    }
+
 }
 
 @media (max-width: 300px) {
-    .project-calendar {
-       display: none;
-    }
+
 }

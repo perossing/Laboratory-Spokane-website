@@ -12,7 +12,7 @@ artisturl: ""
 facebook: 
 type: projects
 listType: projects
-gridtype: grid-single
+gridtype: grid--single
 publishdate: 2018-01-01
 tbd: true
 draft: true

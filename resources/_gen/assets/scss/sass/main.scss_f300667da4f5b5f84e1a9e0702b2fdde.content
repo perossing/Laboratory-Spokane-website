@@ -359,7 +359,7 @@ strong {
     top: 0;
     right: 165px; }
 
-.container-primary {
+.page-container {
   background: #fff;
   width: 95%;
   max-width: 1500px;
@@ -382,50 +382,39 @@ strong {
     align-self: stretch; }
 
 /* ===== MEDIA QUERIES ===== */
-@media (max-width: 1525px) {
-  /* not quite right method for dropping menu down. test a few px above breakpoint to see */
-  .header_nav {
-    bottom: 0;
-    margin-top: 5px; } }
-
 @media (max-width: 1300px) {
-  .sidebar-previews {
-    margin-top: 50px; } }
-
-@media (max-width: 1130px) {
-  /* Nav bar (with shortened wording) needs to change here */
-  .carousel-control {
-    display: none; } }
+  .page-container--home .sidebar-previews {
+    margin-top: 30px; } }
 
 @media (max-width: 1025px) {
-  .grid-home {
-    grid-template-areas: "header projects" "copy projects" "calendar calendar" "info info"; }
+  .page-container--home .grid--home {
+    grid-template-areas: "header sidebar" "primary sidebar" "info info"; }
   .projects_project-title {
     font-size: 18px; }
   .projects_preview_date {
     margin: 5px 0; }
-  .project-calendar {
-    top: 0;
-    left: 20px;
-    width: 500px;
-    height: 310px; } }
+  .org-info {
+    width: 100% !important; } }
 
-@media (max-width: 625px) {
-  .project-calendar {
-    width: 340px;
-    height: 215px; } }
+@media (max-width: 1005px) {
+  /* GO TO DIFFERENT NAV LAYOUT HERE */
+  .list_block {
+    flex-grow: 1;
+    min-width: 46%; }
+  .page-container--base .grid--single {
+    grid-template-columns: auto;
+    grid-template-areas: "header" "primary" "sidebar"; }
+  .page-container--base .preview_link-more {
+    float: none;
+    display: inline-block;
+    margin: 20px 0 0 0; } }
 
-@media (max-width: 455px) {
-  .project-calendar {
-    left: -20px;
-    width: 250px;
-    height: 155px; }
-  .calendar_month {
-    font-size: 18px;
-    left: 4px; } }
+@media (max-width: 700px) {
+  .list_block {
+    min-width: 100%; } }
 
-@media (max-width: 300px) {
-  .project-calendar {
+@media (max-width: 1130px) {
+  .carousel-control {
     display: none; } }
 
 /* ===== HEADER NAV ===== */
@@ -440,7 +429,7 @@ strong {
 .header_logo {
   width: 200px;
   height: auto;
-  margin-right: 20px; }
+  margin-right: 5px; }
 
 .header_nav {
   display: inline-block;
@@ -457,10 +446,10 @@ strong {
   .header_nav_menu-item a {
     color: #fff;
     text-decoration: none; }
-  .header_nav_menu-item:hover {
-    color: #deab63; }
-    .header_nav_menu-item:hover > .triangle_drop-down {
-      border-color: #fff transparent transparent transparent; }
+    .header_nav_menu-item a:hover {
+      color: #f9af49; }
+      .header_nav_menu-item a:hover > .triangle_drop-down {
+        border-color: #fff transparent transparent transparent; }
 
 .header_nav div {
   display: inline-block; }
@@ -477,6 +466,8 @@ strong {
 
 /* ===== SUB-NAV ===== */
 .nav_subnav {
+  height: 30px;
+  overflow: hidden;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -486,7 +477,9 @@ strong {
   transition: opacity 0.2s ease-in;
   z-index: 100; }
   .nav_subnav:hover {
-    opacity: 1; }
+    height: 130px;
+    opacity: 1;
+    overflow: visible; }
 
 .subnav_menu-item {
   display: block;
@@ -584,22 +577,45 @@ strong {
     background: #fff;
 } */
 /* ===== PRIMARY COPY SECTION ===== */
-.copy-primary {
+.page-copy {
   grid-area: primary;
   background: #F7F5F0;
   padding: 30px 45px 50px 45px;
   position: relative; }
-  .copy-primary h1, .copy-primary h2 {
+  .page-copy h1,
+  .page-copy h2 {
     color: #004B80;
     margin: 0; }
-  .copy-primary h1 {
+  .page-copy h1 {
     font-size: 30px; }
-  .copy-primary .copy-primary_content {
+  .page-copy h2 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 24px; }
+  .page-copy .page-copy_content {
     clear: both;
     position: relative;
     font-size: 18px;
     line-height: 1.4;
     font-weight: 400;
+    margin-top: 20px; }
+  .page-copy .project-pic {
+    margin: 30px 25px 40px 0;
+    float: left;
+    max-height: 500px;
+    max-width: 400px;
+    width: auto;
+    height: auto; }
+  .page-copy .artist-pic {
+    margin-top: 25px; }
+  .page-copy .artist-website {
+    font-size: 18px;
+    white-space: pre;
+    display: inline-block;
+    margin-top: 10px; }
+    .page-copy .artist-website a {
+      display: inline; }
+  .page-copy .artist-bio {
     margin-top: 20px; }
 
 .filter-item {
@@ -815,11 +831,11 @@ td {
 .sidebar-previews .list-page_summary {
   display: none; }
 
-.grid-home {
+.grid--home {
   grid-template-columns: 60% auto;
   grid-template-rows: auto;
   grid-gap: 35px;
-  grid-template-areas: "header sidebar" "primary sidebar" "primary calendar" "primary info"; }
+  grid-template-areas: "header sidebar" "primary sidebar" "primary info"; }
 
 /* ===== ORG-INFO SECTION ===== */
 .org-info {
@@ -832,7 +848,7 @@ td {
   .org-info p {
     margin-bottom: 16px; }
 
-.grid-single {
+.grid--single {
   grid-template-columns: 60% auto;
   grid-template-rows: auto;
   grid-gap: 35px;
@@ -903,33 +919,6 @@ td {
   top: 4px;
   right: 65px; }
 
-.copy-primary h2 {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 24px; }
-
-.copy-primary .project-pic {
-  margin: 30px 25px 40px 0;
-  float: left;
-  max-height: 500px;
-  max-width: 400px;
-  width: auto;
-  height: auto; }
-
-.copy-primary .artist-pic {
-  margin-top: 25px; }
-
-.copy-primary .artist-website {
-  font-size: 18px;
-  white-space: pre;
-  display: inline-block;
-  margin-top: 10px; }
-  .copy-primary .artist-website a {
-    display: inline; }
-
-.copy-primary .artist-bio {
-  margin-top: 20px; }
-
 .artists h1 {
   display: inline-block; }
 
@@ -968,7 +957,7 @@ td {
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-gap: 35px;
-  grid-template-areas: "header" "subhead " "listings";
+  grid-template-areas: "header" "subhead" "listings";
   width: 100%; }
 
 .subhead_type {
@@ -1006,7 +995,7 @@ td {
   align-content: stretch; }
 
 .list_block {
-  flex-basis: auto;
+  flex: 0 1 auto;
   width: 31%;
   margin: 10px; }
 

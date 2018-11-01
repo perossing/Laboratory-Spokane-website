@@ -1,6 +1,6 @@
 ---
 title: Become a Contributor
-gridtype: grid-single
+gridtype: grid--single
 type: supporters
 listType: support
 sidebar: contribute

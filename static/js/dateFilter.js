@@ -2,8 +2,6 @@
 
 (function filterDates() {
 
-    console.log("=== date filter ===");
-
     let filterItem = document.getElementsByClassName("filter-item");
     let yearSelect = document.getElementsByClassName("year-select");
     let dateSelect = document.getElementsByClassName("date-selector");

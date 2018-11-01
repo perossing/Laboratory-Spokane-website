@@ -11,7 +11,7 @@ artistwebsite: https://szymonkaliski.com/music/
 facebook: https://www.facebook.com/projects/1018248568356982/
 type: projects
 listType: projects
-gridtype: grid-single
+gridtype: grid--single
 publishdate: 2018-01-01
 tbd: false
 draft: false

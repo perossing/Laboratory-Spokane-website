@@ -1,6 +1,6 @@
 @import 'variables';
 
-.grid-single {
+.grid--single {
     grid-template-columns: 60% auto;
     grid-template-rows: auto;
     grid-gap: 35px;
@@ -114,42 +114,6 @@
 
 // /* ========== */
 
-.copy-primary {
-    h2 {
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 24px;
-    }
-
-    .project-pic {
-        margin: 30px 25px 40px 0;
-        float: left;
-        max-height: 500px;
-        max-width: 400px;
-        width: auto;
-        height: auto;
-    }
-
-    .artist-pic {
-        margin-top: 25px;
-    }
-
-    .artist-website {
-        font-size: 18px;
-        white-space: pre;
-        display: inline-block;
-        margin-top: 10px;
-
-        a {
-            display: inline;
-        }
-    }
-
-    .artist-bio {
-        margin-top: 20px;
-    }
-
-}
 
 .artists {
     h1 {

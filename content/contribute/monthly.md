@@ -1,6 +1,6 @@
 ---
 title: Become a Monthly Donor
-gridtype: grid-single
+gridtype: grid--single
 type: contribute
 # listType: support
 section: primary

@@ -1,6 +1,6 @@
 ---
 title: FAQ
-gridtype: grid-single
+gridtype: grid--single
 listType: residency
 type: residency
 image: /images/residency/desk-and-chair.jpg
