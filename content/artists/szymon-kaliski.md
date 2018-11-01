@@ -5,7 +5,7 @@ listType: artists
 date: 2018-06-01
 picture: /images/artist_pics/SzymonKaliski.png
 artistwebsite:  http://szymonkaliski.com
-gridtype: grid--single
+gridtype: grid-single
 publishdate: 2018-01-01
 ---
 

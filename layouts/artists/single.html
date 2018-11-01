@@ -27,7 +27,7 @@
     </section>
 
     <section class="page-copy artists">
-        <h1 class="page-copy_h1">{{.Params.name}}</h1>
+        <h1>{{.Params.name}}</h1>
         <div class="artist-quarter">{{$.Scratch.Get "quarter"}} {{$year}}</div>
         <img class="artist-pic" src={{.Params.picture}}>
         {{if .Params.artistwebsite}}
