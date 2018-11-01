@@ -1,6 +1,6 @@
 /* ===== EVENT PREVIEW LIST SECTION ===== */
 
-.projects_list {
+.sidebar {
     grid-area: sidebar;
 }
 
@@ -45,12 +45,13 @@
     margin: 5px 0;
 }
 
-.sidebar-previews {
-    .list-page_summary{
-    // Removes summary from display in small previews
+.sidebar {
+    // Remove summary from display in sidebar previews
+    .artist-project-summary {
     display: none;
     }
 }
+
 
 
 

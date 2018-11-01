@@ -17,7 +17,7 @@
     {{end}}
 
 
-    <section class="sidebar-previews projects_list">
+    <section class="sidebar">
         <h1>{{$artist}} at Laboratory</h1>
         {{range where .Site.Pages ".Params.type" "projects" }}
                 {{ if eq .Params.artist $artist}}

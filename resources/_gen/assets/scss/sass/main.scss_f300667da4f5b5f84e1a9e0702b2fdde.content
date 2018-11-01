@@ -383,7 +383,7 @@ strong {
 
 /* ===== MEDIA QUERIES ===== */
 @media (max-width: 1300px) {
-  .page-container--home .sidebar-previews {
+  .page-container--home .sidebar {
     margin-top: 30px; } }
 
 @media (max-width: 1025px) {
@@ -793,7 +793,7 @@ td {
   background: #ECAD55; }
 
 /* ===== EVENT PREVIEW LIST SECTION ===== */
-.projects_list {
+.sidebar {
   grid-area: sidebar; }
 
 .projects_preview {
@@ -829,7 +829,7 @@ td {
 .projects_preview_address {
   margin: 5px 0; }
 
-.sidebar-previews .list-page_summary {
+.sidebar .artist-project-summary {
   display: none; }
 
 .grid--home {
@@ -1037,7 +1037,7 @@ td {
   font-weight: 700;
   margin-bottom: 15px; }
 
-.list-page_summary {
+.artist-project-summary {
   display: inline-block;
   font-size: 17px;
   line-height: 1.4;
