@@ -3,25 +3,9 @@
 <!-- SUPPORTERS PAGE (Design based on Single template, functions as List)-->
 <!-- Nav, Social, and Header pic are in baseof -->
 
-<section class="sidebar">        
-
-        <h1>{{.Title}}</h1>
-
-        {{range where .Site.Pages ".Params.sidebar" "contribute"}}   
-            <div class="contribute-info">
-                {{.Content}}
-            </div>
-        {{end}}
-        
-        <p class="non-profit-info">{{.Site.Data.orgInfo.nonprofit }}</p>
-
-</section>
-
 <section class="page-copy">
-    <div class="triangle triangle-corner"></div>
-    
+    <div class="triangle triangle-corner"></div>    
     <h1>Thank you to Our Sponsors</h1>
-
     <div class="page-copy_content">
 
     {{range where .Site.Pages ".Params.type" "supporters"}}
@@ -33,8 +17,20 @@
         {{end}}
     {{end}}
 
-    </div>
+    </div>    
+</section>
+
+
+<section class="sidebar">       
+    <h1>{{.Title}}</h1>
+
+    {{range where .Site.Pages ".Params.sidebar" "supporters"}}   
+        <div class="contribute-info">
+            {{.Content}}
+        </div>
+    {{end}}
     
+    <p class="non-profit-info">{{.Site.Data.orgInfo.nonprofit }}</p>
 </section>
 
 {{end}}

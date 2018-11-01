@@ -3,7 +3,7 @@ title: Become a Contributor
 gridtype: grid--single
 type: supporters
 listType: support
-sidebar: contribute
+sidebar: supporters
 ---
 
 Join us in making awesome happen every day! Become an ongoing monthly donor, make a one-time donation, donate space, or volunteer.

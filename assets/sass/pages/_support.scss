@@ -1,12 +1,6 @@
 @import 'variables';
 
-.support {
-
-    .donate_container {
-        display: table;
-        vertical-align: top;
-    }
-
+.support, .volunteer {
     h2 {
         text-transform: uppercase;
         font-size: 24px;
@@ -25,6 +19,12 @@
         max-width: 85%;
         margin: 10px auto;      
     }
+}
+
+
+.donate_container {
+    display: table;
+    vertical-align: top;
 }
 
 
@@ -141,6 +141,7 @@
 
 .donate_info {
     width: 55%;
+    padding-right: 20px;
 }
 
 .donate_form {

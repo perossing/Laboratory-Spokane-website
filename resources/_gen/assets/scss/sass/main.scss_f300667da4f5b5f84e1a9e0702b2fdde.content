@@ -386,7 +386,8 @@ strong {
   .page-container--home .sidebar {
     margin-top: 30px; } }
 
-@media (max-width: 1025px) {
+@media (max-width: 1100px) {
+  /* GO TO DIFFERENT NAV LAYOUT HERE */
   .page-container--home .grid--home {
     grid-template-areas: "header sidebar" "primary sidebar" "info info"; }
   .projects_project-title {
@@ -394,10 +395,7 @@ strong {
   .projects_preview_date {
     margin: 5px 0; }
   .org-info {
-    width: 100% !important; } }
-
-@media (max-width: 1005px) {
-  /* GO TO DIFFERENT NAV LAYOUT HERE */
+    width: 100% !important; }
   .list_block {
     flex-grow: 1;
     min-width: 46%; }
@@ -407,15 +405,19 @@ strong {
   .page-container--base .preview_link-more {
     float: none;
     display: inline-block;
-    margin: 20px 0 0 0; } }
+    margin: 20px 0 0 0; }
+  .volunteer .contribute-info {
+    display: inline-block;
+    width: 50%; }
+  .volunteer .image--volunteer {
+    display: inline-block;
+    width: 40%;
+    margin-left: 35px;
+    vertical-align: top; } }
 
 @media (max-width: 700px) {
   .list_block {
     min-width: 100%; } }
-
-@media (max-width: 1130px) {
-  .carousel-control {
-    display: none; } }
 
 /* ===== HEADER NAV ===== */
 .header_nav-logo-container {
@@ -1078,24 +1080,24 @@ td {
 .residency-copy ol {
   padding-left: 15px; }
 
-.support .donate_container {
-  display: table;
-  vertical-align: top; }
-
-.support h2 {
+.support h2, .volunteer h2 {
   text-transform: uppercase;
   font-size: 24px; }
 
-.support ul {
+.support ul, .volunteer ul {
   list-style: none;
   padding-left: 0; }
 
-.support li {
+.support li, .volunteer li {
   margin-bottom: 12px; }
 
-.support img {
+.support img, .volunteer img {
   max-width: 85%;
   margin: 10px auto; }
+
+.donate_container {
+  display: table;
+  vertical-align: top; }
 
 .donate_info,
 .donate_form {
@@ -1195,7 +1197,8 @@ td {
         margin-right: 10px; }
 
 .donate_info {
-  width: 55%; }
+  width: 55%;
+  padding-right: 20px; }
 
 .donate_form {
   width: 45%; }
