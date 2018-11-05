@@ -1,6 +1,6 @@
 ---
 title: About CMTV
-gridtype: grid--single
+gridtype: grid--residency
 listType: residency
 type: residency
 image: 

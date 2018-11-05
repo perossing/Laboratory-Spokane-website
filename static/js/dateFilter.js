@@ -51,6 +51,7 @@
             if (filterItem[i].classList.contains(season)) {
                 changeDisplay(i, 'block');
                 changeOpacity(i);
+                changeHeaderColor();
                 resultStatus.style.display = "none";
             } else {
                 if (result === false) {
@@ -68,7 +69,7 @@
             changeOpacity(i);
             result = false;
             resultStatus.style.display = "none";
-            console.log("=== CLEARED ===");
+            changeHeaderColor();
         }
     });
 
@@ -82,6 +83,22 @@
         setTimeout(() => {
             filterItem[i].style.display = value;
         }, 100);
+    }
+
+
+
+    function changeHeaderColor() {
+       let headers = document.getElementsByClassName('subhead_date');
+       for (i = 0; i < headers.length; i++) {
+            if (result) {
+                headers[i].style.background = 'linear-gradient(to right, #E6AC5C, rgba(230, 172, 92, 0.2))';
+                headers[i].style.color = '#fff';
+                colorChange = true;
+            } else {
+                headers[i].style.background = 'linear-gradient(to right, #7C95BF, rgba(124, 149, 191, 0.2))';
+                headers[i].style.color = '#eee';
+            }
+       }
     }
 
 })();

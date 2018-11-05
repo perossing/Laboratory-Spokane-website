@@ -98,7 +98,7 @@
 
 
 
-.filter-button {
+.clear-button {
     margin: 20px 0 0 -10px;
     padding: 2px 0;
     display: inline-block;
@@ -111,7 +111,7 @@
     width: 85px;
     text-align: center;
     position: relative;
-    left: 95%;
+    left: 85%;
 }
 
 .results-status {
@@ -120,6 +120,9 @@
     font-weight: 700;
     color: $orange;
     text-align: center;
-    margin-top: -26px;
-    width: 85%;
+    width: 160px;
+    margin: 0 auto;
+    border: solid 1px red;
+    position: relative;
+    top: -25px;
 }

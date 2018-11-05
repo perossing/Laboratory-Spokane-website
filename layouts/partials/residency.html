@@ -1,19 +1,25 @@
 <section class="residency_menu">
     <h1>Laboratory Residency</h1>
     <p>{{ .Param "residency_phrase"}}</p>
-
-    <ul class="residency_menu">
+    <div class="residency_menu_container">
+        <ul>
             {{ range sort (where .Site.Pages ".Params.type" "residency") ".Params.order"}}
             <li><a href="{{.URL}}">{{.Params.title}}</a></li>
             {{end}}
-    </ul>
+        </ul>
+    </div>
 
-    {{if .Params.image}}
-    <img src="{{.Params.image}}"/>
-    <a class="link_residency-gallery">more pictures</a>
-    {{end}}
+
 
 </section>
+
+<section class="residency-pic">
+    {{if .Params.image}}
+        <img src="{{.Params.image}}" />
+        <a class="link_residency-gallery">more pictures</a>
+    {{end}}
+</section>
+
 
 <section class="page-copy">
 

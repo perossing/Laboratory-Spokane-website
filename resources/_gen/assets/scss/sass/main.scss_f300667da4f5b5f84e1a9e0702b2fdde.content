@@ -402,6 +402,9 @@ strong {
   .page-container--base .grid--single {
     grid-template-columns: auto;
     grid-template-areas: "header" "primary" "sidebar"; }
+  .page-container--base .grid--residency {
+    grid-template-columns: auto;
+    grid-template-areas: "header" "sidebar" "primary" "image"; }
   .page-container--base .preview_link-more {
     float: none;
     display: inline-block;
@@ -413,11 +416,21 @@ strong {
     display: inline-block;
     width: 40%;
     margin-left: 35px;
-    vertical-align: top; } }
+    vertical-align: top; }
+  section.list_intro {
+    max-width: 50%;
+    padding-right: 10px;
+    padding-top: 0; }
+  .block_date-filter {
+    max-width: 30%; }
+  .clear-button {
+    left: 80%; } }
 
 @media (max-width: 700px) {
-  .list_block {
-    min-width: 100%; } }
+  .list_block, .list_intro {
+    min-width: 100%; }
+  .block_date-filter {
+    padding-bottom: 30px; } }
 
 /* ===== HEADER NAV ===== */
 .header_nav-logo-container {
@@ -693,7 +706,7 @@ strong {
 .year-select:active, .year-select:hover, .year-select:focus {
   background: #004B80; }
 
-.filter-button {
+.clear-button {
   margin: 20px 0 0 -10px;
   padding: 2px 0;
   display: inline-block;
@@ -706,7 +719,7 @@ strong {
   width: 85px;
   text-align: center;
   position: relative;
-  left: 95%; }
+  left: 85%; }
 
 .results-status {
   display: none;
@@ -714,8 +727,11 @@ strong {
   font-weight: 700;
   color: #E6AC5C;
   text-align: center;
-  margin-top: -26px;
-  width: 85%; }
+  width: 160px;
+  margin: 0 auto;
+  border: solid 1px red;
+  position: relative;
+  top: -25px; }
 
 .pagination {
   display: inline-block;
@@ -1009,7 +1025,8 @@ td {
   font-size: 18px;
   line-height: 1.3; }
 
-.project-listing, .artist-listing {
+.project-listing,
+.artist-listing {
   padding: 20px 10px 0 20px;
   background: #F7F5F0; }
 
@@ -1046,6 +1063,15 @@ td {
   margin: 10px 0;
   width: 95%; }
 
+.grid--residency {
+  grid-template-columns: 60% auto;
+  grid-template-rows: auto 400px auto;
+  grid-gap: 35px;
+  grid-template-areas: "header header" "primary sidebar" "primary image"; }
+
+.residency_menu .residency_menu_container {
+  display: inline-block; }
+
 .residency_menu p {
   font-size: 18px;
   color: #7C95BF; }
@@ -1056,9 +1082,10 @@ td {
   line-height: 1.5;
   padding-left: 5px; }
 
-.residency_menu img {
-  width: 100%;
-  margin-top: 15px; }
+.residency-pic {
+  grid-area: image; }
+  .residency-pic img {
+    width: 100%; }
 
 .link_residency-gallery {
   display: inline-block;

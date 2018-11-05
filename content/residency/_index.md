@@ -1,6 +1,6 @@
 ---
 listType: residency
-gridtype: grid--single
+gridtype: grid--residency
 title: Overview
 type: residency
 image: /images/residency/kitchen.jpg

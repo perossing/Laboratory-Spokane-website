@@ -48,6 +48,16 @@
                 "primary"
                 "sidebar";
         }
+        .grid--residency {
+            grid-template-columns: auto;
+            grid-template-areas:
+                "header"
+                "sidebar"
+                "primary"
+                "image";
+        }
+
+
         .preview_link-more {
             float: none;
             display: inline-block;
@@ -68,10 +78,26 @@
         }
     }
 
+    section.list_intro {
+        max-width: 50%;
+        padding-right: 10px;
+        padding-top: 0;
+    }
+
+    .block_date-filter {
+        max-width: 30%;
+    }
+
+    .clear-button {
+        left: 80%;
+    }
 }
 
 @media (max-width: 700px) {
-    .list_block {
+    .list_block, .list_intro {
         min-width: 100%;
+    }
+    .block_date-filter {
+        padding-bottom: 30px;
     }
 }

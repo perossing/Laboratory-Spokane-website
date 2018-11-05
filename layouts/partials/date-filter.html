@@ -1,39 +1,43 @@
 <div class="date-filter">
         <p>Select a time period to filter {{.Type | singularize}} listings:</p>
-        <div class="date-filter_flex-wrapper">           
+        
+        <div class="date-filter_flex-wrapper">
 
                 {{ range .Pages.GroupByDate "2006" }}
 
-                {{$nextYear := add (int (substr .Key (sub (len .Key) 2) 2)) 1}}
+                        {{$nextYear := add (int (substr .Key (sub (len .Key) 2) 2)) 1}}
 
-                {{ range where .Pages ".Params.type" "projects" }}
-                        {{$.Scratch.Set "janfebProject" false}}
-                        {{$month := dateFormat "January" .Params.date}}
+                        {{ range where .Pages ".Params.type" "projects" }}
+
+                                {{$.Scratch.Set "janfebProject" false}}
+                                {{$month := dateFormat "January" .Params.date}}
+
                                 {{if or (eq $month "January") (eq $month "February") }}
-                                {{$.Scratch.Set "janfebProject" true}}
+                                        {{$.Scratch.Set "janfebProject" true}}
                                 {{end}}
-                {{end}}
 
-                {{$inJanFeb := $.Scratch.Get "janfebProject"}}
-                
-                {{if not $inJanFeb}}
-                <div class="year-select" id="select{{.Key}}">{{.Key}}
+                        {{end}}
 
-                        <div class="quarters">
-                                <div class="quarters_bg">
-                                        <p class="date-selector" id="Spring{{.Key}}">Spring {{.Key}}</p>
-                                        <p class="date-selector" id="Summer{{.Key}}">Summer {{.Key}}</p>
-                                        <p class="date-selector" id="Fall{{.Key}}">Fall {{.Key}}</p>
-                                        <p class="date-selector" id="Winter{{.Key}}">Winter {{.Key}}/{{$nextYear}}</p>
+                        {{$inJanFeb := $.Scratch.Get "janfebProject"}}
+
+                        {{if not $inJanFeb}}
+                                <div class="year-select" id="select{{.Key}}">{{.Key}}
+
+                                        <div class="quarters">
+                                                <div class="quarters_bg">
+                                                        <p class="date-selector" id="Spring{{.Key}}">Spring {{.Key}}</p>
+                                                        <p class="date-selector" id="Summer{{.Key}}">Summer {{.Key}}</p>
+                                                        <p class="date-selector" id="Fall{{.Key}}">Fall {{.Key}}</p>
+                                                        <p class="date-selector" id="Winter{{.Key}}">Winter {{.Key}}/{{$nextYear}}</p>
+                                                </div>
+                                        </div>
                                 </div>
-                        </div>
-                </div>
-                {{end}}
+                        {{end}}
 
                 {{end}}
 
         </div>
 
-        <div class="filter-button" id="clear-button">clear filter</div>
+        <div class="clear-button" id="clear-button">clear filter</div>
         <div class="results-status" id="results-status">no results found</div>
 </div>

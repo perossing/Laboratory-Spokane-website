@@ -7,21 +7,8 @@
         {{ partial "social"}}
 
         <div class="grid {{.Params.gridtype}}">
-
-            <header class="header">
-                <div class="header_nav-logo-container"><a href="/"><img class="header_logo" src="/images/Laboratory-Logo-WHITE.png"
-                        alt="Laboratory text logo"></a>
-                    {{ partial "nav" . }}
-                </div>
-
-                <div class="header_image-holder {{ if .Params.listType }}{{.Params.listType}}{{end}}">
-                    <footer>
-                        <div class="tagline">interactive, digital, performance art</div>
-                    </footer>
-                </div>
-                <div class="triangle triangle-punch-out tpo_pages"></div>
-
-            </header>     
+            
+            {{partial "header" .}}   
 
             {{ block "main" . }}
             {{end}}
