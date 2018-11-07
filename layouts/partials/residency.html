@@ -1,10 +1,11 @@
 <section class="residency_menu">
+    <p id="menu-position"></p>
     <h1>Laboratory Residency</h1>
     <p>{{ .Param "residency_phrase"}}</p>
     <div class="residency_menu_container">
         <ul>
             {{ range sort (where .Site.Pages ".Params.type" "residency") ".Params.order"}}
-            <li><a href="{{.URL}}">{{.Params.title}}</a></li>
+            <li><a href="{{.URL}}#page-position">{{.Params.title}}</a></li>
             {{end}}
         </ul>
     </div>
@@ -16,16 +17,16 @@
 <section class="residency-pic">
     {{if .Params.image}}
         <img src="{{.Params.image}}" />
-        <a class="link_residency-gallery">more pictures</a>
+        <a class="link_residency-page">more pictures</a>
     {{end}}
 </section>
 
 
 <section class="page-copy">
-
+    <p id="page-position"></p>
     <h1>{{.Params.title}}</h1>
     <div class="page-copy_content residency-copy">{{.Content}}</div>
     <div class="triangle triangle-corner"></div>
-
+    <a class="link_residency-page" href="#menu-position">Residency info menu</a>
 
 </section>

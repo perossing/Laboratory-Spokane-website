@@ -382,6 +382,10 @@ strong {
     align-self: stretch; }
 
 /* ===== MEDIA QUERIES ===== */
+@media (min-width: 1500px) {
+  .page-container .to-top {
+    margin-right: calc(((100vw - 1500px) / 2) - 5px); } }
+
 @media (max-width: 1300px) {
   .page-container--home .sidebar {
     margin-top: 30px; } }
@@ -405,6 +409,8 @@ strong {
   .page-container--base .grid--residency {
     grid-template-columns: auto;
     grid-template-areas: "header" "sidebar" "primary" "image"; }
+    .page-container--base .grid--residency .page-copy {
+      margin-top: -20px; }
   .page-container--base .preview_link-more {
     float: none;
     display: inline-block;
@@ -424,13 +430,24 @@ strong {
   .block_date-filter {
     max-width: 30%; }
   .clear-button {
-    left: 80%; } }
+    left: 80%; }
+  .residency_menu_container ul {
+    margin: 5px 0 0 0; }
+  .page-container .to-top {
+    transform: scale(0.8);
+    right: 0; } }
 
 @media (max-width: 700px) {
   .list_block, .list_intro {
     min-width: 100%; }
   .block_date-filter {
     padding-bottom: 30px; } }
+
+@media (max-width: 600px) {
+  .page-container .to-top {
+    transform: scale(0.7);
+    right: 0;
+    bottom: 0; } }
 
 /* ===== HEADER NAV ===== */
 .header_nav-logo-container {
@@ -523,7 +540,7 @@ strong {
   background: rgba(135, 165, 216, 0.45);
   position: fixed;
   bottom: 25px;
-  right: 5px;
+  right: 10px;
   z-index: 100;
   outline: none;
   cursor: pointer;
@@ -1065,7 +1082,7 @@ td {
 
 .grid--residency {
   grid-template-columns: 60% auto;
-  grid-template-rows: auto 400px auto;
+  grid-template-rows: auto 265px auto;
   grid-gap: 35px;
   grid-template-areas: "header header" "primary sidebar" "primary image"; }
 
@@ -1077,6 +1094,7 @@ td {
   color: #7C95BF; }
 
 .residency_menu ul {
+  columns: 2;
   list-style: none;
   font-size: 18px;
   line-height: 1.5;
@@ -1087,12 +1105,12 @@ td {
   .residency-pic img {
     width: 100%; }
 
-.link_residency-gallery {
+.link_residency-page {
   display: inline-block;
   width: 99%;
   text-align: right;
   margin-top: 5px;
-  font-size: 14px; }
+  font-size: 15px; }
 
 .residency-copy h2 {
   margin-top: 25px !important;
@@ -1106,6 +1124,12 @@ td {
 
 .residency-copy ol {
   padding-left: 15px; }
+
+#page-position {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  margin-top: -300px; }
 
 .support h2, .volunteer h2 {
   text-transform: uppercase;
