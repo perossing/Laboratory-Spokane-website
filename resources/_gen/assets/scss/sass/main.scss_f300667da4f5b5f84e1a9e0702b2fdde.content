@@ -742,11 +742,13 @@ strong {
   display: none;
   font-size: 20px;
   font-weight: 700;
-  color: #E6AC5C;
+  background: #E6AC5C;
+  color: #fff;
   text-align: center;
   width: 160px;
+  height: 26px;
+  border-radius: 4px;
   margin: 0 auto;
-  border: solid 1px red;
   position: relative;
   top: -25px; }
 
