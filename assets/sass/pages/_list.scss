@@ -1,7 +1,7 @@
 .grid-list {
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-gap: 35px;
+    // grid-gap: 35px;
     grid-template-areas:
         "header"
         "subhead"
@@ -48,6 +48,10 @@
     flex-flow: row wrap;
     align-items: stretch;
     align-content: stretch;
+
+    .list_block {
+        position: relative;
+    }
 }
 
 .list_block {
@@ -55,6 +59,8 @@
     width: 31%;
     margin: 10px;
 }
+
+
 
 .list_intro {
     width: 64%;

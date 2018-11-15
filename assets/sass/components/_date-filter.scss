@@ -116,15 +116,17 @@
 
 .results-status {
     display: none;
-    font-size: 20px;
-    font-weight: 700;
-    background: $orange;
-    color: #fff;
-    text-align: center;
     width: 160px;
     height: 26px;
-    border-radius: 4px;
-    margin: 0 auto;
     position: relative;
     top: -25px;
+    margin: 0 auto;
+    padding-top: 2px;
+    border-radius: 4px;
+    background: $orange;
+    box-shadow: 0 1px 8px $orange;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
 }

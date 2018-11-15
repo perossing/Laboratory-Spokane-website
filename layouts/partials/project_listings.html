@@ -34,6 +34,7 @@
                 {{ range sort (where .Pages "Type" "projects") ".Params.date" }}    
                         <section class="list_block project-listing">
                                 {{partial "project_preview" .}}
+                                <div class="triangle triangle-corner"></div>
                         </section>         
                 {{end}}
                 </div>
