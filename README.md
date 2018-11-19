@@ -6,7 +6,7 @@ Built with Hugo static site generator, content will  load from markdown files ge
 
 To-do list (11-19-18):
 - Finish formatting for various devices/screen sizes (IN PROGRESS)
-- Set up changing images on home page
+- Set up image carousel on home page
 - Set up gallery page for residency space photos
 - Edit/resize images for better performance & loading
 - Email sign-up page & contact form
