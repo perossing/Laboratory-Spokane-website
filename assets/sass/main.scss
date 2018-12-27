@@ -2,8 +2,6 @@
 @import 'normalize';
 @import 'base';
 
-@import 'media-queries';
-
 @import 'layout/nav';
 @import 'layout/header';
 @import 'layout/page-copy';
@@ -18,3 +16,5 @@
 @import 'pages/list';
 @import 'pages/residency';
 @import 'pages/support';
+
+@import 'media-queries';
