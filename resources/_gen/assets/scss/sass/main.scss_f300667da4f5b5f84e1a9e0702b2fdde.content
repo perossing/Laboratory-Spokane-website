@@ -410,7 +410,8 @@ strong {
   margin-right: 200px; }
 
 .header_nav_menu-item {
-  position: relative; }
+  position: relative;
+  text-shadow: 1px 1px 3px #000; }
   .header_nav_menu-item a {
     color: #fff;
     text-decoration: none; }
@@ -429,7 +430,7 @@ strong {
 
 .triangle_drop-down {
   border-width: 7px 4px 0 4px;
-  border-color: #aaa transparent transparent transparent;
+  border-color: #fff transparent transparent transparent;
   margin: 0 0 3px 10px; }
 
 /* ===== SUB-NAV ===== */
@@ -472,7 +473,7 @@ strong {
   width: 100%;
   margin-left: -10px;
   padding-top: 5px;
-  background: linear-gradient(rgba(255, 255, 255, 0.6), #eee);
+  background: #eee;
   color: #222;
   border-bottom: solid 1px #444;
   opacity: 0.65;
@@ -1300,9 +1301,9 @@ td {
   .grid--home .subnav_menu-item {
     display: block; } }
 
-@media (max-width: 1015px) {
+@media (max-width: 1015px) and (min-width: 550px) {
   .header_nav-logo-container {
-    background: linear-gradient(180deg, rgba(27, 31, 38, 0.7) 70px, rgba(27, 31, 38, 0)); } }
+    background: linear-gradient(180deg, rgba(27, 31, 38, 0.8) 20px, rgba(27, 31, 38, 0.4) 60px, rgba(27, 31, 38, 0) 95px); } }
 
 @media (max-width: 900px) {
   .page-container {
@@ -1312,6 +1313,12 @@ td {
 
 @media (max-width: 750px) {
   .grid--single .header_nav, .grid--list .header_nav, .grid--residency .header_nav {
+    margin-right: 0; } }
+
+@media (max-width: 550px) {
+  .header_nav-logo-container {
+    padding-bottom: 5px; }
+  .grid--single .header_nav, .grid--list .header_nav, .grid--residency .header_nav {
     display: none;
     top: 0; }
   .grid--single .nav_mobile-placeholder, .grid--list .nav_mobile-placeholder, .grid--residency .nav_mobile-placeholder {
@@ -1320,8 +1327,7 @@ td {
     display: none; }
   .grid--single .header_nav_menu-item, .grid--list .header_nav_menu-item, .grid--residency .header_nav_menu-item {
     display: block;
-    padding-top: 12px;
-    text-shadow: 1px 1px 3px #000; }
+    padding-top: 12px; }
   .grid--single .triangle_drop-down, .grid--list .triangle_drop-down, .grid--residency .triangle_drop-down {
     transform: rotate(30deg); }
   .grid--single .nav_subnav, .grid--list .nav_subnav, .grid--residency .nav_subnav {
