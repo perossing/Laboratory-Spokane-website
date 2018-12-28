@@ -8,7 +8,7 @@ endDate:
 time: 
 venue: 
 address: 
-artisturl: ""
+artistwebsite: ""
 facebook: 
 type: projects
 listType: projects

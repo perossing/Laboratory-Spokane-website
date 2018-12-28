@@ -6,7 +6,6 @@ artist: Raiz Arroyo
 date: 2018-08-22
 endDate:
 time: 5 - 8pm
-publishdate: 2018-01-01
 venue: Richmond Art Collective
 address: 228 W Spraque Ave
 artistwebsite: https://pablosomething.tumblr.com/
