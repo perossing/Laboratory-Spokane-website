@@ -1,7 +1,7 @@
 ---
 title: Contribute
 gridtype: grid--single
-type: contribute
+# type: contribute
 listType: support
 ---
 

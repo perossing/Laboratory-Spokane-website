@@ -116,7 +116,7 @@
 
 @media (max-width: 1050px) {
 
-    // same for non-home pages @ 750px
+    // same for non-home pages @ 550px
     .grid--home {
         .header_nav {
             display: none;
@@ -163,7 +163,7 @@
 
 @media (max-width: 1015px) and (min-width: 550px) {
     .header_nav-logo-container {
-        background: linear-gradient(180deg,rgba(27, 31, 38, 0.8) 20px, rgba(27, 31, 38, 0.4) 60px, rgba(27, 31, 38, 0) 95px);
+        background: linear-gradient(180deg, rgba(27, 31, 38, 0.8) 20px, rgba(27, 31, 38, 0.4) 60px, rgba(27, 31, 38, 0) 95px);
     }
 }
 
@@ -179,11 +179,32 @@
 }
 
 @media (max-width: 750px) {
-    .grid--single, .grid--list, .grid--residency {
+
+    .grid--single,
+    .grid--list,
+    .grid--residency {
         .header_nav {
             margin-right: 0;
         }
     }
+
+    .donate_info,
+    .donate_form {
+        display: block;
+        width: 100%;
+    }
+
+    .donate_form {
+        form {
+            margin: 0 auto;
+            top: 0;
+        }
+
+        .monthly {
+            padding-bottom: 75px;
+        }
+    }
+
 }
 
 
@@ -193,7 +214,9 @@
         padding-bottom: 5px;
     }
 
-    .grid--single, .grid--list, .grid--residency {
+    .grid--single,
+    .grid--list,
+    .grid--residency {
         .header_nav {
             display: none;
             top: 0;
@@ -231,6 +254,20 @@
         .subnav_menu-item {
             display: block;
         }
+    }
+
+    .social-links .triangle {
+        display: none;
+    }
+
+    .page-container {
+        padding-bottom: 60px;
+    }
+
+    .social-links {
+        position: absolute;
+        top: calc(100% - 52px);
+        right: calc(50% - 100px);
     }
 }
 

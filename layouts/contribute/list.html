@@ -1,14 +1,14 @@
 {{ define "main"}}
 
-<!-- CONTRIBUTE SINGLE PAGE (Design based on Single template, functions as List)-->
+<!-- CONTRIBUTE PAGE (Design based on Single template, functions as List)-->
 <!-- Nav, Social, and Header pic are in baseof -->
 
-<section class="page-copy support">
+<section class="page-copy">
     <div class="triangle triangle-corner"></div>    
     <h1>{{.Params.title}}</h1>
 
-    {{range where .Site.Pages ".Params.section" "primary"}}
-        <div class="page-copy_content donate_container">            
+    {{range where .Site.Pages ".Params.type" "contribute"}}   
+    <div class="page-copy_content donate_container">        
             <div class="donate_info">
                 <h2>{{.Title}}</h2>
                 <div>{{.Content}}</div>
