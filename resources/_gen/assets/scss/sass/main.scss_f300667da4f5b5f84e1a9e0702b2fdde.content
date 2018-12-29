@@ -1326,24 +1326,18 @@ td {
     top: 0; }
   .donate_form .monthly {
     padding-bottom: 75px; }
-  .grid--home {
-    border: solid 1px magenta;
+  .page-container--home .grid--home {
     grid-template-columns: 100%;
     grid-template-areas: "header" "primary" "sidebar" "info"; }
-    .grid--home header {
-      width: 100%;
-      height: 260px;
-      overflow: hidden;
-      border: solid 1px lawngreen; }
-    .grid--home .page-copy {
-      border: solid 1px purple;
-      align-self: auto;
-      grid-area: primary; }
-    .grid--home .sidebar {
-      grid-area: primary;
-      border: solid 1px orange; }
-    .grid--home .org-info {
-      grid-area: info; } }
+  .grid--home header {
+    height: 260px;
+    overflow: hidden; }
+  .grid--home .header_nav-logo-container {
+    width: 100%; }
+  .grid--home .sidebar {
+    margin-top: 0; }
+  .grid--home .page-copy {
+    align-self: auto; } }
 
 @media (max-width: 750px) and (max-width: 550px) {
   .header_nav-logo-container {
