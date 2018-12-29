@@ -11,8 +11,7 @@ navReveal.onclick = (() => {
     if (!menuVisible) {
         mobileNav.style.display = "block";
         mobileNav.style.opacity = "1";
-        navReveal.style.background = '#ea5';
-        // navReveal.style.color = '#ea5';
+        navReveal.style.background = '#ea4';
         navReveal.style.textShadow = '1px 1px 5px #fff';
         menuVisible = true;
     }

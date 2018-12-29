@@ -325,7 +325,7 @@ a {
   text-decoration: underline; }
 
 a:hover {
-  color: #e99327; }
+  color: #ea9515; }
 
 strong {
   font-weight: 700;
@@ -416,7 +416,7 @@ strong {
     color: #fff;
     text-decoration: none; }
     .header_nav_menu-item a:hover {
-      color: #ffac44; }
+      color: #ffad33; }
       .header_nav_menu-item a:hover > .triangle_drop-down {
         border-color: #fff transparent transparent transparent; }
 
@@ -465,7 +465,7 @@ strong {
   .subnav_menu-item:hover {
     background: rgba(70, 70, 85, 0.9);
     border-bottom: solid 2px #048;
-    color: #fab047; }
+    color: #EA4; }
 
 /* ===== MOBILE PLACEHOLDER ===== */
 .nav_mobile-placeholder {
@@ -670,7 +670,7 @@ strong {
       overflow: visible; }
 
 .year-select:active, .year-select:hover, .year-select:focus, .filter-buttons:active, .filter-buttons:hover, .filter-buttons:focus, .quarters p:active, .quarters p:hover, .quarters p:focus {
-  background: #EA5;
+  background: #EA4;
   box-shadow: none;
   cursor: pointer;
   text-shadow: none; }
@@ -691,7 +691,7 @@ strong {
   width: 85px;
   text-align: center;
   position: relative;
-  left: 85%; }
+  left: calc(100% - 90px); }
 
 .results-status {
   display: none;
@@ -702,8 +702,8 @@ strong {
   margin: 0 auto;
   padding-top: 2px;
   border-radius: 4px;
-  background: #EA5;
-  box-shadow: 0 1px 8px #EA5;
+  background: #EA4;
+  box-shadow: 0 1px 8px #EA4;
   text-align: center;
   font-size: 18px;
   font-weight: 700;
@@ -784,7 +784,7 @@ td {
   height: 20%; }
 
 .highlight {
-  background: #ECAD55; }
+  background: #EA4; }
 
 /* ===== EVENT PREVIEW LIST SECTION ===== */
 .sidebar {
@@ -924,7 +924,7 @@ td {
   width: 175px;
   padding-top: 3px;
   margin-top: 10px;
-  background: #EA5;
+  background: #EA4;
   color: #fff;
   font-weight: 700;
   font-size: 20px;
@@ -1143,15 +1143,15 @@ td {
       .donate_form form .dollar-sign:hover,
       .donate_form form .dollar-sign:active,
       .donate_form form .dollar-sign:focus {
-        background: #EA5; }
+        background: #EA4; }
     .donate_info form .donate-focus,
     .donate_form form .donate-focus {
-      background: #e08616; }
+      background: #d28613; }
       .donate_info form .donate-focus:hover, .donate_info form .donate-focus:active, .donate_info form .donate-focus:focus,
       .donate_form form .donate-focus:hover,
       .donate_form form .donate-focus:active,
       .donate_form form .donate-focus:focus {
-        background: #EA5; }
+        background: #EA4; }
     .donate_info form .dollar-sign,
     .donate_form form .dollar-sign {
       margin-top: 10px;
@@ -1332,8 +1332,6 @@ td {
   .grid--home header {
     height: 260px;
     overflow: hidden; }
-  .grid--home .header_nav-logo-container {
-    width: 100%; }
   .grid--home .sidebar {
     margin-top: 0; }
   .grid--home .page-copy {
@@ -1350,8 +1348,6 @@ td {
     left: 0; }
   .list_block {
     right: 5px; }
-  .clear-button {
-    left: calc(100% - 90px); }
   .grid--single .header_nav,
   .grid--list .header_nav,
   .grid--residency .header_nav {

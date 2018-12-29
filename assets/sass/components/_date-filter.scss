@@ -111,7 +111,7 @@
     width: 85px;
     text-align: center;
     position: relative;
-    left: 85%;
+    left: calc(100% - 90px);
 }
 
 .results-status {
