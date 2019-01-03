@@ -13,23 +13,9 @@
                         alt="Laboratory text logo">
                     {{ partial "nav" . }}
                 </div>
-
-                <img class="header_image-home" src="images/FPO_preMADE_67inch_3to4.jpg">
-                <!-- <img class="header_image" src="images/FPO_superduluxe_3to4.jpg"> -->
-                <div class="triangle triangle-punch-out"></div>
-
                 <div class="tagline">interactive, digital, performance art</div>
-                <div class="carousel-control">
-                    <div class="carousel_dots">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
-                    <div class="carousel_arrow forward"> > </div>
-                    <div class="carousel_arrow back"> < </div>
-                </div>
+                {{ partial "image-slider" . }}
+                <div class="triangle triangle-punch-out"></div>
             </header>
             
             <section class="page-copy">

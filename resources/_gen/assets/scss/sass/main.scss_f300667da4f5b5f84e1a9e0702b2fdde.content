@@ -546,6 +546,9 @@ strong {
   background: #ccd;
   opacity: 0.45; }
 
+.dot-current {
+  opacity: 1; }
+
 .carousel_arrow {
   color: #fff;
   font-size: 32px;
@@ -561,9 +564,6 @@ strong {
     margin-left: 8px; }
 
 /* -- MAKE INTERACTIVE w JS -- */
-.dot:first-of-type {
-  opacity: 1; }
-
 /* .dot:active {
     background: #fff;
 } */
