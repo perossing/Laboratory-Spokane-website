@@ -1,10 +1,10 @@
-<div class="carousel" style="overflow: hidden; max-height: 500px;">
+<div class="carousel">
     <!-- Put styling in CSS -- control height -->
-<img class="header_image-home slide-pic" src="images/FPO_preMADE_67inch_3to4.jpg">
-<img class="header_image-home slide-pic" src="images/FPO_superduluxe_3to4.jpg">
-<img class="header_image-home slide-pic" src="images/ElsaPhilippe_MercuryTheatre.jpg">
-<img class="header_image-home slide-pic" src="images/Karen-Briem_POV.jpg">
-<img class="header_image-home slide-pic" src="images/ShuangshuangHuo_InvisibleTerritories.png">
+<img class="slide-pic home-pic" src="images/carousel/preMADE.jpg">
+<img class="slide-pic" src="images/carousel/ShuangshuangHuo.jpg">
+<img class="slide-pic" src="images/carousel/superduluxe.jpg">
+<img class="slide-pic" src="images/carousel/CynthiaHua.jpg">
+<img class="slide-pic" src="images/carousel/TomerBaruch.jpg">
 
 
 
@@ -20,35 +20,3 @@
     <div class="carousel_arrow forward" onclick="plusDivs(1)">&#10095;</div>
 </div>
 </div>
-
-<script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-    
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-    
-    function currentDiv(n) {
-      showDivs(slideIndex = n);
-    }
-    
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("slide-pic");
-      var dots = document.getElementsByClassName("dot");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-        // x[i].style.AnimationPlayState = "running";   
-        x[i].style.display = "none"; 
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("dot-current", "");
-      }
-      x[slideIndex-1].style.display = "block";
-      x[slideIndex-1].style.AnimationPlayState = "running";   
-      dots[slideIndex-1].className += " dot-current";
-    }
-    </script>
-    
