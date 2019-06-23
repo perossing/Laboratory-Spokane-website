@@ -28,8 +28,7 @@ function showDivs(n) {
         dots[i].className = dots[i].className.replace("dot-current", "");
     }
 
-    // pics[slideIndex - 1].style.transform = 'translateX(90%)';
-    pics[slideIndex - 1].style.display = "block";
+   pics[slideIndex - 1].style.display = "block";
 
     dots[slideIndex - 1].className += " dot-current";
 }
